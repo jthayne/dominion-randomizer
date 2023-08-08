@@ -3,6 +3,7 @@
     "php": "^8.2",
     "catfan/medoo": "^2.1.8",
     "cerbero/enum": "^1.0.0",
+    "psr/log": "^3.0",
     "vlucas/phpdotenv": "^5.5.0"
   }
 }
