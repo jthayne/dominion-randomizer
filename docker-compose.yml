@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  php-8.2-dominion:
+    container_name: php-8.2-dominion
+    build: .
+    depends_on:
+      - db-dominion
+    restart: always
+    volumes:
+      - ./:/var/www/html/
+    environment:
+      WEB_DOCUMENT_ROOT: /var/www/html/public
+    ports:
+      - "8486:80"
+  db-dominion:
+    container_name: db-dominion
+    image: mysql:latest
+    restart: always
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    cap_add:
+      - CAP_SYS_NICE
+    ports:
+      - "13307:3306"
