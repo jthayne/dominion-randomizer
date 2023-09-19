@@ -12,14 +12,14 @@ use General\Session;
 /**
  * Register The Auto Loader
  */
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 /**
  *--------------------------------------------------------------------------
  * Add environment variables
  *--------------------------------------------------------------------------
  */
-$dotenv = Dotenv::createImmutable('../config');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../config');
 $dotenv->load();
 
 /**
@@ -27,7 +27,7 @@ $dotenv->load();
  * Set up app level items. Primarily class autoload
  *--------------------------------------------------------------------------
  */
-require_once '../bootstrap/autoload.php';
+require_once __DIR__ . '/../bootstrap/autoload.php';
 
 /**
  *--------------------------------------------------------------------------
@@ -35,10 +35,3 @@ require_once '../bootstrap/autoload.php';
  *--------------------------------------------------------------------------
  */
 Session::create();
-
-/**
- *--------------------------------------------------------------------------
- * Return the database schema.
- *--------------------------------------------------------------------------
- */
-return include_once __DIR__ . '/../bootstrap/db.php';

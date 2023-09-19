@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Dominion;
 
+use Cerbero\Enum\Concerns\Enumerates;
+
 enum CardSet: string
 {
+    use Enumerates;
+
     case Adventures = 'Adventures';
     case Alchemy = 'Alchemy';
     case Allies = 'Allies';
@@ -23,4 +27,6 @@ enum CardSet: string
     case Prosperity = 'Prosperity';
     case Renaissance = 'Renaissance';
     case Seaside = 'Seaside';
+
+
 }

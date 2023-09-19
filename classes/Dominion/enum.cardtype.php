@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Dominion;
 
+use Cerbero\Enum\Concerns\Enumerates;
+
 enum CardType
 {
+    use Enumerates;
+
     case Action;
     case Ally;
     case Artifact;
