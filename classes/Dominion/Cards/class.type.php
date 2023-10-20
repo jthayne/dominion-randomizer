@@ -14,14 +14,16 @@ readonly class Type
     ) {
     }
 
-    final public function addTypeToCard(int $id, CardType $type): void
+    final public function addTypeToCard(int $id, int $type): void
     {
-        $this->medoo->insert(
-            'card_type',
+        $this->medoo->update(
+            'cards',
             [
-                'card_id' => $id,
-                'type' => $type->name,
+                'types' => $type,
             ],
+            [
+                'id[=]' => $id,
+            ]
         );
     }
 }

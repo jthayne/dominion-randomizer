@@ -49,7 +49,7 @@ readonly class Details
                 'type',
             ],
             [
-                'id[=]' => $id,
+                'card_id[=]' => $id,
             ]
         );
 
