@@ -17,5 +17,5 @@ enum Abilities: int
     case Trash = 16;
     case Exile = 32;
     case Gain = 64;
-    case VP = 128;
+    case Vp = 128;
 }
