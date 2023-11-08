@@ -26,6 +26,7 @@ readonly class Details
                 'text',
                 'is_kingdom_card',
                 'cost',
+                'types',
             ],
             [
                 'id[=]' => $id,
@@ -35,6 +36,8 @@ readonly class Details
         if (empty($result) === false) {
             $result['set'] = CardSet::tryFromName($result['set']);
             $result['types'] = $this->getTypesForCard($id);
+            $result['abilities'] = $this->getAbilitiesForCard($id);
+            $result['ability_score'] = $this->calculateAbilityBinaryScore($result['abilities']);
         }
 
         return $result ?? [];
@@ -60,5 +63,51 @@ readonly class Details
         }
 
         return $return;
+    }
+
+    final public function getAbilitiesForCard(int $id): array
+    {
+        $abiities = $this->medoo->get(
+            'cards',
+            [
+                'actions',
+                'cards',
+                'buys',
+                'coins',
+                'trash',
+                'exile',
+                'gain',
+                'vp',
+            ],
+            [
+                'id[=]' => $id,
+            ]
+        );
+    }
+    final public function hasAbility(int $id, Abilities $ability): bool
+    {
+        $details = $this->getByID($id);
+
+        if ($details['abilities'] & $ability->value) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private function calculateAbilityBinaryScore(array $abilities): int
+    {
+        $score = 0;
+
+        foreach ($abilities as $ability => $flag) {
+            if ($flag === 1) {
+                $ability = ucfirst($ability);
+
+                $value = Abilities::tryFromName($ability);
+
+                $score += $value;
+            }
+        }
+
     }
 }
