@@ -30,11 +30,4 @@ final readonly class Cards
 
         return array_rand($cards);
     }
-
-    public function getRandomKingdom(): array
-    {
-        $cards = $this->getAllCards();
-
-        return array_rand($cards, 10);
-    }
 }
