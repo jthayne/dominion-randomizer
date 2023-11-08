@@ -67,7 +67,7 @@ readonly class Details
 
     final public function getAbilitiesForCard(int $id): array
     {
-        $abiities = $this->medoo->get(
+        return $this->medoo->get(
             'cards',
             [
                 'actions',
@@ -109,5 +109,6 @@ readonly class Details
             }
         }
 
+        return $score;
     }
 }
