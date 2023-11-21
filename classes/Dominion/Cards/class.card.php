@@ -38,4 +38,17 @@ final readonly class Card
 
         return $this->medoo->id();
     }
+
+    public function addTypeToCard(int $id, int $type): void
+    {
+        $this->medoo->update(
+            'cards',
+            [
+                'types' => $type,
+            ],
+            [
+                'id[=]' => $id,
+            ]
+        );
+    }
 }

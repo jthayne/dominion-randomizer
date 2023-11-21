@@ -9,6 +9,7 @@ use Dominion\Cards\Cards;
 final class Kingdom
 {
     private array $cardList = [];
+    private array $setsInUse = [];
 
     public function __construct(private readonly Cards $cards) {}
 

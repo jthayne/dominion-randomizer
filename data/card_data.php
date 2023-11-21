@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Dominion\Cards\Card;
 use Dominion\Cards\Type;
 use Dominion\CardSet;
-use Dominion\CardType;
 
 $row = 1;
 $firstRow = true;
@@ -103,7 +102,7 @@ if (($handle = fopen(__DIR__ . "/cards.csv", "r")) !== FALSE) {
                     $types = explode(' - ', $value);
 
                     foreach ($types as $type) {
-                        $cards[$set][$row]['types'][] = CardType::tryFromName($type);
+                        $cards[$set][$row]['types'][] = Type::tryFromName($type);
                     }
 
                     if (in_array(strtolower($value), $nonKingdomCardTypes) === true) {
@@ -140,12 +139,11 @@ if (($handle = fopen(__DIR__ . "/cards.csv", "r")) !== FALSE) {
 }
 
 $card = new Card($db);
-$cardType = new Type($db);
 foreach ($cards as $set => $cardlist) {
     foreach ($cardlist as $data) {
         $cardId = $card->add($data);
         foreach ($data['types'] as $type) {
-            $cardType->addTypeToCard((int) $cardId, $type);
+            $card->addTypeToCard((int) $cardId, $type);
         }
     }
 }

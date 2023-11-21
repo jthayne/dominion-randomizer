@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Dominion\Cards;
 
 use Dominion\CardSet;
-use Dominion\CardType;
 use Medoo\Medoo;
 
 readonly class Details
@@ -58,7 +57,7 @@ readonly class Details
 
         if (is_array($result) === true) {
             foreach ($result as $type) {
-                $return[] = CardType::tryFromName($type['type']);
+                $return[] = Type::tryFromName($type['type']);
             }
         }
 

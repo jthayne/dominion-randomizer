@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Dominion;
+namespace Dominion\Cards;
 
 use Cerbero\Enum\Concerns\Enumerates;
 
-enum CardType: int
+enum Type: int
 {
     use Enumerates;
 
