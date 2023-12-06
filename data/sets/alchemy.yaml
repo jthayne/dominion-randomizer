@@ -4,136 +4,136 @@ cards:
     cost:
       treasure: 3
       potion: 1
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - potion
 
   - name: Apothecary
     cost:
       treasure: 2
       potion: 1
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - potion
 
   - name: Apprentice
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - trash
+    trigger:
+      - none
 
   - name: Familiar
     cost:
       treasure: 3
       potion: 1
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - action
+      - curse
+    trigger:
+      - potion
 
   - name: Golem
     cost:
       treasure: 4
       potion: 1
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - potion
 
   - name: Herbalist
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+    trigger:
+      - none
 
   - name: Philosopher's Stone
     cost:
       treasure: 3
       potion: 1
-    isAttack: false
-    isAction: false
-    isTreasure: true
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - treasure
+    ability:
+      - coin
+    trigger:
+      - potion
 
   - name: Possession
     cost:
       treasure: 6
       potion: 1
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - gain
+    trigger:
+      - potion
 
   - name: Scrying Pool
     cost:
       treasure: 2
       potion: 1
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - action
+    trigger:
+      - potion
 
   - name: Transmute
     cost:
-      treasure: 0
       potion: 1
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - potion
 
   - name: University
     cost:
       treasure: 2
       potion: 1
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - gain
+    trigger:
+      - potion
 
   - name: Vineyard
     cost:
-      treasure: 0
       potion: 1
-    isAttack: false
-    isAction: false
-    isTreasure: false
-    isVictory: true
-    isTrashing: false
-    isReaction: false
+    type:
+      - victory
+    ability:
+      - vp
+    trigger:
+      - potion
