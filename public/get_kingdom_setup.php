@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
+use Dominion\Cards\Card;
 use Dominion\Cards\Cards;
+use Dominion\Cards\Details;
 use Dominion\Kingdom\Kingdom;
 
 require_once __DIR__ . '/../bootstrap/init.php';
@@ -13,4 +15,12 @@ $kingdom = new Kingdom(new Cards($db));
 
 $kingdom->buildKingdom();
 
-print_r($kingdom->getKingdomList());
+$cardData = new Details($db);
+
+$detailedList = [];
+$cardList = $kingdom->getKingdomList();
+foreach ($cardList as $index => $card) {
+    $detailedList[] = $cardData->getByID($card['id']);
+}
+
+print_r($detailedList);

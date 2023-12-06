@@ -36,6 +36,7 @@ readonly class Details
             $result['types'] = $this->getTypesForCard($id);
             $result['abilities'] = $this->getAbilitiesForCard($id);
             $result['ability_score'] = $this->calculateAbilityBinaryScore($result['abilities']);
+            $result['triggers'] = $this->getTriggersForCard($id);
         }
 
         return $result ?? [];
@@ -82,6 +83,22 @@ readonly class Details
             ]
         );
     }
+
+    final public function getTriggersForCard(int $id): array
+    {
+        $triggers = $this->medoo->get(
+            'cards',
+            [
+                'triggers',
+            ],
+            [
+                'id[=]' => $id,
+            ]
+        );
+
+        return unserialize($triggers['triggers']);
+    }
+
     final public function hasAbility(int $id, Abilities $ability): bool
     {
         $details = $this->getByID($id);
@@ -103,7 +120,7 @@ readonly class Details
 
                 $value = Abilities::tryFromName($ability);
 
-                $score += $value;
+                $score += $value->value;
             }
         }
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Dominion\Kingdom;
 
 use Dominion\Cards\Cards;
+use Random\Randomizer;
 
 final class Kingdom
 {
@@ -25,9 +26,17 @@ final class Kingdom
 
     public function getRandomKingdom(int $size): array
     {
-        $cards = $this->cards->getAllCards();
+        $cards = $this->cards->getAllKingdomCards();
 
-        return array_rand($cards, $size);
+        $selectedKeys = array_rand($cards, $size);
+
+        foreach ($selectedKeys as $key) {
+            $this->cardList[] = $cards[$key];
+        }
+
+        $randomizer = new Randomizer();
+
+        return $randomizer->shuffleArray($this->cardList);
     }
 
     public function replaceCard(int $oldCard): void

@@ -24,10 +24,24 @@ final readonly class Cards
         );
     }
 
+    public function getAllKingdomCards(): array
+    {
+        return $this->medoo->select(
+            'cards',
+            [
+                'id',
+                'name',
+            ],
+            [
+                'is_kingdom_card[=]' => 1,
+            ]
+        );
+    }
+
     public function getRandomCard(): int
     {
         $cards = $this->getAllCards();
 
-        return array_rand($cards);
+        return $cards[array_rand($cards)];
     }
 }
