@@ -3,708 +3,564 @@ cards:
   - name: Amulet
     cost:
       treasure: 3
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+    ability:
+      - coin
+      - trash
+      - draw
+      - gain
+    trigger:
+      - none
 
   - name: Artificer
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
+      - discard
+      - gain
+    trigger:
+      - none
 
   - name: Bridge Troll
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: true
-    isDuration: true
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - cost
+      - buy
+    trigger:
+      - tokens
 
   - name: Caravan Guard
     cost:
       treasure: 3
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: true
-    isDrawer: true
-    isReaction: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+      - reaction
+    ability:
+      - card
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Distant Lands
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: true
+    type:
+      - action
+      - reserve
+      - victory
+    ability:
+      - vp
+    trigger:
+      - tavern
 
   - name: Dungeon
     cost:
       treasure: 3
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: true
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+    ability:
+      - action
+      - card
+      - discard
+    trigger:
+      - none
 
   - name: Duplicate
     cost:
       treasure: 4
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - reserve
+    ability:
+      - gain
+    trigger:
+      - tavern
 
   - name: Gear
     cost:
       treasure: 3
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: true
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Giant
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+      - curse
+      - trash
+    trigger:
+      - none
 
   - name: Guide
     cost:
       treasure: 3
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - reserve
+    ability:
+      - card
+      - action
+      - redraw
+    trigger:
+      - tavern
 
   - name: Haunted Woods
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDuration: true
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Hireling
     cost:
       treasure: 6
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: true
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Lost City
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Magpie
     cost:
       treasure: 4
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - gain
+    trigger:
+      - none
 
   - name: Messenger
     cost:
       treasure: 4
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+      - discard
+      - gain
+    trigger:
+      - none
 
   - name: Miser
     cost:
       treasure: 4
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - tavern
 
   - name: Page
     cost:
       treasure: 2
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - traveller
+    ability:
+      - card
+      - action
+    trigger:
+      - treasure_hunter
 
   - name: Peasant
     cost:
       treasure: 2
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDuration: false
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - traveller
+    ability:
+      - buy
+      - coin
+    trigger:
+      - Soldier
 
   - name: Port
     cost:
       treasure: 4
-      potion: 0
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - gain
+    trigger:
+      - none
 
   - name: Ranger
     cost:
       treasure: 4
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDuration: false
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - buy
+      - card
+    trigger:
+      - tokens
 
   - name: Ratcatcher
     cost:
       treasure: 2
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isReaction: false
-    isReserve: true
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - reserve
+    ability:
+      - card
+      - action
+      - trash
+    trigger:
+      - tavern
 
   - name: Raze
     cost:
       treasure: 2
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - trash
+    trigger:
+      - none
 
   - name: Relic
     cost:
       treasure: 5
-      potion: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: false
-    isTreasure: true
-    isVictory: false
+    type:
+      - treasure
+      - attack
+    ability:
+      - none
+    trigger:
+      - tokens
 
   - name: Royal Carriage
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: true
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - reserve
+    ability:
+      - action
+    trigger:
+      - tavern
 
   - name: Storyteller
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isMultiDrawer: true
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Swamp Hag
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDuration: true
-    isDrawer: false
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - coin
+      - curse
+    trigger:
+      - none
 
   - name: Transmogrify
     cost:
       treasure: 4
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: true
-    isReaction: false
-    isReserve: true
-    isTrashing: true
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - reserve
+    ability:
+      - action
+      - trash
+      - gain
+    trigger:
+      - tavern
 
   - name: Treasure Trove
     cost:
       treasure: 5
-      potion: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: false
-    isTrashing: false
-    isTraveller: false
-    isTreasure: true
-    isVictory: false
+    type:
+      - treasure
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Wine Merchant
     cost:
       treasure: 5
-      potion: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: true
-    isTrashing: false
-    isTraveller: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - reserve
+    ability:
+      - coin
+      - buy
+    trigger:
+      - tavern
 
   - name: Coin of the Realm
-    cost: 
+    cost:
       treasure: 2
-      potion: 0
-    isAction: false
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isDrawer: false
-    isReaction: false
-    isReserve: true
-    isTrashing: false
-    isTraveller: false
-    isTreasure: true
-    isVictory: false
+    type:
+      - treasure
+      - reserve
+    ability:
+      - action
+    trigger:
+      - tavern
 
 events:
   - name: Mission
     cost:
       treasure: 4
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - turn
+    trigger:
+      - none
 
   - name: Scouting Party
     cost:
       treasure: 2
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: true
-    isDrawer: true
-    isReaction: false
-    isTrashing: false
-  
+    type:
+      - event
+    ability:
+      - buy
+    trigger:
+      - none
+
   - name: Pathfinding
     cost:
       treasure: 8
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: true
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - none
+    trigger:
+      - tokens
 
   - name: Bonfire
     cost:
       treasure: 3
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: true
-    isReaction: false
-    isTrashing: true
+    type:
+      - event
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Pilgrimage
     cost:
       treasure: 4
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - gain
+    trigger:
+      - token
 
   - name: Training
     cost:
       treasure: 6
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - coin
+    trigger:
+      - token
 
   - name: Ball
     cost:
       treasure: 5
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - gain
+    trigger:
+      - token
 
   - name: Travelling Fair
     cost:
       treasure: 2
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: true
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - buy
+    trigger:
+      - none
 
   - name: Save
     cost:
       treasure: 1
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: true
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - buy
+    trigger:
+      - none
 
   - name: Borrow
     cost:
       treasure: 0
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: true
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - buy
+      - coin
+    trigger:
+      - token
 
   - name: Lost Arts
     cost:
       treasure: 6
-      potion: 0
-    isActionSupplier: true
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - action
+    trigger:
+      - token
 
   - name: Trade
     cost:
       treasure: 5
-      potion: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: true
+    type:
+      - event
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Raid
     cost:
       treasure: 5
-      potion: 0
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - gain
+    trigger:
+      - token
 
   - name: Quest
     cost:
       treasure: 0
-      potion: 0
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
-  
+    type:
+      - event
+    ability:
+      - discard
+      - gain
+    trigger:
+      - none
+
   - name: Expedition
     cost:
       treasure: 3
-      potion: 0
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - draw
+    trigger:
+      - none
 
   - name: Alms
     cost:
       treasure: 0
-      potion: 0
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Inheritance
     cost:
       treasure: 7
-      potion: 0
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - none
+    trigger:
+      - token
 
   - name: Ferry
     cost:
       treasure: 3
-      potion: 0
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    type:
+      - event
+    ability:
+      - none
+    trigger:
+      - token
 
   - name: Plan
     cost:
       treasure: 3
-      potion: 0
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: true
+    type:
+      - event
+    ability:
+      - trash
+    trigger:
+      - token
 
   - name: Seaway
     cost:
-      treasure: 3
-      potion: 0
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+      treasure: 5
+    type:
+      - event
+    ability:
+      - gain
+      - buy
+    trigger:
+      - token
