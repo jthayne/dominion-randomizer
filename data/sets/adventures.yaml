@@ -39,7 +39,7 @@ cards:
       - cost
       - buy
     trigger:
-      - tokens
+      - token_minuscoin
 
   - name: Caravan Guard
     cost:
@@ -65,7 +65,7 @@ cards:
     ability:
       - vp
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Dungeon
     cost:
@@ -89,7 +89,7 @@ cards:
     ability:
       - gain
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Gear
     cost:
@@ -126,7 +126,7 @@ cards:
       - action
       - redraw
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Haunted Woods
     cost:
@@ -195,7 +195,7 @@ cards:
     ability:
       - coin
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Page
     cost:
@@ -207,7 +207,7 @@ cards:
       - card
       - action
     trigger:
-      - treasure_hunter
+      - upgrade_treasurehunter
 
   - name: Peasant
     cost:
@@ -219,7 +219,7 @@ cards:
       - buy
       - coin
     trigger:
-      - Soldier
+      - upgrade_soldier
 
   - name: Port
     cost:
@@ -242,7 +242,7 @@ cards:
       - buy
       - card
     trigger:
-      - tokens
+      - token_journey
 
   - name: Ratcatcher
     cost:
@@ -255,7 +255,7 @@ cards:
       - action
       - trash
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Raze
     cost:
@@ -277,7 +277,7 @@ cards:
     ability:
       - none
     trigger:
-      - tokens
+      - token_minuscard
 
   - name: Royal Carriage
     cost:
@@ -288,7 +288,7 @@ cards:
     ability:
       - action
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Storyteller
     cost:
@@ -325,7 +325,7 @@ cards:
       - trash
       - gain
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Treasure Trove
     cost:
@@ -347,7 +347,7 @@ cards:
       - coin
       - buy
     trigger:
-      - tavern
+      - mat_tavern
 
   - name: Coin of the Realm
     cost:
@@ -358,7 +358,7 @@ cards:
     ability:
       - action
     trigger:
-      - tavern
+      - mat_tavern
 
 events:
   - name: Mission
@@ -389,7 +389,7 @@ events:
     ability:
       - none
     trigger:
-      - tokens
+      - token_pluscard
 
   - name: Bonfire
     cost:
@@ -409,7 +409,7 @@ events:
     ability:
       - gain
     trigger:
-      - token
+      - token_journey
 
   - name: Training
     cost:
@@ -419,7 +419,7 @@ events:
     ability:
       - coin
     trigger:
-      - token
+      - token_plusaction
 
   - name: Ball
     cost:
@@ -429,7 +429,7 @@ events:
     ability:
       - gain
     trigger:
-      - token
+      - token_minuscoin
 
   - name: Travelling Fair
     cost:
@@ -460,7 +460,7 @@ events:
       - buy
       - coin
     trigger:
-      - token
+      - token_minuscard
 
   - name: Lost Arts
     cost:
@@ -470,7 +470,7 @@ events:
     ability:
       - action
     trigger:
-      - token
+      - token_plusaction
 
   - name: Trade
     cost:
@@ -491,7 +491,7 @@ events:
     ability:
       - gain
     trigger:
-      - token
+      - token_minuscard
 
   - name: Quest
     cost:
@@ -532,7 +532,7 @@ events:
     ability:
       - none
     trigger:
-      - token
+      - token_estate
 
   - name: Ferry
     cost:
@@ -542,7 +542,7 @@ events:
     ability:
       - none
     trigger:
-      - token
+      - token_minuscost
 
   - name: Plan
     cost:
@@ -552,7 +552,7 @@ events:
     ability:
       - trash
     trigger:
-      - token
+      - token_trashing
 
   - name: Seaway
     cost:
@@ -563,4 +563,4 @@ events:
       - gain
       - buy
     trigger:
-      - token
+      - token_plusbuy
