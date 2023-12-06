@@ -13,9 +13,9 @@ class Custom
 
     }
 
-    public function list()
+    final public function list(): array
     {
-
+        return [];
     }
 
     final public function setLimit(int $limit = 2): void

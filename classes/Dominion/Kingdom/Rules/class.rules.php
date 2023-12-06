@@ -10,7 +10,7 @@ class Rules
     {
 
     }
-    public function addSetRules(...$sets)
+    final public function addSetRules(...$sets): void
     {
 
     }
