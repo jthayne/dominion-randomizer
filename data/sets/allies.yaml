@@ -1,718 +1,422 @@
 name: Allies
-cards:  
+cards:
   - name: Bauble
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
+    type:
+      - treasure
+      - liaison
+    ability:
+      - buy
+      - coin
+      - favor
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Sycophant
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - liaison
+    ability:
+      - action
+      - coin
+      - favor
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Townsfolk
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-  
+    type:
+      - action
+      - townsfolk
+    ability:
+      - card
+      - action
+      - coin
+      - draw
+    trigger:
+      - none
+
   - name: Augurs
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
-  
+    type:
+      - action
+      - attack
+      - augur
+    ability:
+      - buy
+      - trash
+      - gain
+      - action
+      - curse
+      - card
+    trigger:
+      - none
+
   - name: Clashes
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: true
-  
+    type:
+      - action
+      - clash
+      - attack
+      - duration
+      - victory
+    ability:
+      - card
+      - action
+      - coin
+      - vp
+      - gain
+    trigger:
+      - none
+
   - name: Forts
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: true
-  
+    type:
+      - action
+      - fort
+      - duration
+      - victory
+    ability:
+      - coin
+      - card
+      - gain
+      - action
+    trigger:
+      - token_base
+
   - name: Importer
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-  
+    type:
+      - action
+      - duration
+      - liaison
+    ability:
+      - gain
+    trigger:
+      - mat_favor
+      - token_favor_four
+      - ally
+
   - name: Merchant Camp
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Odysseys
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: true
+    type:
+      - action
+      - odyssey
+      - duration
+      - treasure
+      - victory
+    ability:
+      - card
+      - action
+      - gain
+    trigger:
+      - none
 
   - name: Sentinel
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Underling
     cost:
-      treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+      treasure: 3
+    type:
+      - action
+      - liaison
+    ability:
+      - card
+      - action
+      - favor
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Wizards
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - wizard
+      - liaison
+      - duration
+      - attack
+    ability:
+      - action
+      - trash
+      - favor
+      - gain
+      - card
+      - curse
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Broker
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - liaison
+    ability:
+      - trash
+      - card
+      - action
+      - favor
+      - coin
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Carpenter
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - gain
+      - trash
+    trigger:
+      - none
 
   - name: Courier
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Innkeeper
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Royal Galley
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Town
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - buy
+      - coin
+    trigger:
+      - none
 
   - name: Barbarian
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+      - trash
+      - gain
+      - curse
+    trigger:
+      - none
 
   - name: Capital City
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Contract
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
+    type:
+      - treasure
+      - duration
+      - liaison
+    ability:
+      - favor
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Emissary
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - liaison
+    ability:
+      - card
+      - action
+      - favor
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Galleria
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - coin
+      - buy
+    trigger:
+      - none
 
   - name: Guildmaster
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: true
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - liaison
+    ability:
+      - coin
+      - favor
+    trigger:
+      - mat_favor
+      - token_favor
+      - ally
 
   - name: Highwayman
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Hunter
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
 
   - name: Modify
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - trash
+      - card
+      - action
+      - gain
+    trigger:
+      - none
 
   - name: Skirmisher
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - action
+      - coin
+    trigger:
+      - none
+
   - name: Specialist
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Swap
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - gain
+    trigger:
+      - none
 
   - name: Marquis
     cost:
       treasure: 6
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    
+    type:
+      - action
+    ability:
+      - buy
+      - card
+    trigger:
+      - none
+
 allies:
   - name: Architects' Guild
   - name: Band of Nomads
