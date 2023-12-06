@@ -22,7 +22,6 @@ readonly class Details
                 'name',
                 'set',
                 'edition',
-                'text',
                 'is_kingdom_card',
                 'cost',
                 'types',

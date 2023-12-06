@@ -23,7 +23,6 @@ final readonly class Card
                 'name' => $data['name'],
                 'set' => $data['set']->value,
                 'edition' => $data['edition'],
-                'text' => $data['text'],
                 'actions' => $data['actions'],
                 'cards' => $data['cards'],
                 'buys' => $data['buys'],
@@ -33,6 +32,7 @@ final readonly class Card
                 'gain' => $data['gain'],
                 'vp' => $data['vp'],
                 'is_kingdom_card' => $data['is_kingdom_card'],
+                'triggers' => $data['triggers'],
             ]
         );
 
@@ -48,6 +48,45 @@ final readonly class Card
             ],
             [
                 'id[=]' => $id,
+            ]
+        );
+    }
+
+    public function addTriggersToCard(int $id, string $triggers): void
+    {
+        $this->medoo->update(
+            'cards',
+            [
+                'triggers' => $triggers,
+            ],
+            [
+                'id[=]' => $id,
+            ],
+        );
+    }
+
+    public function getCardByName(string $name): ?array
+    {
+        return $this->medoo->get(
+            'cards',
+            [
+                'id',
+                'name',
+                'set',
+                'edition',
+                'actions',
+                'cards',
+                'buys',
+                'coins',
+                'trash',
+                'exile',
+                'gain',
+                'vp',
+                'is_kingdom_card',
+                'triggers',
+            ],
+            [
+                'name[=]' => $name,
             ]
         );
     }

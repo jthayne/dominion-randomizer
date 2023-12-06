@@ -14,7 +14,6 @@ $structure = [
     'set',
     'types',
     'cost',
-    'text',
     'actions',
     'cards',
     'buys',
