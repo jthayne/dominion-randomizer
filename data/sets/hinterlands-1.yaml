@@ -1,105 +1,91 @@
-name: Hinterlands (2nd)
+name: Hinterlands (1st Edition)
 cards:
-  - name: Trail
+  - name: Silk Road
     cost:
       treasure: 4
     type:
       - action
-      - reaction
     ability:
       - action
-      - card
     trigger:
       - none
 
-  - name: Weaver
+  - name: Ill-Gotten Gains
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
+
+  - name: Embassy
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
+
+  - name: Nomad Camp
     cost:
       treasure: 4
     type:
       - action
-      - reaction
     ability:
-      - gain
-    trigger:
-      - none
-
-  - name: Berserker
-    cost:
-      treasure: 5
-    type:
       - action
-      - attack
-    ability:
-      - gain
     trigger:
       - none
 
-  - name: Cauldron
-    cost:
-      treasure: 5
-    type:
-      - treasure
-      - attack
-    ability:
-      - buy
-      - curse
-    trigger:
-      - none
-
-  - name: Guard Dog
+  - name: Oracle
     cost:
       treasure: 3
     type:
       - action
-      - reaction
     ability:
-      - card
+      - action
     trigger:
       - none
 
-  - name: Nomads
+  - name: Noble Brigand
     cost:
       treasure: 4
     type:
       - action
     ability:
-      - buy
-      - coin
-    trigger:
-      - none
-
-  - name: Souk
-    cost:
-      treasure: 5
-    type:
       - action
-    ability:
-      - buy
-      - coin
-      - trash
     trigger:
       - none
 
-  - name: Wheelwright
+  - name: Mandarin
     cost:
       treasure: 5
     type:
       - action
     ability:
       - action
-      - card
-      - gain
     trigger:
       - none
 
-  - name: Witch's Hut
+  - name: Cache
     cost:
       treasure: 5
     type:
       - action
-      - attack
     ability:
-      - card
-      - curse
+      - action
+    trigger:
+      - none
+
+  - name: Duchess
+    cost:
+      treasure: 2
+    type:
+      - action
+    ability:
+      - action
     trigger:
       - none

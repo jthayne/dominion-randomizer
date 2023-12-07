@@ -2,664 +2,541 @@ name: Empires
 cards:
   - name: Engineer
     cost:
-      treasure: 0
-      potion: 0
       debt: 4
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - gain
+      - trash
+    trigger:
+      - token_debt
 
   - name: City Quarter
     cost:
-      treasure: 0
-      potion: 0
       debt: 8
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - token_debt
 
   - name: Overlord
     cost:
-      treasure: 0
-      potion: 0
       debt: 8
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - command
+    ability:
+      - none
+    trigger:
+      - token_debt
 
   - name: Royal Blacksmith
     cost:
-      treasure: 0
-      potion: 0
       debt: 8
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Encampment/Plunder
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - treasure
+    ability:
+      - action
+      - card
+      - vp
+    trigger:
+      - token_vp
 
   - name: Patrician/Emporium
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - coin
+      - vp
+    trigger:
+      - token_vp
 
   - name: Settlers/Bustling Village
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Castles
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: true
+    type:
+      - treasure
+      - victory
+      - castle
+      - action
+    ability:
+      - vp
+      - trash
+      - gain
+      - coin
+    trigger:
+      - token_vp
 
   - name: Catapult/Rocks
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: true
-    isDuration: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - attack
+      - treasure
+    ability:
+      - coin
+      - trash
+      - curse
+      - gain
+    trigger:
+      - none
 
   - name: Chariot Race
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - coin
+      - vp
+    trigger:
+      - token_vp
 
   - name: Enchantress
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - attack
+      - duration
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Farmers' Market
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: false
-    isDuration: false
-    isGathering: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - gathering
+    ability:
+      - buy
+      - trash
+      - vp
+      - coin
+    trigger:
+      - token_vp
 
   - name: Gladiator/Fortune
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - treasure
+    ability:
+      - coin
+      - trash
+      - buy
+      - gain
+    trigger:
+      - token_debt
 
   - name: Sacrifice
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - trash
+      - card
+      - action
+      - coin
+      - vp
+    trigger:
+      - token_vp
 
   - name: Temple
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isGathering: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
+    type:
+      - action
+      - gathering
+    ability:
+      - vp
+      - trash
+    trigger:
+      - token_vp
 
   - name: Villa
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
+    type:
+      - action
+    ability:
+      - action
+      - buy
+      - coin
+    trigger:
+      - none
 
   - name: Archive
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: true
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
+    type:
+      - action
+      - duration
+    ability:
+      - action
+    trigger:
+      - none
 
   - name: Capital
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: true
+    type:
+      - treasure
+    ability:
+      - buy
+    trigger:
+      - token_debt
 
   - name: Charm
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: false
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: true
+    type:
+      - treasure
+    ability:
+      - buy
+      - coin
+      - gain
+    trigger:
+      - none
 
   - name: Crown
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: true
+    type:
+      - action
+      - treasure
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Forum
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - buy
+    trigger:
+      - none
 
   - name: Groundskeeper
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - vp
+    trigger:
+      - token_vp
 
   - name: Legionary
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: false
-    isDuration: false
-    isGathering: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Wild Hunt
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDuration: false
-    isGathering: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
+    type:
+      - action
+      - gathering
+    ability:
+      - card
+      - gain
+      - vp
+    trigger:
+      - token_vp
 
 events:
   - name: Triumph
     cost:
-      treasure: 0
-      potion: 0
       debt: 5
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - gain
+      - vp
+    trigger:
+      - token_vp
+      - token_debt
 
   - name: Annex
     cost:
-      treasure: 0
-      potion: 0
       debt: 8
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - gain
+    trigger:
+      - token_debt
 
   - name: Donate
     cost:
-      treasure: 0
-      potion: 0
       debt: 8
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: true
+    ability:
+      - trash
+    trigger:
+      - token_debt
 
   - name: Advance
     cost:
       treasure: 0
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: true
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Delve
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: true
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - buy
+      - gain
+    trigger:
+      - none
 
   - name: Tax
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - none
+    trigger:
+      - token_debt
 
   - name: Banquet
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Ritual
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: true
+    ability:
+      - gain
+      - curse
+      - trash
+      - vp
+      - coin
+    trigger:
+      - token_vp
 
   - name: Salt the Earth
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - vp
+      - trash
+    trigger:
+      - token_vp
 
   - name: Wedding
     cost:
       treasure: 4
-      potion: 0
       debt: 3
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - vp
+      - gain
+    trigger:
+      - token_vp
+      - token_debt
 
   - name: Windfall
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Conquest
     cost:
       treasure: 6
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - gain
+      - vp
+    trigger:
+      - token_vp
 
   - name: Dominate
     cost:
       treasure: 14
-      potion: 0
-      debt: 0
-    isActionSupplier: false
-    isBuySupplier: false
-    isDrawer: false
-    isReaction: false
-    isTrashing: false
+    ability:
+      - gain
+      - vp
+    trigger:
+      - token_vp
 
 landmarks:
   - name: Aqueduct
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Arena
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Bandit Fort
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Basilica
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Baths
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Battlefield
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Colonnade
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Defiled Shrine
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Fountain
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Keep
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Labyrinth
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Mountain Pass
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_debt
+      - token_vp
 
   - name: Museum
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Obelisk
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Orchard
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Palace
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Tomb
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - vp
+    trigger:
+      - token_vp
 
   - name: Tower
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Triumphal Arch
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Wall
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Wolf Den
-    cost:
-      treasure: 0
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - none

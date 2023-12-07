@@ -3,153 +3,144 @@ cards:
   - name: Harvest
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Young Witch
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - curse
+    trigger:
+      - bane
 
   - name: Horse Traders
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: true
-    isBuySupplier: true
+    type:
+      - action
+      - reaction
+    ability:
+      - buy
+      - coin
+      - card
+    trigger:
+      - none
 
   - name: Tournament
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - coin
+    trigger:
+      - none
 
   - name: Hamlet
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - buy
+    trigger:
+      - none
 
   - name: Jester
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+      - curse
+    trigger:
+      - none
 
   - name: Fortune Teller
     cost:
       treasure: 3
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Fairgrounds
     cost:
       treasure: 6
-      potion: 0
-    isAttack: false
-    isAction: false
-    isTreasure: false
-    isVictory: true
-    isTrashing: false
-    isReaction: false
+    type:
+      - victory
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Horn of Plenty
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: false
-    isTreasure: true
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - treasure
+    ability:
+      - gain
+      - trash
+    trigger:
+      - none
 
   - name: Hunting Party
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Menagerie
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Farming Village
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
 
   - name: Remake
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none

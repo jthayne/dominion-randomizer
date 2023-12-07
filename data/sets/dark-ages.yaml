@@ -3,406 +3,411 @@ cards:
   - name: Armory
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Vagrant
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Catacombs
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Count
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - gain
+      - coin
+      - trash
+    trigger:
+      - none
 
   - name: Knights
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+      - knight
+      - victory
+    ability:
+      - trash
+      - action
+      - gain
+      - coin
+      - card
+      - buy
+    trigger:
+      - none
 
   - name: Fortress
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Scavenger
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Market Square
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: true
-    isBuySupplier: true
+    type:
+      - action
+      - reaction
+    ability:
+      - action
+      - card
+      - buy
+      - gain
+    trigger:
+      - none
 
   - name: Urchin
     cost:
       treasure: 3
-      potion: 0
-    isAttack: true
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - action
+      - card
+      - trash
+    trigger:
+      - mercenary
 
   - name: Rats
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Sage
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
 
   - name: Forager
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - buy
+      - trash
+      - coin
+    trigger:
+      - none
 
   - name: Altar
     cost:
       treasure: 6
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Procession
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Squire
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - coin
+      - buy
+      - gain
+    trigger:
+      - none
 
   - name: Beggar
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: true
+    type:
+      - action
+      - reaction
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Poor House
     cost:
       treasure: 1
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Death Cart
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+      - looter
+    ability:
+      - trash
+      - coin
+    trigger:
+      - ruins
 
   - name: Wandering Minstrel
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Ironmonger
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Hermit
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
-    isDrawer: true
-    isMultiDrawer: true
+    type:
+      - action
+    ability:
+      - action
+      - trash
+      - gain
+    trigger:
+      - madman
 
   - name: Pillage
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - gain
+    trigger:
+      - spoils
 
   - name: Mystic
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Storeroom
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+    trigger:
+      - none
 
   - name: Hunting Grounds
     cost:
       treasure: 6
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+      - gain
+    trigger:
+      - none
 
   - name: Graverobber
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - gain
+      - trash
+    trigger:
+      - none
 
   - name: Counterfeit
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: false
-    isTreasure: true
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - treasure
+    ability:
+      - twice
+      - buy
+    trigger:
+      - none
 
   - name: Cultist
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+      - looter
+    ability:
+      - card
+      - trash
+    trigger:
+      - ruins
 
   - name: Rogue
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+      - gain
+      - trash
+    trigger:
+      - none
 
   - name: Marauder
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+      - looter
+    ability:
+      - gain
+    trigger:
+      - spoils
+      - ruins
 
   - name: Band of Misfits
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - command
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Junk Dealer
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - coin
+      - trash
+    trigger:
+      - none
 
   - name: Feodum
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: false
-    isTreasure: false
-    isVictory: true
-    isTrashing: false
-    isReaction: false
+    type:
+      - victory
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Rebuild
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Bandit Camp
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - gain
+    trigger:
+      - spoils

@@ -1,151 +1,152 @@
 name: Guilds
-cards:  
+cards:
   - name: Advisor
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
 
   - name: Baker
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - coffer
+    trigger:
+      - mat_coffer
+      - token_coin
 
   - name: Butcher
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - coffer
+      - trash
+      - gain
+    trigger:
+      - mat_coffer
+      - token_coin
 
   - name: Candlestick Maker
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - buy
+      - coffer
+    trigger:
+      - mat_coffer
+      - token_coin
 
   - name: Doctor
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Herald
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Journeyman
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Masterpiece
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: false
-    isTreasure: true
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - treasure
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Merchant Guild
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+      - coffer
+    trigger:
+      - mat_coffer
+      - token_coin
 
   - name: Plaza
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - coffer
+    trigger:
+      - mat_coffer
+      - token_coin
 
   - name: Soothsayer
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - gain
+      - curse
+    trigger:
+      - none
 
   - name: Stonemason
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Taxman
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
