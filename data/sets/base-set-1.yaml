@@ -1,0 +1,67 @@
+name: Dominion (1st Edition)
+cards:
+  - name: Adventurer
+    cost:
+      treasure: 6
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - none
+
+  - name: Chancellor
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
+
+  - name: Feast
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
+
+  - name: Spy
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - action
+    trigger:
+      - none
+
+  - name: Thief
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
+
+  - name: Woodcutter
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+    trigger:
+      - none

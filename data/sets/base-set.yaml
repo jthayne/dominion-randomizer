@@ -1,295 +1,314 @@
 name: Dominion
-cards:  
+cards:
   - name: Adventurer
     cost:
       treasure: 6
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Bureaucrat
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Cellar
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
 
   - name: Chancellor
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Chapel
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Council Room
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - card
+      - buy
+    trigger:
+      - none
 
   - name: Feast
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Festival
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - action
+      - buy
+      - coin
+    trigger:
+      - none
 
   - name: Gardens
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: false
-    isTreasure: false
-    isVictory: true
-    isTrashing: false
-    isReaction: false
+    type:
+      - victory
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Laboratory
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Library
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Market
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - buy
+      - coin
+    trigger:
+      - none
 
   - name: Militia
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Mine
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Moat
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: true
+    type:
+      - action
+      - reaction
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Moneylender
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Remodel
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Smithy
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Spy
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Thief
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Throne Room
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Village
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Witch
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - curse
+    trigger:
+      - none
 
   - name: Woodcutter
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isBuyProvider: true
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+    trigger:
+      - none
 
   - name: Workshop
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - gain
+    trigger:
+      - none
+supply:
+  - name: Copper
+    cost:
+      treasure: 0
+    type:
+      - treasure
+
+  - name: Silver
+    cost:
+      treasure: 3
+    type:
+      - treasure
+
+  - name: Gold
+    cost:
+      treasure: 6
+    type:
+      - treasure
+
+  - name: Estate
+    cost:
+      treasure: 2
+    type:
+      - victory
+
+  - name: Duchy
+    cost:
+      treasure: 5
+    type:
+      - victory
+
+  - name: Province
+    cost:
+      treasure: 8
+    type:
+      - victory
+
+  - name: Curse
+    cost:
+      treasure: 0
+    type:
+      - curse
