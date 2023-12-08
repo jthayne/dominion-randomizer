@@ -1,111 +1,90 @@
-name: Seaside (2nd)
+name: Seaside
 cards:
-  - name: Astrolabe
+  - name: Ghost Ship
     cost:
-      treasure: 3
-    type:
-      - treasure
-      - duration
-    ability:
-      - buy
-    trigger:
-      - none
-
-  - name: Monkey
-    cost:
-      treasure: 3
+      treasure: 5
     type:
       - action
-      - duration
+      - attack
     ability:
       - card
     trigger:
       - none
 
-  - name: Sea Chart
+  - name: Ambassador
     cost:
       treasure: 3
     type:
       - action
+      - attack
     ability:
-      - card
-      - action
+      - gain
     trigger:
       - none
 
-  - name: Blockade
+  - name: Sea Hag
     cost:
       treasure: 4
     type:
       - action
-      - duration
       - attack
     ability:
-      - gain
       - curse
     trigger:
       - none
 
-  - name: Sailor
+  - name: Navigator
     cost:
       treasure: 4
     type:
       - action
-      - duration
     ability:
-      - action
       - coin
-      - trash
     trigger:
       - none
 
-  - name: Tide Pools
-    cost:
-      treasure: 4
-    type:
-      - action
-      - duration
-    ability:
-      - card
-      - action
-    trigger:
-      - none
-
-  - name: Corsair
+  - name: Explorer
     cost:
       treasure: 5
     type:
       - action
-      - duration
-      - attack
-    ability:
-      - coin
-      - card
-      - trash
-    trigger:
-      - none
-
-  - name: Pirate
-    cost:
-      treasure: 5
-    type:
-      - action
-      - duration
-      - reaction
     ability:
       - gain
     trigger:
       - none
 
-  - name: Sea Witch
+  - name: Pirate Ship
     cost:
-      treasure: 5
+      treasure: 4
     type:
       - action
-      - duration
       - attack
     ability:
+      - coin
+      - trash
+    trigger:
+      - mat_pirateship
+      - token_coin
+
+  - name: Pearl Diver
+    cost:
+      treasure: 2
+    type:
+      - action
+    ability:
       - card
-      - curse
+      - action
     trigger:
       - none
+
+  - name: Embargo
+    cost:
+      treasure: 2
+    type:
+      - action
+    ability:
+      - coin
+      - trash
+      - curse
+    trigger:
+      - token_embargo

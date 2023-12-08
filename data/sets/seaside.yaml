@@ -1,325 +1,207 @@
 name: Seaside
 cards:
-  - name: Ghost Ship
-    cost:
-      treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-
   - name: Smugglers
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
+    type:
+      - action
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Salvager
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
-    isBuySupplier: true
+    type:
+      - action
+    ability:
+      - buy
+      - trash
+      - coin
+    trigger:
+      - none
 
   - name: Haven
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
-
-  - name: Ambassador
-    cost:
-      treasure: 3
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-
-  - name: Sea Hag
-    cost:
-      treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+      - dration
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Native Village
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: true
-
-  - name: Navigator
-    cost:
-      treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - mat_nativevillage
 
   - name: Tactician
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
-    isActionSupplier: false
-    isBuySupplier: true
+    type:
+      - action
+      - duration
+    ability:
+      - card
+      - action
+      - buy
+    trigger:
+      - none
 
   - name: Fishing Village
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
-    isActionSupplier: true
+    type:
+      - action
+      - duration
+    ability:
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Island
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: true
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+      - victory
+    ability:
+      - none
+    trigger:
+      - mat_island
 
   - name: Wharf
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
-    isBuySupplier: true
+    type:
+      - action
+      - duration
+    ability:
+      - card
+      - buy
+    trigger:
+      - none
 
   - name: Bazaar
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: true
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Treasure Map
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-
-  - name: Explorer
-    cost:
-      treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Lookout
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+    ability:
+      - action
+      - trash
+    trigger:
+      - none
 
   - name: Treasury
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - coin
+    trigger:
+      - none
 
   - name: Cutpurse
     cost:
       treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Caravan
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
+    type:
+      - action
+      - duration
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Warehouse
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isMultiDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Lighthouse
     cost:
       treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
-
-  - name: Pirate Ship
-    cost:
-      treasure: 4
-      potion: 0
-    isAttack: true
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-
-  - name: Pearl Diver
-    cost:
-      treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+      - duration
+    ability:
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Merchant Ship
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
-
-  - name: Embargo
-    cost:
-      treasure: 2
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
+    type:
+      - action
+      - duration
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Outpost
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: true
+    type:
+      - action
+      - duration
+    ability:
+      - none
+    trigger:
+      - none

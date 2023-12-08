@@ -1,695 +1,470 @@
 name: Renaissance
-cards:  
+cards:
   - name: Border Guard
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - artifact_lantern
+      - artifact_horn
 
   - name: Ducat
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: true
-    isTerminal: false
-    isVictory: false
+    type:
+      - treasure
+    ability:
+      - coffer
+      - buy
+      - trash
+    trigger:
+      - mat_coffer
+      - token_coin
 
   - name: Lackeys
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: true
+    type:
+      - action
+    ability:
+      - card
+      - villager
+    trigger:
+      - mat_villager
+      - token_coin
 
   - name: Acting Troupe
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: true
+    type:
+      - action
+    ability:
+      - villager
+      - trash
+    trigger:
+      - mat_villager
+      - token_coin
 
   - name: Cargo Ship
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+      - duration
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Experiment
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - gain
+    trigger:
+      - none
 
   - name: Improve
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
-  
+    type:
+      - action
+    ability:
+      - coin
+      - trash
+      - gain
+    trigger:
+      - none
+
   - name: Flag Bearer
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - artifact_flag
 
   - name: Hideout
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - trash
+      - curse
+    trigger:
+      - none
 
   - name: Inventor
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Mountain Village
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Patron
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: true
+    type:
+      - action
+      - reaction
+    ability:
+      - villager
+      - coin
+      - coffer
+    trigger:
+      - token_coin
+      - mat_coffer
+      - mat_villager
 
   - name: Priest
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - coin
+      - trash
+    trigger:
+      - none
 
   - name: Research
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+      - duration
+    ability:
+      - action
+      - trash
+    trigger:
+      - none
 
   - name: Silk Merchant
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: true
+    type:
+      - action
+    ability:
+      - card
+      - buy
+      - coffer
+      - villager
+    trigger:
+      - token_coin
+      - mat_coffer
+      - mat_villager
 
   - name: Old Witch
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - curse
+      - trash
+    trigger:
+      - none
 
   - name: Recruiter
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: true
+    type:
+      - action
+    ability:
+      - card
+      - trash
+      - villager
+    trigger:
+      - token_coin
+      - mat_villager
 
   - name: Scepter
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: true
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - treasure
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Scholar
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Sculptor
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: true
+    type:
+      - action
+    ability:
+      - gain
+      - villager
+    trigger:
+      - token_coin
+      - mat_villager
 
   - name: Seer
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Spices
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: true
-    isTerminal: false
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - treasure
+    ability:
+      - buy
+      - coffer
+    trigger:
+      - token_coin
+      - mat_coffer
 
   - name: Swashbuckler
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - coffer
+    trigger:
+      - token_coin
+      - mat_coffer
+      - artifact_treasurechest
 
   - name: Treasurer
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+    ability:
+      - coin
+      - trash
+      - gain
+    trigger:
+      - artifact_key
 
   - name: Villain
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isTerminal: true
-    isVictory: false
-    isVillageSupplier: false
+    type:
+      - action
+      - attack
+    ability:
+      - coffer
+    trigger:
+      - mat_coffer
+      - token_coin
 
 projects:
   - name: Cathedral
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
+    ability:
+      - trash
+    trigger:
+      - token_block
 
   - name: City Gate
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
+    ability:
+      - card
+    trigger:
+      - token_block
 
   - name: Pageant
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
+    ability:
+      - coffer
+    trigger:
+      - mat_coffer
+      - token_coin
+      - token_block
 
   - name: Sewers
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
+    ability:
+      - trash
+    trigger:
+      - token_block
 
   - name: Star Chart
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
 
   - name: Exploration
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
+    ability:
+      - coffer
+      - villager
+    trigger:
+      - token_coin
+      - mat_coffer
+      - mat_villager
+      - token_block
 
   - name: Fair
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
+    ability:
+      - buy
+    trigger:
+      - token_block
 
   - name: Silos
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
 
   - name: Sinister Plot
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
+    ability:
+      - card
+    trigger:
+      - token_block
 
   - name: Academy
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
+    ability:
+      - villager
+    trigger:
+      - token_block
+      - token_coin
+      - mat_villager
 
   - name: Capitalism
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
 
   - name: Fleet
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
 
   - name: Guildhall
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
+    ability:
+      - coffer
+    trigger:
+      - mat_coffer
+      - token_coin
+      - token_block
 
   - name: Piazza
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
 
   - name: Road Network
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
+    ability:
+      - card
+    trigger:
+      - token_block
 
   - name: Barracks
     cost:
       treasure: 6
-      potion: 0
-      debt: 0
+    ability:
+      - action
+    trigger:
+      - token_block
 
   - name: Crop Rotation
     cost:
       treasure: 6
-      potion: 0
-      debt: 0
+    ability:
+      - card
+    trigger:
+      - token_block
 
   - name: Innovation
     cost:
       treasure: 6
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
 
   - name: Canal
     cost:
       treasure: 7
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
 
   - name: Citadel
     cost:
       treasure: 8
-      potion: 0
-      debt: 0
+    ability:
+      - none
+    trigger:
+      - token_block
