@@ -419,25 +419,121 @@ cards:
 
 allies:
   - name: Architects' Guild
+    ability:
+      - none
+    trigger:
+      - none
   - name: Band of Nomads
+    ability:
+      - card
+      - action
+      - buy
+    trigger:
+      - none
   - name: Cave Dwellers
+    ability:
+      - none
+    trigger:
+      - none
   - name: Circle of Witches
+    ability:
+      - curse
+    trigger:
+      - none
   - name: City-State
+    ability:
+      - none
+    trigger:
+      - none
   - name: Coastal Haven
+    ability:
+      - none
+    trigger:
+      - none
   - name: Crafters' Guild
+    ability:
+      - gain
+    trigger:
+      - none
   - name: Desert Guides
+    ability:
+      - none
+    trigger:
+      - none
   - name: Family of Inventors
+    ability:
+      - none
+    trigger:
+      - none
   - name: Fellowship of Scribes
+    ability:
+      - card
+    trigger:
+      - none
   - name: Forest Dwellers
+    ability:
+      - none
+    trigger:
+      - none
   - name: Gang of Pickpockets
+    ability:
+      - none
+    trigger:
+      - none
   - name: Island Folk
+    ability:
+      - none
+    trigger:
+      - none
   - name: League of Bankers
+    ability:
+      - coin
+    trigger:
+      - none
   - name: League of Shopkeepers
+    ability:
+      - coin
+      - action
+      - buy
+    trigger:
+      - none
   - name: Market Towns
+    ability:
+      - none
+    trigger:
+      - none
   - name: Mountain Folk
+    ability:
+      - card
+    trigger:
+      - none
   - name: Order of Astrologers
+    ability:
+      - none
+    trigger:
+      - none
   - name: Order of Masons
+    ability:
+      - none
+    trigger:
+      - none
   - name: Peaceful Cult
+    ability:
+      - trash
+    trigger:
+      - none
   - name: Plateau Shepherds
+    ability:
+      - none
+    trigger:
+      - none
   - name: Trappers' Lodge
+    ability:
+      - none
+    trigger:
+      - none
   - name: Woodworkers' Guild
+    ability:
+      - trash
+    trigger:
+      - none
