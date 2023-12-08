@@ -3,1039 +3,654 @@ cards:
   - name: Cage
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - treasure
+      - duration
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Grotto
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-
+    type:
+      - action
+      - duration
+    ability:
+      - action
+    trigger:
+      - none
 
   - name: Jewelled Egg
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: true
+    type:
+      - treasure
+    ability:
+      - buy
+    trigger:
+      - loot
 
   - name: Search
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: true
+    type:
+      - action
+      - duration
+    ability:
+      - coin
+      - trash
+    trigger:
+      - loot
 
   - name: Shaman
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+    ability:
+      - action
+      - coin
+      - trash
+    trigger:
+      - none
 
   - name: Secluded Shrine
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - duration
+    ability:
+      - coin
+      - trash
+    trigger:
+      - none
 
   - name: Siren
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - curse
+      - trash
+    trigger:
+      - none
 
   - name: Stowaway
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: true
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - duration
+      - reaction
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Taskmaster
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - duration
+    ability:
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Abundance
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - treasure
+      - duration
+    ability:
+      - buy
+      - coin
+    trigger:
+      - none
+
   - name: Cabin Boy
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - duration
+    ability:
+      - card
+      - action
+      - coin
+      - trash
+    trigger:
+      - none
 
   - name: Crucible
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - treasure
+    ability:
+      - trash
+      - coin
+    trigger:
+      - none
 
   - name: Flagship
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - duration
+      - command
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Fortune Hunter
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Gondola
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - treasure
+      - duration
+    ability:
+      - coin
+    trigger:
+      - none
 
   - name: Harbor Village
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
+    trigger:
+      - none
 
   - name: Landing Party
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - duration
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Mapmaker
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: true
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+      - reaction
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Maroon
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+    ability:
+      - trash
+      - card
+    trigger:
+      - none
 
   - name: Rope
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - treasure
+      - duration
+    ability:
+      - buy
+      - card
+      - trash
+    trigger:
+      - none
 
   - name: Swamp Shacks
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - none
 
   - name: Tools
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - treasure
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Buried Treasure
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - treasure
+      - duration
+    ability:
+      - buy
+      - coin
+    trigger:
+      - none
+
   - name: Crew
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+      - duration
+    ability:
+      - card
+    trigger:
+      - none
+
   - name: Cutthroat
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: true
-      
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - none
+    trigger:
+      - loot
+
   - name: Enlarge
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+      - duration
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
+
   - name: Figurine
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - treasure
+    ability:
+      - card
+      - buy
+      - coin
+    trigger:
+      - none
+
   - name: First Mate
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Frigate
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - coin
+    trigger:
+      - none
+
   - name: Longship
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+      - duration
+    ability:
+      - action
+      - card
+    trigger:
+      - none
+
   - name: Mining Road
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+    ability:
+      - action
+      - buy
+      - coin
+    trigger:
+      - none
+
   - name: Pendant
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - treasure
+    ability:
+      - coin
+    trigger:
+      - none
+
   - name: Pickaxe
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: true
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: true
-      
+    type:
+      - treasure
+    ability:
+      - trash
+    trigger:
+      - loot
+
   - name: Pilgrim
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: true
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+    ability:
+      - card
+    trigger:
+      - none
+
   - name: Quartermaster
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: true
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+      - duration
+    ability:
+      - gain
+    trigger:
+      - none
+
   - name: Silver Mine
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - treasure
+    ability:
+      - gain
+    trigger:
+      - none
+
   - name: Trickster
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: false
-      
+    type:
+      - action
+      - attack
+    ability:
+      - curse
+    trigger:
+      - none
+
   - name: Wealthy Village
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: true
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-    isLootSupplier: true
-      
+    type:
+      - action
+    ability:
+      - card
+      - action
+    trigger:
+      - loot
+
   - name: Sack of Loot
     cost:
       treasure: 6
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: true
+    type:
+      - treasure
+    ability:
+      - buy
+    trigger:
+      - loot
 
   - name: King's Cache
     cost:
       treasure: 7
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isArtifactSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDoom: false
-    isDrawer: false
-    isDuration: false
-    isFate: false
-    isLiaison: false
-    isMultiDrawer: false
-    isNight: false
-    isReaction: false
-    isTerminal: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
-    isLootSupplier: false
-  
+    type:
+      - treasure
+    ability:
+      - none
+    trigger:
+      - none
+
 events:
   - name: Bury
     cost:
       treasure: 1
+    ability:
+      - buy
+    trigger:
+      - none
 
   - name: Avoid
     cost:
       treasure: 2
+    ability:
+      - buy
+    trigger:
+      - none
 
   - name: Deliver
     cost:
       treasure: 2
+    ability:
+      - buy
+    trigger:
+      - none
 
   - name: Peril
     cost:
       treasure: 2
+    ability:
+      - trash
+    trigger:
+      - loot
 
   - name: Rush
     cost:
       treasure: 2
+    ability:
+      - buy
+    trigger:
+      - none
 
   - name: Foray
     cost:
       treasure: 3
+    ability:
+      - none
+    trigger:
+      - loot
 
   - name: Launch
     cost:
       treasure: 3
+    ability:
+      - card
+      - action
+      - buy
+    trigger:
+      - none
 
   - name: Mirror
     cost:
       treasure: 3
+    ability:
+      - buy
+      - gain
+    trigger:
+      - none
 
   - name: Prepare
     cost:
       treasure: 3
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Scrounge
     cost:
       treasure: 3
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Journey
     cost:
       treasure: 4
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Maelstrom
     cost:
       treasure: 4
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Looting
     cost:
       treasure: 6
+    ability:
+      - gain
+    trigger:
+      - loot
 
   - name: Invasion
     cost:
       treasure: 10
+    ability:
+      - gain
+    trigger:
+      - loot
 
   - name: Prosper
     cost:
       treasure: 10
+    ability:
+      - gain
+    trigger:
+      - loot
 
 traits:
   - name: Cheap
+    ability:
+      - none
+    trigger:
+      - none
   - name: Cursed
+    ability:
+      - curse
+    trigger:
+      - loot
   - name: Fated
+    ability:
+      - none
+    trigger:
+      - none
   - name: Fawning
+    ability:
+      - gain
+    trigger:
+      - none
   - name: Friendly
+    ability:
+      - gain
+    trigger:
+      - none
   - name: Hasty
+    ability:
+      - none
+    trigger:
+      - none
   - name: Inherited
+    ability:
+      - none
+    trigger:
+      - none
   - name: Inspiring
+    ability:
+      - none
+    trigger:
+      - none
   - name: Nearby
+    ability:
+      - buy
+    trigger:
+      - none
   - name: Patient
+    ability:
+      - none
+    trigger:
+      - none
   - name: Pious
+    ability:
+      - trash
+    trigger:
+      - none
   - name: Reckless
+    ability:
+      - none
+    trigger:
+      - none
   - name: Rich
+    ability:
+      - gain
+    trigger:
+      - none
   - name: Shy
+    ability:
+      - card
+    trigger:
+      - none
   - name: Tireless
-  
+    ability:
+      - none
+    trigger:
+      - none

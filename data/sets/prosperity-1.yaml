@@ -1,42 +1,8 @@
-name: Prosperity (2nd)
+name: Prosperity
 cards:
-  - name: Anvil
+  - name: Contraband
     cost:
-      treasure: 3
-    type:
-      - treasure
-    ability:
-      - none
-    trigger:
-      - none
-
-  - name: Clerk
-    cost:
-      treasure: 4
-    type:
-      - action
-      - reaction
-      - attack
-    ability:
-      - coin
-    trigger:
-      - none
-
-  - name: Investment
-    cost:
-      treasure: 4
-    type:
-      - treasure
-    ability:
-      - trash
-      - coin
-      - vp
-    trigger:
-      - token_vp
-
-  - name: Tiara
-    cost:
-      treasure: 4
+      treasure: 5
     type:
       - treasure
     ability:
@@ -44,7 +10,72 @@ cards:
     trigger:
       - none
 
-  - name: Charlatan
+  - name: Counting House
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - none
+
+  - name: Goons
+    cost:
+      treasure: 6
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+      - vp
+    trigger:
+      - token_vp
+
+  - name: Talisman
+    cost:
+      treasure: 4
+    type:
+      - treasure
+    ability:
+      - gain
+    trigger:
+      - none
+
+  - name: Loan
+    cost:
+      treasure: 3
+    type:
+      - treasure
+    ability:
+      - trash
+    trigger:
+      - none
+
+  - name: Trade Route
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - buy
+      - trash
+      - coin
+    trigger:
+      - token_coin
+      - mat_traderoute
+
+  - name: Royal Seal
+    cost:
+      treasure: 5
+    type:
+      - treasure
+    ability:
+      - none
+    trigger:
+      - none
+
+  - name: Mountebank
     cost:
       treasure: 5
     type:
@@ -53,46 +84,16 @@ cards:
     ability:
       - coin
       - curse
-    trigger:
-      - none
-
-  - name: Collection
-    cost:
-      treasure: 5
-    type:
-      - treasure
-    ability:
-      - buy
-      - vp
-    trigger:
-      - token_vp
-
-  - name: Crystal Ball
-    cost:
-      treasure: 5
-    type:
-      - treasure
-    ability:
-      - trash
-    trigger:
-      - none
-
-  - name: Magnate
-    cost:
-      treasure: 5
-    type:
-      - action
-    ability:
-      - card
-    trigger:
-      - none
-
-  - name: War Chest
-    cost:
-      treasure: 5
-    type:
-      - treasure
-    ability:
       - gain
+    trigger:
+      - none
+
+  - name: Venture
+    cost:
+      treasure: 5
+    type:
+      - treasure
+    ability:
+      - none
     trigger:
       - none
