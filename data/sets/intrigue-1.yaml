@@ -1,77 +1,49 @@
-name: Intrigue (2nd)
+name: Intrigue
 cards:
-  - name: Lurker
+  - name: Secret Chamber
     cost:
       treasure: 2
     type:
       - action
-    ability:
-      - action
-      - trash
-      - gain
-    trigger:
-      - none
-
-  - name: Diplomat
-    cost:
-      treasure: 4
-    type:
-      - action
       - reaction
     ability:
+      - coin
       - card
-      - action
     trigger:
       - none
 
-  - name: Mill
+  - name: Coppersmith
     cost:
       treasure: 4
     type:
       - action
+    ability:
+      - none
+    trigger:
+      - none
+
+  - name: Scout
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - action
+    trigger:
+      - none
+
+  - name: Harem
+    cost:
+      treasure: 6
+    type:
+      - treasure
       - victory
     ability:
-      - card
-      - action
-      - coin
+      - none
     trigger:
       - none
 
-  - name: Secret Passage
-    cost:
-      treasure: 4
-    type:
-      - action
-    ability:
-      - card
-      - action
-    trigger:
-      - none
-
-  - name: Patrol
-    cost:
-      treasure: 5
-    type:
-      - action
-    ability:
-      - card
-    trigger:
-      - none
-
-  - name: Courtier
-    cost:
-      treasure: 5
-    type:
-      - action
-    ability:
-      - action
-      - buy
-      - coin
-      - gain
-    trigger:
-      - none
-
-  - name: Replace
+  - name: Saboteur
     cost:
       treasure: 5
     type:
@@ -80,17 +52,29 @@ cards:
     ability:
       - trash
       - gain
-      - curse
     trigger:
       - none
 
-  - name: Farm
+  - name: Tribute
     cost:
-      treasure: 6
+      treasure: 5
     type:
-      - treasure
+      - action
+    ability:
+      - action
+      - coin
+      - card
+    trigger:
+      - none
+
+  - name: Great Hall
+    cost:
+      treasure: 3
+    type:
+      - action
       - victory
     ability:
-      - none
+      - card
+      - action
     trigger:
       - none

@@ -1,638 +1,420 @@
 name: Nocturne
-cards:  
+cards:
   - name: Druid
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-  
+    type:
+      - action
+      - fate
+    ability:
+      - buy
+      - boon
+    trigger:
+      - boon
+      - willowisp
+
   - name: Faithful Hound
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-  
+    type:
+      - action
+      - reaction
+    ability:
+      - card
+    trigger:
+      - none
+
   - name: Guardian
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isNight: true
-    isReaction: true
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
-  
+    type:
+      - duration
+      - night
+    ability:
+      - coin
+    trigger:
+      - none
+
   - name: Monastery
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+    ability:
+      - trash
+    trigger:
+      - none
 
   - name: Pixie
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - fate
+    ability:
+      - trash
+    trigger:
+      - heirloom_goat
+      - boon
+      - willowisp
 
   - name: Tracker
     cost:
       treasure: 2
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
- 
+    type:
+      - action
+      - fate
+    ability:
+      - coin
+      - boon
+    trigger:
+      - heirloom_pouch
+      - boon
+      - willowisp
+
   - name: Changeling
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+    ability:
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Fool
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - fate
+    ability:
+      - boon
+    trigger:
+      - boon
+      - state_lostinthewoods
+      - willowisp
 
   - name: Ghost Town
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+      - duration
+    ability:
+      - card
+      - action
+    trigger:
+      - none
 
   - name: Leprechaun
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: true
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - doom
+    ability:
+      - gain
+      - hex
+    trigger:
+      - wish
+      - hex
+      - state_deluded
+      - state_miserable
 
   - name: Night Watchman
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Secret Cave
     cost:
       treasure: 3
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - duration
+    ability:
+      - card
+      - action
+      - coin
+    trigger:
+      - heirloom_magiclamp
+      - wish
 
   - name: Bard
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - fate
+    ability:
+      - coin
+      - boon
+    trigger:
+      - boon
+      - willowisp
 
   - name: Blessed Village
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - fate
+    ability:
+      - card
+      - action
+      - boon
+    trigger:
+      - boon
+      - willowisp
 
   - name: Cemetery
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: true
+    type:
+      - victory
+    ability:
+      - trash
+    trigger:
+      - heirloom_hauntedmirror
+      - ghost
 
   - name: Conclave
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - coin
+      - action
+    trigger:
+      - none
 
   - name: Devil's Workshop
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+    ability:
+      - gain
+    trigger:
+      - imp
 
   - name: Exorcist
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+    ability:
+      - trash
+    trigger:
+      - willowisp
+      - ghost
 
   - name: Necromancer
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - none
+    trigger:
+      - zombie_apprentice
+      - zombie_mason
+      - zombie_spy
 
   - name: Shepherd
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - action
+      - card
+    trigger:
+      - heirloom_pasture
 
   - name: Skulk
     cost:
       treasure: 4
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: true
-    isDrawer: false
-    isDoom: true
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - attack
+      - doom
+    ability:
+      - buy
+      - hex
+      - gain
+    trigger:
+      - hex
+      - state_deluded
+      - state_miserable
 
   - name: Cobbler
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false    
+    type:
+      - night
+      - duration
+    ability:
+      - gain
+    trigger:
+      - none
 
   - name: Crypt
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+      - duration
+    ability:
+      - none
+    trigger:
+      - none
 
   - name: Cursed Village
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: true
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: true
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - doom
+    ability:
+      - action
+      - hex
+    trigger:
+      - hex
+      - state_deluded
+      - state_miserable
 
   - name: Den of Sin
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+      - duration
+    ability:
+      - card
+    trigger:
+      - none
 
   - name: Idol
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: true
-    isVictory: false
+    type:
+      - treasure
+      - attack
+      - fate
+    ability:
+      - boon
+      - curse
+    trigger:
+      - boon
+      - willowisp
 
   - name: Pooka
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: true
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - trash
+      - card
+    trigger:
+      - heirloom_cursedgold
 
   - name: Sacred Grove
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: true
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - fate
+    ability:
+      - buy
+      - coin
+      - boon
+    trigger:
+      - boon
+      - willowisp
 
   - name: Tormentor
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: true
-    isDoom: true
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - attack
+      - doom
+    ability:
+      - coin
+      - gain
+      - hex
+    trigger:
+      - imp
+      - hex
+      - state_deluded
+      - state_miserable
 
   - name: Tragic Hero
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: false
-    isBuySupplier: true
-    isDrawer: true
-    isMultiDrawer: true
-    isDoom: false
-    isDuration: false
-    isFate: false
-    isNight: false
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+    ability:
+      - card
+      - buy
+      - trash
+      - gain
+    trigger:
+      - none
 
   - name: Vampire
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: true
-    isDuration: false
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+      - attack
+      - doom
+    ability:
+      - hex
+      - gain
+    trigger:
+      - bat
+      - hex
+      - state_deluded
+      - state_miserable
 
   - name: Werewolf
     cost:
       treasure: 5
-      potion: 0
-      debt: 0
-    isAction: true
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: true
-    isMultiDrawer: true
-    isDoom: true
-    isDuration: false
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - action
+      - night
+      - attack
+      - doom
+    ability:
+      - hex
+      - card
+    trigger:
+      - hex
+      - state_deluded
+      - state_miserable
 
   - name: Raider
     cost:
       treasure: 6
-      potion: 0
-      debt: 0
-    isAction: false
-    isActionSupplier: false
-    isAttack: true
-    isBuySupplier: false
-    isDrawer: false
-    isDoom: false
-    isDuration: true
-    isFate: false
-    isNight: true
-    isReaction: false
-    isTrashing: false
-    isTreasure: false
-    isVictory: false
+    type:
+      - night
+      - duration
+      - attack
+    ability:
+      - coin
+    trigger:
+      - none
 
 boons:
   - name: The Earth's Gift
