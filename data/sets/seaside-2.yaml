@@ -8,8 +8,6 @@ cards:
       - duration
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Monkey
     cost:
@@ -19,8 +17,6 @@ cards:
       - duration
     ability:
       - card
-    trigger:
-      - none
 
   - name: Sea Chart
     cost:
@@ -30,8 +26,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Blockade
     cost:
@@ -43,8 +37,6 @@ cards:
     ability:
       - gain
       - curse
-    trigger:
-      - none
 
   - name: Sailor
     cost:
@@ -56,8 +48,6 @@ cards:
       - action
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Tide Pools
     cost:
@@ -68,8 +58,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Corsair
     cost:
@@ -82,8 +70,6 @@ cards:
       - coin
       - card
       - trash
-    trigger:
-      - none
 
   - name: Pirate
     cost:
@@ -94,8 +80,6 @@ cards:
       - reaction
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Sea Witch
     cost:
@@ -107,5 +91,3 @@ cards:
     ability:
       - card
       - curse
-    trigger:
-      - none

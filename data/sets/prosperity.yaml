@@ -7,8 +7,6 @@ cards:
       - treasure
     ability:
       - coin
-    trigger:
-      - none
 
   - name: City
     cost:
@@ -20,8 +18,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Bishop
     cost:
@@ -45,8 +41,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Watchtower
     cost:
@@ -54,10 +48,6 @@ cards:
     type:
       - action
       - reaction
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Expand
     cost:
@@ -67,18 +57,12 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: King's Court
     cost:
       treasure: 7
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Hoard
     cost:
@@ -87,8 +71,6 @@ cards:
       - treasure
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Peddler
     cost:
@@ -99,8 +81,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Monument
     cost:
@@ -121,8 +101,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Rabble
     cost:
@@ -132,8 +110,6 @@ cards:
       - attack
     ability:
       - card
-    trigger:
-      - none
 
   - name: Mint
     cost:
@@ -143,18 +119,12 @@ cards:
     ability:
       - gain
       - trash
-    trigger:
-      - none
 
   - name: Quarry
     cost:
       treasure: 4
     type:
       - treasure
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Worker's Village
     cost:
@@ -165,8 +135,6 @@ cards:
       - card
       - action
       - buy
-    trigger:
-      - none
 
   - name: Vault
     cost:
@@ -176,5 +144,16 @@ cards:
     ability:
       - card
       - coin
-    trigger:
-      - none
+
+supply:
+  - name: Platinum
+    cost:
+      treasure: 9
+    type:
+      - treasure
+
+  - name: Colony
+    cost:
+      treasure: 11
+    type:
+      - victory

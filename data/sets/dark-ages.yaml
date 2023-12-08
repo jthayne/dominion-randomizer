@@ -7,8 +7,6 @@ cards:
       - action
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Vagrant
     cost:
@@ -18,8 +16,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Catacombs
     cost:
@@ -28,8 +24,6 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
 
   - name: Count
     cost:
@@ -40,8 +34,6 @@ cards:
       - gain
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Knights
     cost:
@@ -50,7 +42,6 @@ cards:
       - action
       - attack
       - knight
-      - victory
     ability:
       - trash
       - action
@@ -58,8 +49,6 @@ cards:
       - coin
       - card
       - buy
-    trigger:
-      - none
 
   - name: Fortress
     cost:
@@ -69,8 +58,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Scavenger
     cost:
@@ -79,8 +66,6 @@ cards:
       - action
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Market Square
     cost:
@@ -93,8 +78,6 @@ cards:
       - card
       - buy
       - gain
-    trigger:
-      - none
 
   - name: Urchin
     cost:
@@ -119,8 +102,6 @@ cards:
       - card
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Sage
     cost:
@@ -129,8 +110,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Forager
     cost:
@@ -142,8 +121,6 @@ cards:
       - buy
       - trash
       - coin
-    trigger:
-      - none
 
   - name: Altar
     cost:
@@ -153,8 +130,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Procession
     cost:
@@ -164,8 +139,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Squire
     cost:
@@ -177,8 +150,6 @@ cards:
       - coin
       - buy
       - gain
-    trigger:
-      - none
 
   - name: Beggar
     cost:
@@ -188,8 +159,6 @@ cards:
       - reaction
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Poor House
     cost:
@@ -198,8 +167,6 @@ cards:
       - action
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Death Cart
     cost:
@@ -221,8 +188,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Ironmonger
     cost:
@@ -233,8 +198,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Hermit
     cost:
@@ -268,8 +231,6 @@ cards:
     ability:
       - action
       - coin
-    trigger:
-      - none
 
   - name: Storeroom
     cost:
@@ -279,8 +240,6 @@ cards:
     ability:
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Hunting Grounds
     cost:
@@ -290,8 +249,6 @@ cards:
     ability:
       - card
       - gain
-    trigger:
-      - none
 
   - name: Graverobber
     cost:
@@ -301,8 +258,6 @@ cards:
     ability:
       - gain
       - trash
-    trigger:
-      - none
 
   - name: Counterfeit
     cost:
@@ -312,8 +267,6 @@ cards:
     ability:
       - twice
       - buy
-    trigger:
-      - none
 
   - name: Cultist
     cost:
@@ -338,8 +291,6 @@ cards:
       - coin
       - gain
       - trash
-    trigger:
-      - none
 
   - name: Marauder
     cost:
@@ -360,10 +311,6 @@ cards:
     type:
       - action
       - command
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Junk Dealer
     cost:
@@ -375,8 +322,6 @@ cards:
       - card
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Feodum
     cost:
@@ -385,8 +330,6 @@ cards:
       - victory
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Rebuild
     cost:
@@ -397,8 +340,6 @@ cards:
       - action
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Bandit Camp
     cost:
@@ -411,3 +352,212 @@ cards:
       - gain
     trigger:
       - spoils
+
+cards-not-in-supply:
+  - name: Madman
+    cost:
+      treasure: 0
+    type:
+      - action
+    ability:
+      - action
+      - card
+
+  - name: Mercenary
+    cost:
+      treasure: 0
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - card
+      - coin
+
+  - name: Spoils
+    cost:
+      treasure: 0
+    type:
+      - treasure
+
+shelters:
+  - name: Hovel
+    cost:
+      treasure: 1
+    type:
+      - reaction
+      - shelter
+    ability:
+      - trash
+
+  - name: Necropolis
+    cost:
+      treasure: 1
+    type:
+      - action
+      - shelter
+    ability:
+      - action
+
+  - name: Overgrown Estate
+    cost:
+      treasure: 1
+    type:
+      - victory
+      - shelter
+    ability:
+      - card
+
+ruins:
+  - name: Abandoned Mine
+    cost:
+      treasure: 0
+    type:
+      - action
+      - ruins
+    ability:
+      - coin
+
+  - name: Ruined Library
+    cost:
+      treasure: 0
+    type:
+      - action
+      - ruins
+    ability:
+      - card
+
+  - name: Ruined Market
+    cost:
+      treasure: 0
+    type:
+      - action
+      - ruins
+    ability:
+      - buy
+
+  - name: Ruined Village
+    cost:
+      treasure: 0
+    type:
+      - action
+      - ruins
+    ability:
+      - action
+
+  - name: Survivors
+    cost:
+      treasure: 0
+    type:
+      - action
+      - ruins
+
+knights:
+  - name: Dame Anna
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - trash
+
+  - name: Dame Josephine
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - victory
+      - knight
+    ability:
+      - trash
+
+  - name: Dame Molly
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - action
+      - trash
+
+  - name: Dame Natalie
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - gain
+      - trash
+
+  - name: Dame Sylvia
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - coin
+      - trash
+
+  - name: Sir Bailey
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - card
+      - action
+      - trash
+
+  - name: Sir Destry
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - card
+      - trash
+
+  - name: Sir Martin
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - buy
+      - trash
+
+  - name: Sir Michael
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - trash
+
+  - name: Sir Vander
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - knight
+    ability:
+      - trash
+      - gain

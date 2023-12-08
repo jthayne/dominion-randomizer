@@ -41,8 +41,6 @@ cards:
       - action
       - coin
       - draw
-    trigger:
-      - none
 
   - name: Augurs
     cost:
@@ -58,8 +56,6 @@ cards:
       - action
       - curse
       - card
-    trigger:
-      - none
 
   - name: Clashes
     cost:
@@ -76,8 +72,6 @@ cards:
       - coin
       - vp
       - gain
-    trigger:
-      - none
 
   - name: Forts
     cost:
@@ -117,8 +111,6 @@ cards:
     ability:
       - action
       - coin
-    trigger:
-      - none
 
   - name: Odysseys
     cost:
@@ -133,8 +125,6 @@ cards:
       - card
       - action
       - gain
-    trigger:
-      - none
 
   - name: Sentinel
     cost:
@@ -143,8 +133,6 @@ cards:
       - action
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Underling
     cost:
@@ -208,8 +196,6 @@ cards:
       - action
       - gain
       - trash
-    trigger:
-      - none
 
   - name: Courier
     cost:
@@ -218,8 +204,6 @@ cards:
       - action
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Innkeeper
     cost:
@@ -229,8 +213,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Royal Galley
     cost:
@@ -240,8 +222,6 @@ cards:
       - duration
     ability:
       - card
-    trigger:
-      - none
 
   - name: Town
     cost:
@@ -253,8 +233,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Barbarian
     cost:
@@ -267,8 +245,6 @@ cards:
       - trash
       - gain
       - curse
-    trigger:
-      - none
 
   - name: Capital City
     cost:
@@ -279,8 +255,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Contract
     cost:
@@ -319,8 +293,6 @@ cards:
     ability:
       - coin
       - buy
-    trigger:
-      - none
 
   - name: Guildmaster
     cost:
@@ -345,8 +317,6 @@ cards:
       - attack
     ability:
       - card
-    trigger:
-      - none
 
   - name: Hunter
     cost:
@@ -355,8 +325,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Modify
     cost:
@@ -368,8 +336,6 @@ cards:
       - card
       - action
       - gain
-    trigger:
-      - none
 
   - name: Skirmisher
     cost:
@@ -381,8 +347,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Specialist
     cost:
@@ -391,8 +355,6 @@ cards:
       - action
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Swap
     cost:
@@ -403,8 +365,6 @@ cards:
       - card
       - action
       - gain
-    trigger:
-      - none
 
   - name: Marquis
     cost:
@@ -414,126 +374,312 @@ cards:
     ability:
       - buy
       - card
+
+augurs:
+  - name: Acolyte
+    cost:
+      treasure: 4
+    type:
+      - action
+      - augur
+    ability:
+      - trash
+      - gain
+
+  - name: Herb Gatherer
+    cost:
+      treasure: 3
+    type:
+      - action
+      - augur
+    ability:
+      - buy
+
+  - name: Sibyl
+    cost:
+      treasure: 6
+    type:
+      - action
+      - augur
+    ability:
+      - card
+      - action
+
+  - name: Sorceress
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - augur
+    ability:
+      - action
+      - curse
+
+clash:
+  - name: Battle Plan
+    cost:
+      treasure: 3
+    type:
+      - action
+      - clash
+    ability:
+      - card
+      - action
+
+  - name: Archer
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+      - clash
+    ability:
+      - coin
+
+  - name: Warlord
+    cost:
+      treasure: 5
+    type:
+      - action
+      - duration
+      - attack
+      - clash
+    ability:
+      - card
+      - action
+
+  - name: Territory
+    cost:
+      treasure: 6
+    type:
+      - victory
+      - clash
+    ability:
+      - gain
+
+forts:
+  - name: Tent
+    cost:
+      treasure: 3
+    type:
+      - action
+      - fort
+    ability:
+      - coin
+
+  - name: Garrison
+    cost:
+      treasure: 4
+    type:
+      - action
+      - duration
+      - fort
+    ability:
+      - coin
+      - card
     trigger:
-      - none
+      - token_coin
+
+  - name: Hill Fort
+    cost:
+      treasure: 5
+    type:
+      - action
+      - fort
+    ability:
+      - gain
+      - card
+      - action
+
+  - name: Stronghold
+    cost:
+      treasure: 6
+    type:
+      - action
+      - victory
+      - duration
+      - fort
+    ability:
+      - coin
+      - card
+
+odysseys:
+  - name: Old Map
+    cost:
+      treasure: 3
+    type:
+      - action
+      - odyssey
+    ability:
+      - card
+      - action
+
+  - name: Voyage
+    cost:
+      treasure: 4
+    type:
+      - action
+      - duration
+      - odyssey
+    ability:
+      - action
+
+  - name: Sunken Treasure
+    cost:
+      treasure: 5
+    type:
+      - treasure
+      - odyssey
+    ability:
+      - gain
+
+  - name: Distant Shore
+    cost:
+      treasure: 6
+    type:
+      - action
+      - victory
+      - odyssey
+    ability:
+      - card
+      - action
+      - gain
+
+townsfolk:
+  - name: Town Crier
+    cost:
+      treasure: 2
+    type:
+      - action
+      - townsfolk
+    ability:
+      - coin
+      - card
+      - action
+      - gain
+
+  - name: Blacksmith
+    cost:
+      treasure: 3
+    type:
+      - action
+      - townsfolk
+    ability:
+      - card
+      - action
+
+  - name: Miller
+    cost:
+      treasure: 4
+    type:
+      - action
+      - townsfolk
+    ability:
+      - action
+
+  - name: Elder
+    cost:
+      treasure: 5
+    type:
+      - action
+      - townsfolk
+    ability:
+      - coin
+
+wizards:
+  - name: Student
+    cost:
+      treasure: 3
+    type:
+      - action
+      - wizard
+      - liaison
+    ability:
+      - action
+      - trash
+      - favor
+    trigger:
+      - mat_favor
+      - token_coin
+      - ally
+
+  - name: Conjurer
+    cost:
+      treasure: 4
+    type:
+      - action
+      - duration
+      - wizard
+    ability:
+      - gain
+
+  - name: Sorcerer
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+      - wizard
+    ability:
+      - card
+      - action
+      - curse
+
+  - name: Lich
+    cost:
+      treasure: 6
+    type:
+      - action
+      - wizard
+    ability:
+      - action
+      - card
+      - gain
 
 allies:
   - name: Architects' Guild
-    ability:
-      - none
-    trigger:
-      - none
   - name: Band of Nomads
     ability:
       - card
       - action
       - buy
-    trigger:
-      - none
   - name: Cave Dwellers
-    ability:
-      - none
-    trigger:
-      - none
   - name: Circle of Witches
     ability:
       - curse
-    trigger:
-      - none
   - name: City-State
-    ability:
-      - none
-    trigger:
-      - none
   - name: Coastal Haven
-    ability:
-      - none
-    trigger:
-      - none
   - name: Crafters' Guild
     ability:
       - gain
-    trigger:
-      - none
   - name: Desert Guides
-    ability:
-      - none
-    trigger:
-      - none
   - name: Family of Inventors
-    ability:
-      - none
-    trigger:
-      - none
   - name: Fellowship of Scribes
     ability:
       - card
-    trigger:
-      - none
   - name: Forest Dwellers
-    ability:
-      - none
-    trigger:
-      - none
   - name: Gang of Pickpockets
-    ability:
-      - none
-    trigger:
-      - none
   - name: Island Folk
-    ability:
-      - none
-    trigger:
-      - none
   - name: League of Bankers
     ability:
       - coin
-    trigger:
-      - none
   - name: League of Shopkeepers
     ability:
       - coin
       - action
       - buy
-    trigger:
-      - none
   - name: Market Towns
-    ability:
-      - none
-    trigger:
-      - none
   - name: Mountain Folk
     ability:
       - card
-    trigger:
-      - none
   - name: Order of Astrologers
-    ability:
-      - none
-    trigger:
-      - none
   - name: Order of Masons
-    ability:
-      - none
-    trigger:
-      - none
   - name: Peaceful Cult
     ability:
       - trash
-    trigger:
-      - none
   - name: Plateau Shepherds
-    ability:
-      - none
-    trigger:
-      - none
   - name: Trappers' Lodge
-    ability:
-      - none
-    trigger:
-      - none
   - name: Woodworkers' Guild
     ability:
       - trash
-    trigger:
-      - none

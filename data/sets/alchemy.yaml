@@ -32,8 +32,6 @@ cards:
     ability:
       - action
       - trash
-    trigger:
-      - none
 
   - name: Familiar
     cost:
@@ -55,8 +53,6 @@ cards:
       potion: 1
     type:
       - action
-    ability:
-      - none
     trigger:
       - potion
 
@@ -68,8 +64,6 @@ cards:
     ability:
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Philosopher's Stone
     cost:
@@ -137,3 +131,10 @@ cards:
       - vp
     trigger:
       - potion
+
+supply:
+  - name: Potion
+    cost:
+      treasure: 4
+    type:
+      - treasure

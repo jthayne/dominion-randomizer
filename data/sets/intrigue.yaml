@@ -9,8 +9,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Conspirator
     cost:
@@ -21,8 +19,6 @@ cards:
       - coin
       - card
       - action
-    trigger:
-      - none
 
   - name: Mining Village
     cost:
@@ -34,8 +30,6 @@ cards:
       - action
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Pawn
     cost:
@@ -47,8 +41,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Courtyard
     cost:
@@ -57,8 +49,6 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
 
   - name: Trading Post
     cost:
@@ -68,18 +58,12 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Duke
     cost:
       treasure: 5
     type:
       - victory
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Baron
     cost:
@@ -90,8 +74,6 @@ cards:
       - buy
       - coin
       - gain
-    trigger:
-      - none
 
   - name: Swindler
     cost:
@@ -103,8 +85,6 @@ cards:
       - coin
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Bridge
     cost:
@@ -114,8 +94,6 @@ cards:
     ability:
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Torturer
     cost:
@@ -126,8 +104,6 @@ cards:
     ability:
       - card
       - curse
-    trigger:
-      - none
 
   - name: Wishing Well
     cost:
@@ -137,8 +113,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Masquerade
     cost:
@@ -148,8 +122,6 @@ cards:
     ability:
       - card
       - trash
-    trigger:
-      - none
 
   - name: Ironworks
     cost:
@@ -161,8 +133,6 @@ cards:
       - action
       - coin
       - card
-    trigger:
-      - none
 
   - name: Steward
     cost:
@@ -173,8 +143,6 @@ cards:
       - card
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Minion
     cost:
@@ -186,8 +154,6 @@ cards:
       - action
       - coin
       - card
-    trigger:
-      - none
 
   - name: Upgrade
     cost:
@@ -199,8 +165,6 @@ cards:
       - action
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Shanty Town
     cost:
@@ -210,8 +174,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
 supply:
   - name: Copper

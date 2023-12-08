@@ -8,8 +8,6 @@ cards:
       - attack
     ability:
       - card
-    trigger:
-      - none
 
   - name: Ambassador
     cost:
@@ -19,8 +17,6 @@ cards:
       - attack
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Sea Hag
     cost:
@@ -30,8 +26,6 @@ cards:
       - attack
     ability:
       - curse
-    trigger:
-      - none
 
   - name: Navigator
     cost:
@@ -40,8 +34,6 @@ cards:
       - action
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Explorer
     cost:
@@ -50,8 +42,6 @@ cards:
       - action
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Pirate Ship
     cost:
@@ -74,8 +64,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Embargo
     cost:

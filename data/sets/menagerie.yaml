@@ -10,8 +10,6 @@ cards:
     ability:
       - card
       - curse
-    trigger:
-      - none
 
   - name: Sleigh
     cost:
@@ -53,8 +51,6 @@ cards:
       - action
       - trash
       - card
-    trigger:
-      - none
 
   - name: Scrap
     cost:
@@ -79,8 +75,6 @@ cards:
       - reaction
     ability:
       - card
-    trigger:
-      - none
 
   - name: Snowy Village
     cost:
@@ -91,8 +85,6 @@ cards:
       - action
       - card
       - buy
-    trigger:
-      - none
 
   - name: Stockpile
     cost:
@@ -175,8 +167,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Barge
     cost:
@@ -187,8 +177,6 @@ cards:
     ability:
       - card
       - buy
-    trigger:
-      - none
 
   - name: Coven
     cost:
@@ -223,8 +211,6 @@ cards:
       - reaction
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Gatekeeper
     cost:
@@ -247,8 +233,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Kiln
     cost:
@@ -258,8 +242,6 @@ cards:
     ability:
       - coin
       - gain
-    trigger:
-      - none
 
   - name: Livery
     cost:
@@ -278,10 +260,6 @@ cards:
     type:
       - action
       - duration
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Paddock
     cost:
@@ -317,8 +295,6 @@ cards:
       - action
       - card
       - coin
-    trigger:
-      - none
 
   - name: Destrier
     cost:
@@ -328,8 +304,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Wayfarer
     cost:
@@ -339,8 +313,6 @@ cards:
     ability:
       - card
       - gain
-    trigger:
-      - none
 
   - name: Animal Fair
     cost:
@@ -351,17 +323,21 @@ cards:
       - coin
       - buy
       - trash
-    trigger:
-      - none
+
+cards-non-supply:
+  - name: Horse
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - card
+      - action
 
 events:
   - name: Delay
     cost:
       treasure: 0
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Desperation
     cost:
@@ -370,24 +346,18 @@ events:
       - curse
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Gamble
     cost:
       treasure: 2
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Pursue
     cost:
       treasure: 2
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Ride
     cost:
@@ -402,8 +372,6 @@ events:
       treasure: 2
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Enhance
     cost:
@@ -411,16 +379,10 @@ events:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: March
     cost:
       treasure: 3
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Transport
     cost:
@@ -458,18 +420,12 @@ events:
   - name: Seize the Day
     cost:
       treasure: 4
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Commerce
     cost:
       treasure: 5
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Demand
     cost:
@@ -492,8 +448,6 @@ events:
       treasure: 7
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Enclave
     cost:
@@ -509,23 +463,17 @@ events:
       treasure: 10
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Populate
     cost:
       treasure: 10
     ability:
       - gain
-    trigger:
-      - none
 
 ways:
   - name: Way of the Butterfly
     ability:
       - gain
-    trigger:
-      - none
   - name: Way of the Camel
     ability:
       - exile
@@ -535,93 +483,53 @@ ways:
     ability:
       - card
       - coin
-    trigger:
-      - none
   - name: Way of the Frog
     ability:
       - action
-    trigger:
-      - none
   - name: Way of the Goat
     ability:
       - trash
-    trigger:
-      - none
   - name: Way of the Horse
     ability:
       - card
       - action
-    trigger:
-      - none
   - name: Way of the Mole
     ability:
       - action
       - card
-    trigger:
-      - none
   - name: Way of the Monkey
     ability:
       - buy
       - coin
-    trigger:
-      - none
   - name: Way of the Mouse
-    ability:
-      - none
-    trigger:
-      - none
   - name: Way of the Mule
     ability:
       - action
       - coin
-    trigger:
-      - none
   - name: Way of the Otter
     ability:
       - card
-    trigger:
-      - none
   - name: Way of the Owl
-    ability:
-      - none
-    trigger:
-      - none
   - name: Way of the Ox
     ability:
       - action
-    trigger:
-      - none
   - name: Way of the Pig
     ability:
       - card
       - action
-    trigger:
-      - none
   - name: Way of the Rat
     ability:
       - gain
-    trigger:
-      - none
   - name: Way of the Seal
     ability:
       - coin
-    trigger:
-      - none
   - name: Way of the Sheep
     ability:
       - coin
-    trigger:
-      - none
   - name: Way of the Squirrel
     ability:
       - card
-    trigger:
-      - none
   - name: Way of the Turtle
-    ability:
-      - none
-    trigger:
-      - none
   - name: Way of the Worm
     ability:
       - exile

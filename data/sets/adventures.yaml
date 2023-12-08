@@ -11,8 +11,6 @@ cards:
       - trash
       - draw
       - gain
-    trigger:
-      - none
 
   - name: Artificer
     cost:
@@ -25,8 +23,6 @@ cards:
       - coin
       - discard
       - gain
-    trigger:
-      - none
 
   - name: Bridge Troll
     cost:
@@ -52,8 +48,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Distant Lands
     cost:
@@ -77,8 +71,6 @@ cards:
       - action
       - card
       - discard
-    trigger:
-      - none
 
   - name: Duplicate
     cost:
@@ -99,8 +91,6 @@ cards:
       - duration
     ability:
       - card
-    trigger:
-      - none
 
   - name: Giant
     cost:
@@ -112,8 +102,6 @@ cards:
       - coin
       - curse
       - trash
-    trigger:
-      - none
 
   - name: Guide
     cost:
@@ -137,8 +125,6 @@ cards:
       - attack
     ability:
       - card
-    trigger:
-      - none
 
   - name: Hireling
     cost:
@@ -148,8 +134,6 @@ cards:
       - duration
     ability:
       - card
-    trigger:
-      - none
 
   - name: Lost City
     cost:
@@ -159,8 +143,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Magpie
     cost:
@@ -171,8 +153,6 @@ cards:
       - card
       - action
       - gain
-    trigger:
-      - none
 
   - name: Messenger
     cost:
@@ -184,8 +164,6 @@ cards:
       - coin
       - discard
       - gain
-    trigger:
-      - none
 
   - name: Miser
     cost:
@@ -230,8 +208,6 @@ cards:
       - card
       - action
       - gain
-    trigger:
-      - none
 
   - name: Ranger
     cost:
@@ -265,8 +241,6 @@ cards:
     ability:
       - action
       - trash
-    trigger:
-      - none
 
   - name: Relic
     cost:
@@ -274,8 +248,6 @@ cards:
     type:
       - treasure
       - attack
-    ability:
-      - none
     trigger:
       - token_minuscard
 
@@ -298,8 +270,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Swamp Hag
     cost:
@@ -311,8 +281,6 @@ cards:
     ability:
       - coin
       - curse
-    trigger:
-      - none
 
   - name: Transmogrify
     cost:
@@ -334,8 +302,6 @@ cards:
       - treasure
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Wine Merchant
     cost:
@@ -360,6 +326,102 @@ cards:
     trigger:
       - mat_tavern
 
+upgrades:
+  - name: Soldier
+    cost:
+      treasure: 3
+    type:
+      - action
+      - attack
+      - traveller
+    ability:
+      - coin
+    trigger:
+      - fugitive
+
+  - name: Treasure Hunter
+    cost:
+      treasure: 3
+    type:
+      - action
+      - traveller
+    ability:
+      - coin
+      - action
+      - gain
+    trigger:
+      - warrior
+
+  - name: Fugitive
+    cost:
+      treasure: 4
+    type:
+      - action
+      - traveller
+    ability:
+      - card
+      - action
+    trigger:
+      - disciple
+
+  - name: Warrior
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+      - traveller
+    ability:
+      - card
+      - trash
+    trigger:
+      - hero
+
+  - name: Disciple
+    cost:
+      treasure: 5
+    type:
+      - action
+      - traveller
+    ability:
+      - gain
+    trigger:
+      - teacher
+
+  - name: Hero
+    cost:
+      treasure: 5
+    type:
+      - action
+      - traveller
+    ability:
+      - coin
+      - gain
+    trigger:
+      - champion
+
+  - name: Teacher
+    cost:
+      treasure: 6
+    type:
+      - action
+      - reserve
+    trigger:
+      - mat_tavern
+      - token_pluscard
+      - token_plusaction
+      - token_plusbuy
+      - token_pluscoin
+
+  - name: Champion
+    cost:
+      treasure: 6
+    type:
+      - action
+      - duration
+    ability:
+      - action
+
 events:
   - name: Mission
     cost:
@@ -368,8 +430,6 @@ events:
       - event
     ability:
       - turn
-    trigger:
-      - none
 
   - name: Scouting Party
     cost:
@@ -378,16 +438,12 @@ events:
       - event
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Pathfinding
     cost:
       treasure: 8
     type:
       - event
-    ability:
-      - none
     trigger:
       - token_pluscard
 
@@ -398,8 +454,6 @@ events:
       - event
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Pilgrimage
     cost:
@@ -438,8 +492,6 @@ events:
       - event
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Save
     cost:
@@ -448,8 +500,6 @@ events:
       - event
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Borrow
     cost:
@@ -480,8 +530,6 @@ events:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Raid
     cost:
@@ -501,8 +549,6 @@ events:
     ability:
       - discard
       - gain
-    trigger:
-      - none
 
   - name: Expedition
     cost:
@@ -511,8 +557,6 @@ events:
       - event
     ability:
       - draw
-    trigger:
-      - none
 
   - name: Alms
     cost:
@@ -521,16 +565,12 @@ events:
       - event
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Inheritance
     cost:
       treasure: 7
     type:
       - event
-    ability:
-      - none
     trigger:
       - token_estate
 
@@ -539,8 +579,6 @@ events:
       treasure: 3
     type:
       - event
-    ability:
-      - none
     trigger:
       - token_minuscost
 

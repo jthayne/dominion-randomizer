@@ -21,8 +21,6 @@ cards:
       - reaction
     ability:
       - card
-    trigger:
-      - none
 
   - name: Guardian
     cost:
@@ -32,8 +30,6 @@ cards:
       - night
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Monastery
     cost:
@@ -42,8 +38,6 @@ cards:
       - night
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Pixie
     cost:
@@ -80,8 +74,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Fool
     cost:
@@ -105,8 +97,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Leprechaun
     cost:
@@ -128,10 +118,6 @@ cards:
       treasure: 3
     type:
       - night
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Secret Cave
     cost:
@@ -193,8 +179,6 @@ cards:
     ability:
       - coin
       - action
-    trigger:
-      - none
 
   - name: Devil's Workshop
     cost:
@@ -222,8 +206,6 @@ cards:
       treasure: 4
     type:
       - action
-    ability:
-      - none
     trigger:
       - zombie_apprentice
       - zombie_mason
@@ -264,8 +246,6 @@ cards:
       - duration
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Crypt
     cost:
@@ -273,10 +253,6 @@ cards:
     type:
       - night
       - duration
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Cursed Village
     cost:
@@ -300,8 +276,6 @@ cards:
       - duration
     ability:
       - card
-    trigger:
-      - none
 
   - name: Idol
     cost:
@@ -369,8 +343,6 @@ cards:
       - buy
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Vampire
     cost:
@@ -413,19 +385,221 @@ cards:
       - attack
     ability:
       - coin
+
+cards-non-supply:
+  - name: Bat
+    cost:
+      treasure: 2
+    type:
+      - night
+    ability:
+      - trash
     trigger:
-      - none
+      - vampire
+
+  - name: Cursed Gold
+    cost:
+      treasure: 4
+    type:
+      - treasure
+      - heirloom
+    ability:
+      - curse
+
+  - name: Ghost
+    cost:
+      treasure: 4
+    type:
+      - night
+      - duration
+      - spirit
+
+  - name: Goat
+    cost:
+      treasure: 2
+    type:
+      - treasure
+      - heirloom
+    ability:
+      trash
+
+  - name: Haunted Mirror
+    cost:
+      treasure: 0
+    type:
+      - treasure
+      - heirloom
+    ability:
+      - gain
+
+  - name: Imp
+    cost:
+      treasure: 2
+    type:
+      - action
+      - spirit
+    ability:
+      - card
+
+  - name: Lucky Coin
+    cost:
+      treasure: 4
+    type:
+      - treasure
+      - heirloom
+    ability:
+      - gain
+
+  - name: Magic Lamp
+    cost:
+      treasure: 0
+    type:
+      - treasure
+      - heirloom
+    ability:
+      - trash
+      - gain
+    trigger:
+      - wish
+
+  - name: Pasture
+    cost:
+      treasure: 2
+    type:
+      - treasure
+      - victory
+      - heirloom
+
+  - name: Pouch
+    cost:
+      treasure: 2
+    type:
+      - treasure
+      - heirloom
+    ability:
+      - buy
+
+  - name: Will-o'-Wisp
+    cost:
+      treasure: 0
+    type:
+      - action
+      - spirit
+    ability:
+      - card
+      - action
+
+  - name: Wish
+    cost:
+      treasure: 0
+    type:
+      - action
+    ability:
+      - action
+      - gain
+
+  - name: Zombie Apprentice
+    cost:
+      treasure: 3
+    type:
+      - action
+      - zombie
+    ability:
+      - trash
+      - card
+      - action
+
+  - name: Zombie Mason
+    cost:
+      treasure: 3
+    type:
+      - action
+      - zombie
+    ability:
+      - trash
+      - gain
+
+  - name: Zombie Spy
+    cost:
+      treasure: 3
+    type:
+      - action
+      - zombie
+    ability:
+      - card
+      - action
 
 boons:
   - name: The Earth's Gift
+    ability:
+      - gain
   - name: The Field's Gift
+    ability:
+      - action
+      - coin
   - name: The Flame's Gift
+    ability:
+      - trash
   - name: The Forest's Gift
+    ability:
+      - buy
+      - coin
   - name: The Moon's Gift
   - name: The Mountain's Gift
+    ability:
+      - gain
   - name: The River's Gift
+    ability:
+      - card
   - name: The Sea's Gift
+    ability:
+      - card
   - name: The Sky's Gift
+    ability:
+      - gain
   - name: The Sun's Gift
   - name: The Swamp's Gift
+    ability:
+      - gain
+    trigger:
+      - willowisp
   - name: The Wind's Gift
+    ability:
+      - card
+
+hexes:
+  - name: Bad Omens
+  - name: Delusion
+    trigger:
+      - state_deluded
+  - name: Envy
+    trigger:
+      - state_deluded
+  - name: Famine
+  - name: Fear
+  - name: Greed
+    ability:
+      - gain
+  - name: Haunting
+  - name: Locusts
+    ability:
+      - trash
+      - curse
+      - gain
+  - name: Misery
+    trigger:
+      - state_miserable
+  - name: Plague
+    ability:
+      - curse
+  - name: Poverty
+  - name: War
+    ability:
+      - trash
+
+states:
+  - name: Lost in the Woods
+    trigger:
+      - boon
+  - name: Deluded/Envious
+  - name: Miserable/Twice Miserable

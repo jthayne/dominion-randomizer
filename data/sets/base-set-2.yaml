@@ -3,97 +3,67 @@ cards:
   - name: Harbinger
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
 
   - name: Merchant
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
 
   - name: Vassal
     cost:
       treasure: 3
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: false
+    type:
+      - action
+    ability:
+      - coin
 
   - name: Poacher
     cost:
       treasure: 4
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
 
   - name: Bandit
     cost:
       treasure: 5
-      potion: 0
-    isAttack: true
-    isAction: true
-    isDrawer: false
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: false
+    type:
+      - action
+      - attack
+    ability:
+      - gain
+      - trash
 
   - name: Sentry
     cost:
       treasure: 5
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: true
-    isTreasure: false
-    isVictory: false
-    isTrashing: true
-    isReaction: false
-    isDuration: false
-    isActionSupplier: false
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - trash
 
   - name: Artisan
     cost:
       treasure: 6
-      potion: 0
-    isAttack: false
-    isAction: true
-    isDrawer: false
-    isTreasure: false
-    isVictory: false
-    isTrashing: false
-    isReaction: false
-    isDuration: false
-    isActionSupplier: false
+    type:
+      - action
+    ability:
+      - gain
+
+trash:
+  - name: Trash Mat

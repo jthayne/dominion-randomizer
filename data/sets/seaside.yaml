@@ -7,8 +7,6 @@ cards:
       - action
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Salvager
     cost:
@@ -19,8 +17,6 @@ cards:
       - buy
       - trash
       - coin
-    trigger:
-      - none
 
   - name: Haven
     cost:
@@ -31,8 +27,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Native Village
     cost:
@@ -54,8 +48,6 @@ cards:
       - card
       - action
       - buy
-    trigger:
-      - none
 
   - name: Fishing Village
     cost:
@@ -66,8 +58,6 @@ cards:
     ability:
       - action
       - coin
-    trigger:
-      - none
 
   - name: Island
     cost:
@@ -75,8 +65,6 @@ cards:
     type:
       - action
       - victory
-    ability:
-      - none
     trigger:
       - mat_island
 
@@ -89,8 +77,6 @@ cards:
     ability:
       - card
       - buy
-    trigger:
-      - none
 
   - name: Bazaar
     cost:
@@ -101,8 +87,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Treasure Map
     cost:
@@ -112,8 +96,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Lookout
     cost:
@@ -123,8 +105,6 @@ cards:
     ability:
       - action
       - trash
-    trigger:
-      - none
 
   - name: Treasury
     cost:
@@ -135,8 +115,6 @@ cards:
       - action
       - card
       - coin
-    trigger:
-      - none
 
   - name: Cutpurse
     cost:
@@ -146,8 +124,6 @@ cards:
       - attack
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Caravan
     cost:
@@ -158,8 +134,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Warehouse
     cost:
@@ -169,8 +143,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Lighthouse
     cost:
@@ -181,8 +153,6 @@ cards:
     ability:
       - action
       - coin
-    trigger:
-      - none
 
   - name: Merchant Ship
     cost:
@@ -190,10 +160,6 @@ cards:
     type:
       - action
       - duration
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Outpost
     cost:
@@ -201,7 +167,3 @@ cards:
     type:
       - action
       - duration
-    ability:
-      - none
-    trigger:
-      - none

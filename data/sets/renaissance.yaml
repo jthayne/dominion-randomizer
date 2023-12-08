@@ -56,8 +56,6 @@ cards:
       - duration
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Experiment
     cost:
@@ -68,8 +66,6 @@ cards:
       - card
       - action
       - gain
-    trigger:
-      - none
 
   - name: Improve
     cost:
@@ -80,8 +76,6 @@ cards:
       - coin
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Flag Bearer
     cost:
@@ -103,8 +97,6 @@ cards:
       - action
       - trash
       - curse
-    trigger:
-      - none
 
   - name: Inventor
     cost:
@@ -113,8 +105,6 @@ cards:
       - action
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Mountain Village
     cost:
@@ -124,8 +114,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Patron
     cost:
@@ -150,8 +138,6 @@ cards:
     ability:
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Research
     cost:
@@ -162,8 +148,6 @@ cards:
     ability:
       - action
       - trash
-    trigger:
-      - none
 
   - name: Silk Merchant
     cost:
@@ -190,8 +174,6 @@ cards:
       - card
       - curse
       - trash
-    trigger:
-      - none
 
   - name: Recruiter
     cost:
@@ -213,8 +195,6 @@ cards:
       - treasure
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Scholar
     cost:
@@ -223,8 +203,6 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
 
   - name: Sculptor
     cost:
@@ -246,8 +224,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Spices
     cost:
@@ -336,8 +312,6 @@ projects:
   - name: Star Chart
     cost:
       treasure: 3
-    ability:
-      - none
     trigger:
       - token_block
 
@@ -364,8 +338,6 @@ projects:
   - name: Silos
     cost:
       treasure: 4
-    ability:
-      - none
     trigger:
       - token_block
 
@@ -390,16 +362,12 @@ projects:
   - name: Capitalism
     cost:
       treasure: 5
-    ability:
-      - none
     trigger:
       - token_block
 
   - name: Fleet
     cost:
       treasure: 5
-    ability:
-      - none
     trigger:
       - token_block
 
@@ -416,8 +384,6 @@ projects:
   - name: Piazza
     cost:
       treasure: 5
-    ability:
-      - none
     trigger:
       - token_block
 
@@ -448,23 +414,30 @@ projects:
   - name: Innovation
     cost:
       treasure: 6
-    ability:
-      - none
     trigger:
       - token_block
 
   - name: Canal
     cost:
       treasure: 7
-    ability:
-      - none
     trigger:
       - token_block
 
   - name: Citadel
     cost:
       treasure: 8
-    ability:
-      - none
     trigger:
       - token_block
+
+artifacts:
+  - name: Flag
+    ability:
+      - card
+  - name: Horn
+  - name: Key
+    ability:
+      - coin
+  - name: Lantern
+  - name: Treasure Chest
+    ability:
+      - gain

@@ -7,8 +7,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Baker
     cost:
@@ -56,8 +54,6 @@ cards:
       - action
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Herald
     cost:
@@ -67,18 +63,12 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Journeyman
     cost:
       treasure: 5
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Masterpiece
     cost:
@@ -87,8 +77,6 @@ cards:
       - treasure
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Merchant Guild
     cost:
@@ -125,8 +113,6 @@ cards:
     ability:
       - gain
       - curse
-    trigger:
-      - none
 
   - name: Stonemason
     cost:
@@ -136,8 +122,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Taxman
     cost:
@@ -148,5 +132,3 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none

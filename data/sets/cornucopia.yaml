@@ -7,8 +7,6 @@ cards:
       - action
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Young Witch
     cost:
@@ -32,8 +30,6 @@ cards:
       - buy
       - coin
       - card
-    trigger:
-      - none
 
   - name: Tournament
     cost:
@@ -45,7 +41,7 @@ cards:
       - card
       - coin
     trigger:
-      - none
+      - prize
 
   - name: Hamlet
     cost:
@@ -56,8 +52,6 @@ cards:
       - card
       - action
       - buy
-    trigger:
-      - none
 
   - name: Jester
     cost:
@@ -68,8 +62,6 @@ cards:
     ability:
       - coin
       - curse
-    trigger:
-      - none
 
   - name: Fortune Teller
     cost:
@@ -78,18 +70,12 @@ cards:
       - action
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Fairgrounds
     cost:
       treasure: 6
     type:
       - victory
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Horn of Plenty
     cost:
@@ -99,8 +85,6 @@ cards:
     ability:
       - gain
       - trash
-    trigger:
-      - none
 
   - name: Hunting Party
     cost:
@@ -110,8 +94,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Menagerie
     cost:
@@ -121,8 +103,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Farming Village
     cost:
@@ -131,8 +111,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Remake
     cost:
@@ -142,5 +120,59 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
+
+prizes:
+  - name: Bag of Gold
+    cost:
+      treasure: 0
+    type:
+      - action
+      - prize
+    ability:
+      - action
+      - gain
+
+  - name: Diadem
+    cost:
+      treasure: 0
+    type:
+      - treasure
+      - prize
+    ability:
+      - coin
+
+  - name: Followers
+    cost:
+      treasure: 0
+    type:
+      - action
+      - attack
+      - prize
+    ability:
+      - card
+      - gain
+      - curse
+
+  - name: Princess
+    cost:
+      treasure: 0
+    type:
+      - action
+      - prize
+    ability:
+      - buy
+
+  - name: Trusty Steed
+    cost:
+      treasure: 0
+    type:
+      - action
+      - prize
+    ability:
+      - card
+      - action
+      - coin
+      - gain
+
+bane:
+  - name: Bane

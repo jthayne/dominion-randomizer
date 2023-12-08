@@ -5,10 +5,6 @@ cards:
       treasure: 3
     type:
       - treasure
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Clerk
     cost:
@@ -19,8 +15,6 @@ cards:
       - attack
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Investment
     cost:
@@ -41,8 +35,6 @@ cards:
       - treasure
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Charlatan
     cost:
@@ -53,8 +45,6 @@ cards:
     ability:
       - coin
       - curse
-    trigger:
-      - none
 
   - name: Collection
     cost:
@@ -74,8 +64,6 @@ cards:
       - treasure
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Magnate
     cost:
@@ -84,8 +72,6 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
 
   - name: War Chest
     cost:
@@ -94,5 +80,3 @@ cards:
       - treasure
     ability:
       - gain
-    trigger:
-      - none

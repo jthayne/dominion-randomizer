@@ -1,15 +1,5 @@
 name: Dominion
 cards:
-  - name: Adventurer
-    cost:
-      treasure: 6
-    type:
-      - action
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Bureaucrat
     cost:
       treasure: 4
@@ -18,8 +8,6 @@ cards:
       - attack
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Cellar
     cost:
@@ -28,18 +16,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
-
-  - name: Chancellor
-    cost:
-      treasure: 3
-    type:
-      - action
-    ability:
-      - coin
-    trigger:
-      - none
 
   - name: Chapel
     cost:
@@ -48,8 +24,6 @@ cards:
       - action
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Council Room
     cost:
@@ -59,19 +33,6 @@ cards:
     ability:
       - card
       - buy
-    trigger:
-      - none
-
-  - name: Feast
-    cost:
-      treasure: 4
-    type:
-      - action
-    ability:
-      - trash
-      - gain
-    trigger:
-      - none
 
   - name: Festival
     cost:
@@ -82,18 +43,12 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Gardens
     cost:
       treasure: 4
     type:
       - victory
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Laboratory
     cost:
@@ -103,18 +58,12 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Library
     cost:
       treasure: 5
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Market
     cost:
@@ -126,8 +75,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Militia
     cost:
@@ -137,8 +84,6 @@ cards:
       - attack
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Mine
     cost:
@@ -148,8 +93,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Moat
     cost:
@@ -159,8 +102,6 @@ cards:
       - reaction
     ability:
       - card
-    trigger:
-      - none
 
   - name: Moneylender
     cost:
@@ -169,8 +110,6 @@ cards:
       - action
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Remodel
     cost:
@@ -180,8 +119,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Smithy
     cost:
@@ -190,42 +127,12 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
-
-  - name: Spy
-    cost:
-      treasure: 4
-    type:
-      - action
-      - attack
-    ability:
-      - card
-      - action
-    trigger:
-      - none
-
-  - name: Thief
-    cost:
-      treasure: 4
-    type:
-      - action
-      - attack
-    ability:
-      - trash
-      - gain
-    trigger:
-      - none
 
   - name: Throne Room
     cost:
       treasure: 4
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Village
     cost:
@@ -235,8 +142,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Witch
     cost:
@@ -247,19 +152,6 @@ cards:
     ability:
       - card
       - curse
-    trigger:
-      - none
-
-  - name: Woodcutter
-    cost:
-      treasure: 3
-    type:
-      - action
-    ability:
-      - buy
-      - coin
-    trigger:
-      - none
 
   - name: Workshop
     cost:
@@ -268,8 +160,7 @@ cards:
       - action
     ability:
       - gain
-    trigger:
-      - none
+
 supply:
   - name: Copper
     cost:

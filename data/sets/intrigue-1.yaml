@@ -9,18 +9,12 @@ cards:
     ability:
       - coin
       - card
-    trigger:
-      - none
 
   - name: Coppersmith
     cost:
       treasure: 4
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Scout
     cost:
@@ -29,8 +23,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Harem
     cost:
@@ -38,10 +30,6 @@ cards:
     type:
       - treasure
       - victory
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Saboteur
     cost:
@@ -52,8 +40,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Tribute
     cost:
@@ -64,8 +50,6 @@ cards:
       - action
       - coin
       - card
-    trigger:
-      - none
 
   - name: Great Hall
     cost:
@@ -76,5 +60,3 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none

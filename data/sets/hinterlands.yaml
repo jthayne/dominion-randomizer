@@ -9,8 +9,6 @@ cards:
       - action
       - card
       - gain
-    trigger:
-      - none
 
   - name: Fool's Gold
     cost:
@@ -22,8 +20,6 @@ cards:
       - coin
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Trader
     cost:
@@ -34,8 +30,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Highway
     cost:
@@ -45,8 +39,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Spice Merchant
     cost:
@@ -59,8 +51,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Cartographer
     cost:
@@ -70,8 +60,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Farmland
     cost:
@@ -81,8 +69,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Margrave
     cost:
@@ -93,8 +79,6 @@ cards:
     ability:
       - card
       - buy
-    trigger:
-      - none
 
   - name: Haggler
     cost:
@@ -104,8 +88,6 @@ cards:
     ability:
       - coin
       - gain
-    trigger:
-      - none
 
   - name: Scheme
     cost:
@@ -115,8 +97,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Inn
     cost:
@@ -126,8 +106,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Tunnel
     cost:
@@ -137,8 +115,6 @@ cards:
       - reaction
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Crossroads
     cost:
@@ -148,8 +124,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Develop
     cost:
@@ -159,8 +133,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Oasis
     cost:
@@ -171,8 +143,6 @@ cards:
       - action
       - card
       - coin
-    trigger:
-      - none
 
   - name: Stables
     cost:
@@ -182,8 +152,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Jack of All Trades
     cost:
@@ -193,8 +161,6 @@ cards:
     ability:
       - gain
       - trash
-    trigger:
-      - none
 
   - name: Silk Road
     cost:
@@ -203,8 +169,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Ill-Gotten Gains
     cost:
@@ -213,8 +177,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Embassy
     cost:
@@ -223,8 +185,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Nomad Camp
     cost:
@@ -233,8 +193,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Oracle
     cost:
@@ -243,8 +201,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Noble Brigand
     cost:
@@ -253,8 +209,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Mandarin
     cost:
@@ -263,8 +217,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Cache
     cost:
@@ -273,8 +225,6 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none
 
   - name: Duchess
     cost:
@@ -283,5 +233,3 @@ cards:
       - action
     ability:
       - action
-    trigger:
-      - none

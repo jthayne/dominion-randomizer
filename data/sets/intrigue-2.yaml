@@ -9,8 +9,6 @@ cards:
       - action
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Diplomat
     cost:
@@ -21,8 +19,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Mill
     cost:
@@ -34,8 +30,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Secret Passage
     cost:
@@ -45,8 +39,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Patrol
     cost:
@@ -55,8 +47,6 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
 
   - name: Courtier
     cost:
@@ -68,8 +58,6 @@ cards:
       - buy
       - coin
       - gain
-    trigger:
-      - none
 
   - name: Replace
     cost:
@@ -81,8 +69,6 @@ cards:
       - trash
       - gain
       - curse
-    trigger:
-      - none
 
   - name: Farm
     cost:
@@ -90,7 +76,3 @@ cards:
     type:
       - treasure
       - victory
-    ability:
-      - none
-    trigger:
-      - none

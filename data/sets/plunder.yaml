@@ -8,8 +8,6 @@ cards:
       - duration
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Grotto
     cost:
@@ -19,8 +17,6 @@ cards:
       - duration
     ability:
       - action
-    trigger:
-      - none
 
   - name: Jewelled Egg
     cost:
@@ -53,8 +49,6 @@ cards:
       - action
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Secluded Shrine
     cost:
@@ -65,8 +59,6 @@ cards:
     ability:
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Siren
     cost:
@@ -78,8 +70,6 @@ cards:
     ability:
       - curse
       - trash
-    trigger:
-      - none
 
   - name: Stowaway
     cost:
@@ -90,8 +80,6 @@ cards:
       - reaction
     ability:
       - card
-    trigger:
-      - none
 
   - name: Taskmaster
     cost:
@@ -102,8 +90,6 @@ cards:
     ability:
       - action
       - coin
-    trigger:
-      - none
 
   - name: Abundance
     cost:
@@ -114,8 +100,6 @@ cards:
     ability:
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Cabin Boy
     cost:
@@ -128,8 +112,6 @@ cards:
       - action
       - coin
       - trash
-    trigger:
-      - none
 
   - name: Crucible
     cost:
@@ -139,8 +121,6 @@ cards:
     ability:
       - trash
       - coin
-    trigger:
-      - none
 
   - name: Flagship
     cost:
@@ -151,8 +131,6 @@ cards:
       - command
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Fortune Hunter
     cost:
@@ -161,8 +139,6 @@ cards:
       - action
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Gondola
     cost:
@@ -172,8 +148,6 @@ cards:
       - duration
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Harbor Village
     cost:
@@ -184,8 +158,6 @@ cards:
       - card
       - action
       - coin
-    trigger:
-      - none
 
   - name: Landing Party
     cost:
@@ -196,8 +168,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Mapmaker
     cost:
@@ -205,10 +175,6 @@ cards:
     type:
       - action
       - reaction
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Maroon
     cost:
@@ -218,8 +184,6 @@ cards:
     ability:
       - trash
       - card
-    trigger:
-      - none
 
   - name: Rope
     cost:
@@ -231,8 +195,6 @@ cards:
       - buy
       - card
       - trash
-    trigger:
-      - none
 
   - name: Swamp Shacks
     cost:
@@ -242,8 +204,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Tools
     cost:
@@ -252,8 +212,6 @@ cards:
       - treasure
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Buried Treasure
     cost:
@@ -264,8 +222,6 @@ cards:
     ability:
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Crew
     cost:
@@ -275,8 +231,6 @@ cards:
       - duration
     ability:
       - card
-    trigger:
-      - none
 
   - name: Cutthroat
     cost:
@@ -285,8 +239,6 @@ cards:
       - action
       - duration
       - attack
-    ability:
-      - none
     trigger:
       - loot
 
@@ -299,8 +251,6 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Figurine
     cost:
@@ -311,18 +261,12 @@ cards:
       - card
       - buy
       - coin
-    trigger:
-      - none
 
   - name: First Mate
     cost:
       treasure: 5
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Frigate
     cost:
@@ -333,8 +277,6 @@ cards:
       - attack
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Longship
     cost:
@@ -345,8 +287,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Mining Road
     cost:
@@ -357,8 +297,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Pendant
     cost:
@@ -367,8 +305,6 @@ cards:
       - treasure
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Pickaxe
     cost:
@@ -387,8 +323,6 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
 
   - name: Quartermaster
     cost:
@@ -398,8 +332,6 @@ cards:
       - duration
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Silver Mine
     cost:
@@ -408,8 +340,6 @@ cards:
       - treasure
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Trickster
     cost:
@@ -419,8 +349,6 @@ cards:
       - attack
     ability:
       - curse
-    trigger:
-      - none
 
   - name: Wealthy Village
     cost:
@@ -448,10 +376,151 @@ cards:
       treasure: 7
     type:
       - treasure
+
+cards-non-supply:
+  - name: Amphora
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - duration
+      - loot
     ability:
-      - none
-    trigger:
-      - none
+      - buy
+      - coin
+
+  - name: Doubloons
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+    ability:
+      - gain
+
+  - name: Endless Chalice
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - duration
+      - loot
+    ability:
+      - buy
+
+  - name: Figurehead
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - duration
+      - loot
+    ability:
+      - card
+
+  - name: Hammer
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+    ability:
+      - gain
+
+  - name: Insignia
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+
+  - name: Jewels
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - duration
+      - loot
+    ability:
+      - buy
+
+  - name: Orb
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+    ability:
+      - buy
+      - coin
+
+  - name: Prize Goat
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+    ability:
+      - buy
+      - trash
+
+  - name: Puzzle Box
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+    ability:
+      - buy
+
+  - name: Sextant
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+    ability:
+      - buy
+
+  - name: Shield
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+      - reaction
+    ability:
+      - buy
+
+  - name: Spell Scroll
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+      - action
+    ability:
+      - trash
+      - gain
+
+  - name: Staff
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+    ability:
+      - buy
+
+  - name: Sword
+    cost:
+      treasure: 7
+    type:
+      - treasure
+      - loot
+      - attack
+    ability:
+      - buy
 
 events:
   - name: Bury
@@ -459,24 +528,18 @@ events:
       treasure: 1
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Avoid
     cost:
       treasure: 2
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Deliver
     cost:
       treasure: 2
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Peril
     cost:
@@ -491,14 +554,10 @@ events:
       treasure: 2
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Foray
     cost:
       treasure: 3
-    ability:
-      - none
     trigger:
       - loot
 
@@ -509,8 +568,6 @@ events:
       - card
       - action
       - buy
-    trigger:
-      - none
 
   - name: Mirror
     cost:
@@ -518,16 +575,10 @@ events:
     ability:
       - buy
       - gain
-    trigger:
-      - none
 
   - name: Prepare
     cost:
       treasure: 3
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Scrounge
     cost:
@@ -535,24 +586,16 @@ events:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Journey
     cost:
       treasure: 4
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Maelstrom
     cost:
       treasure: 4
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Looting
     cost:
@@ -580,77 +623,33 @@ events:
 
 traits:
   - name: Cheap
-    ability:
-      - none
-    trigger:
-      - none
   - name: Cursed
     ability:
       - curse
     trigger:
       - loot
   - name: Fated
-    ability:
-      - none
-    trigger:
-      - none
   - name: Fawning
     ability:
       - gain
-    trigger:
-      - none
   - name: Friendly
     ability:
       - gain
-    trigger:
-      - none
   - name: Hasty
-    ability:
-      - none
-    trigger:
-      - none
   - name: Inherited
-    ability:
-      - none
-    trigger:
-      - none
   - name: Inspiring
-    ability:
-      - none
-    trigger:
-      - none
   - name: Nearby
     ability:
       - buy
-    trigger:
-      - none
   - name: Patient
-    ability:
-      - none
-    trigger:
-      - none
   - name: Pious
     ability:
       - trash
-    trigger:
-      - none
   - name: Reckless
-    ability:
-      - none
-    trigger:
-      - none
   - name: Rich
     ability:
       - gain
-    trigger:
-      - none
   - name: Shy
     ability:
       - card
-    trigger:
-      - none
   - name: Tireless
-    ability:
-      - none
-    trigger:
-      - none

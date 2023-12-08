@@ -7,18 +7,12 @@ cards:
       - treasure
     ability:
       - buy
-    trigger:
-      - none
 
   - name: Counting House
     cost:
       treasure: 5
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Goons
     cost:
@@ -39,8 +33,6 @@ cards:
       - treasure
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Loan
     cost:
@@ -49,8 +41,6 @@ cards:
       - treasure
     ability:
       - trash
-    trigger:
-      - none
 
   - name: Trade Route
     cost:
@@ -70,10 +60,6 @@ cards:
       treasure: 5
     type:
       - treasure
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Mountebank
     cost:
@@ -85,15 +71,9 @@ cards:
       - coin
       - curse
       - gain
-    trigger:
-      - none
 
   - name: Venture
     cost:
       treasure: 5
     type:
       - treasure
-    ability:
-      - none
-    trigger:
-      - none

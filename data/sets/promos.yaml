@@ -19,8 +19,6 @@ cards:
     ability:
       - action
       - trash
-    trigger:
-      - none
 
   - name: Dismantle
     cost:
@@ -30,18 +28,12 @@ cards:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Envoy
     cost:
       treasure: 4
     type:
       - action
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Sauna/Avanto
     cost:
@@ -52,8 +44,6 @@ cards:
       - card
       - action
       - trash
-    trigger:
-      - none
 
   - name: Walled Village
     cost:
@@ -63,8 +53,6 @@ cards:
     ability:
       - card
       - action
-    trigger:
-      - none
 
   - name: Governor
     cost:
@@ -76,18 +64,12 @@ cards:
       - card
       - gain
       - trash
-    trigger:
-      - none
 
   - name: Stash
     cost:
       treasure: 5
     type:
       - treasure
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Captain
     cost:
@@ -96,10 +78,6 @@ cards:
       - action
       - duration
       - command
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Prince
     cost:
@@ -108,10 +86,6 @@ cards:
       - action
       - duration
       - command
-    ability:
-      - none
-    trigger:
-      - none
 
 events:
   - name: Summon
@@ -119,5 +93,3 @@ events:
       treasure: 5
     ability:
       - gain
-    trigger:
-      - none

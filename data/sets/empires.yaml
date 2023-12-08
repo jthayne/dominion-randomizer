@@ -28,8 +28,6 @@ cards:
     type:
       - action
       - command
-    ability:
-      - none
     trigger:
       - token_debt
 
@@ -40,8 +38,6 @@ cards:
       - action
     ability:
       - card
-    trigger:
-      - none
 
   - name: Encampment/Plunder
     cost:
@@ -77,8 +73,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Castles
     cost:
@@ -108,8 +102,6 @@ cards:
       - trash
       - curse
       - gain
-    trigger:
-      - none
 
   - name: Chariot Race
     cost:
@@ -133,8 +125,6 @@ cards:
     ability:
       - action
       - card
-    trigger:
-      - none
 
   - name: Farmers' Market
     cost:
@@ -199,8 +189,6 @@ cards:
       - action
       - buy
       - coin
-    trigger:
-      - none
 
   - name: Archive
     cost:
@@ -210,8 +198,6 @@ cards:
       - duration
     ability:
       - action
-    trigger:
-      - none
 
   - name: Capital
     cost:
@@ -232,8 +218,6 @@ cards:
       - buy
       - coin
       - gain
-    trigger:
-      - none
 
   - name: Crown
     cost:
@@ -241,10 +225,6 @@ cards:
     type:
       - action
       - treasure
-    ability:
-      - none
-    trigger:
-      - none
 
   - name: Forum
     cost:
@@ -255,8 +235,6 @@ cards:
       - action
       - card
       - buy
-    trigger:
-      - none
 
   - name: Groundskeeper
     cost:
@@ -278,8 +256,6 @@ cards:
       - attack
     ability:
       - coin
-    trigger:
-      - none
 
   - name: Wild Hunt
     cost:
@@ -327,8 +303,6 @@ events:
     ability:
       - trash
       - gain
-    trigger:
-      - none
 
   - name: Delve
     cost:
@@ -336,14 +310,10 @@ events:
     ability:
       - buy
       - gain
-    trigger:
-      - none
 
   - name: Tax
     cost:
       treasure: 2
-    ability:
-      - none
     trigger:
       - token_debt
 
@@ -352,8 +322,6 @@ events:
       treasure: 3
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Ritual
     cost:
@@ -392,8 +360,6 @@ events:
       treasure: 5
     ability:
       - gain
-    trigger:
-      - none
 
   - name: Conquest
     cost:
@@ -419,124 +385,58 @@ landmarks:
       - vp
     trigger:
       - token_vp
-
   - name: Arena
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Bandit Fort
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Basilica
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Baths
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Battlefield
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Colonnade
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Defiled Shrine
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Fountain
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Keep
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Labyrinth
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Mountain Pass
-    ability:
-      - none
     trigger:
       - token_debt
       - token_vp
-
   - name: Museum
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Obelisk
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Orchard
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Palace
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Tomb
     ability:
       - vp
     trigger:
       - token_vp
-
   - name: Tower
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Triumphal Arch
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Wall
-    ability:
-      - none
-    trigger:
-      - none
-
   - name: Wolf Den
-    ability:
-      - none
-    trigger:
-      - none
