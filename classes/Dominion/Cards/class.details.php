@@ -7,14 +7,14 @@ namespace Dominion\Cards;
 use Dominion\CardSet;
 use Medoo\Medoo;
 
-readonly class Details
+final readonly class Details
 {
     public function __construct(
         private Medoo $medoo,
     ) {
     }
 
-    final public function getByID(int $id): array {
+    public function getByID(int $id): array {
         $result = $this->medoo->get(
             'cards',
             [
@@ -23,8 +23,6 @@ readonly class Details
                 'set',
                 'edition',
                 'is_kingdom_card',
-//                'cost',
-//                'types',
             ],
             [
                 'id[=]' => $id,
@@ -41,7 +39,7 @@ readonly class Details
         return $result ?? [];
     }
 
-    final public function getTypesForCard(int $id): array
+    public function getTypesForCard(int $id): array
     {
         $return = [];
         $result = $this->medoo->select(
@@ -63,7 +61,7 @@ readonly class Details
         return $return;
     }
 
-    final public function getAbilitiesForCard(int $id): array
+    public function getAbilitiesForCard(int $id): array
     {
         return $this->medoo->get(
             'card_ability',
@@ -76,7 +74,7 @@ readonly class Details
         );
     }
 
-    final public function getTriggersForCard(int $id): array
+    public function getTriggersForCard(int $id): array
     {
         $triggers = $this->medoo->select(
             'card_trigger',
