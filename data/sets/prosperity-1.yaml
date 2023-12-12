@@ -1,4 +1,5 @@
 name: Prosperity
+edition: 1
 cards:
   - name: Contraband
     cost:
@@ -22,9 +23,9 @@ cards:
     ability:
       - buy
       - coin
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Talisman
     cost:

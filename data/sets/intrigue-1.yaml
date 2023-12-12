@@ -1,4 +1,5 @@
 name: Intrigue
+edition: 1
 cards:
   - name: Secret Chamber
     cost:

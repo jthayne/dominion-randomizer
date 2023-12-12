@@ -48,9 +48,9 @@ cards:
     ability:
       - action
       - card
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Patrician/Emporium
     cost:
@@ -61,9 +61,9 @@ cards:
       - action
       - card
       - coin
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Settlers/Bustling Village
     cost:
@@ -83,12 +83,12 @@ cards:
       - castle
       - action
     ability:
-      - vp
+      - victory
       - trash
       - gain
       - coin
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Catapult/Rocks
     cost:
@@ -111,9 +111,9 @@ cards:
     ability:
       - action
       - coin
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Enchantress
     cost:
@@ -135,10 +135,10 @@ cards:
     ability:
       - buy
       - trash
-      - vp
+      - victory
       - coin
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Gladiator/Fortune
     cost:
@@ -164,9 +164,9 @@ cards:
       - card
       - action
       - coin
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Temple
     cost:
@@ -175,10 +175,10 @@ cards:
       - action
       - gathering
     ability:
-      - vp
+      - victory
       - trash
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Villa
     cost:
@@ -244,9 +244,9 @@ cards:
     ability:
       - action
       - card
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Legionary
     cost:
@@ -266,24 +266,28 @@ cards:
     ability:
       - card
       - gain
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
 events:
   - name: Triumph
     cost:
       debt: 5
+    type:
+      - event
     ability:
       - gain
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
       - token_debt
 
   - name: Annex
     cost:
       debt: 8
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -292,6 +296,8 @@ events:
   - name: Donate
     cost:
       debt: 8
+    type:
+      - event
     ability:
       - trash
     trigger:
@@ -300,6 +306,8 @@ events:
   - name: Advance
     cost:
       treasure: 0
+    type:
+      - event
     ability:
       - trash
       - gain
@@ -307,6 +315,8 @@ events:
   - name: Delve
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - buy
       - gain
@@ -314,129 +324,187 @@ events:
   - name: Tax
     cost:
       treasure: 2
+    type:
+      - event
     trigger:
       - token_debt
 
   - name: Banquet
     cost:
       treasure: 3
+    type:
+      - event
     ability:
       - gain
 
   - name: Ritual
     cost:
       treasure: 4
+    type:
+      - event
     ability:
       - gain
       - curse
       - trash
-      - vp
+      - victory
       - coin
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Salt the Earth
     cost:
       treasure: 4
+    type:
+      - event
     ability:
-      - vp
+      - victory
       - trash
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Wedding
     cost:
       treasure: 4
       debt: 3
+    type:
+      - event
     ability:
-      - vp
+      - victory
       - gain
     trigger:
-      - token_vp
+      - token_victory
       - token_debt
 
   - name: Windfall
     cost:
       treasure: 5
+    type:
+      - event
     ability:
       - gain
 
   - name: Conquest
     cost:
       treasure: 6
+    type:
+      - event
     ability:
       - gain
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Dominate
     cost:
       treasure: 14
+    type:
+      - event
     ability:
       - gain
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
 landmarks:
   - name: Aqueduct
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Arena
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Bandit Fort
+    type:
+      - landmark
   - name: Basilica
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Baths
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Battlefield
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Colonnade
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Defiled Shrine
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Fountain
+    type:
+      - landmark
   - name: Keep
+    type:
+      - landmark
   - name: Labyrinth
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Mountain Pass
+    type:
+      - landmark
     trigger:
       - token_debt
-      - token_vp
+      - token_victory
   - name: Museum
+    type:
+      - landmark
   - name: Obelisk
+    type:
+      - landmark
   - name: Orchard
+    type:
+      - landmark
   - name: Palace
+    type:
+      - landmark
   - name: Tomb
+    type:
+      - landmark
     ability:
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
   - name: Tower
+    type:
+      - landmark
   - name: Triumphal Arch
+    type:
+      - landmark
   - name: Wall
+    type:
+      - landmark
   - name: Wolf Den
+    type:
+      - landmark

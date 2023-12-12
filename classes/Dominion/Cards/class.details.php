@@ -99,7 +99,7 @@ readonly class Details
         return unserialize($triggers['triggers']);
     }
 
-    final public function hasAbility(int $id, Abilities $ability): bool
+    final public function hasAbility(int $id, Ability $ability): bool
     {
         $details = $this->getByID($id);
 
@@ -118,7 +118,7 @@ readonly class Details
             if ($flag === 1) {
                 $ability = ucfirst($ability);
 
-                $value = Abilities::tryFromName($ability);
+                $value = Ability::tryFromName($ability);
 
                 $score += $value->value;
             }

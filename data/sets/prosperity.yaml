@@ -26,10 +26,10 @@ cards:
       - action
     ability:
       - coin
-      - vp
+      - victory
       - trash
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Grand Market
     cost:
@@ -89,9 +89,9 @@ cards:
       - action
     ability:
       - coin
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Forge
     cost:

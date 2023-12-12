@@ -9,7 +9,6 @@ cards:
     ability:
       - coin
       - trash
-      - draw
       - gain
 
   - name: Artificer
@@ -21,7 +20,6 @@ cards:
       - card
       - action
       - coin
-      - discard
       - gain
 
   - name: Bridge Troll
@@ -32,7 +30,6 @@ cards:
       - duration
       - attack
     ability:
-      - cost
       - buy
     trigger:
       - token_minuscoin
@@ -57,7 +54,7 @@ cards:
       - reserve
       - victory
     ability:
-      - vp
+      - victory
     trigger:
       - mat_tavern
 
@@ -70,7 +67,6 @@ cards:
     ability:
       - action
       - card
-      - discard
 
   - name: Duplicate
     cost:
@@ -112,7 +108,6 @@ cards:
     ability:
       - card
       - action
-      - redraw
     trigger:
       - mat_tavern
 
@@ -162,7 +157,6 @@ cards:
     ability:
       - buy
       - coin
-      - discard
       - gain
 
   - name: Miser
@@ -428,8 +422,6 @@ events:
       treasure: 4
     type:
       - event
-    ability:
-      - turn
 
   - name: Scouting Party
     cost:
@@ -547,7 +539,6 @@ events:
     type:
       - event
     ability:
-      - discard
       - gain
 
   - name: Expedition
@@ -555,8 +546,6 @@ events:
       treasure: 3
     type:
       - event
-    ability:
-      - draw
 
   - name: Alms
     cost:

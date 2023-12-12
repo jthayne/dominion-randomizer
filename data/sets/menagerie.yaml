@@ -338,10 +338,14 @@ events:
   - name: Delay
     cost:
       treasure: 0
+    type:
+      - event
 
   - name: Desperation
     cost:
       treasure: 0
+    type:
+      - event
     ability:
       - curse
       - buy
@@ -350,18 +354,24 @@ events:
   - name: Gamble
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - buy
 
   - name: Pursue
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - buy
 
   - name: Ride
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -370,12 +380,16 @@ events:
   - name: Toil
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - buy
 
   - name: Enhance
     cost:
       treasure: 3
+    type:
+      - event
     ability:
       - trash
       - gain
@@ -383,10 +397,14 @@ events:
   - name: March
     cost:
       treasure: 3
+    type:
+      - event
 
   - name: Transport
     cost:
       treasure: 3
+    type:
+      - event
     ability:
       - exile
     trigger:
@@ -395,6 +413,8 @@ events:
   - name: Banish
     cost:
       treasure: 4
+    type:
+      - event
     ability:
       - exile
     trigger:
@@ -403,6 +423,8 @@ events:
   - name: Bargain
     cost:
       treasure: 4
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -411,6 +433,8 @@ events:
   - name: Invest
     cost:
       treasure: 4
+    type:
+      - event
     ability:
       - exile
       - card
@@ -420,16 +444,22 @@ events:
   - name: Seize the Day
     cost:
       treasure: 4
+    type:
+      - event
 
   - name: Commerce
     cost:
       treasure: 5
+    type:
+      - event
     ability:
       - gain
 
   - name: Demand
     cost:
       treasure: 5
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -438,6 +468,8 @@ events:
   - name: Stampede
     cost:
       treasure: 5
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -446,12 +478,16 @@ events:
   - name: Reap
     cost:
       treasure: 7
+    type:
+      - event
     ability:
       - gain
 
   - name: Enclave
     cost:
       treasure: 8
+    type:
+      - event
     ability:
       - gain
       - exile
@@ -461,76 +497,120 @@ events:
   - name: Alliance
     cost:
       treasure: 10
+    type:
+      - event
     ability:
       - gain
 
   - name: Populate
     cost:
       treasure: 10
+    type:
+      - event
     ability:
       - gain
 
 ways:
   - name: Way of the Butterfly
+    type:
+      - way
     ability:
       - gain
   - name: Way of the Camel
+    type:
+      - way
     ability:
       - exile
     trigger:
       - mat_exile
   - name: Way of the Chameleon
+    type:
+      - way
     ability:
       - card
       - coin
   - name: Way of the Frog
+    type:
+      - way
     ability:
       - action
   - name: Way of the Goat
+    type:
+      - way
     ability:
       - trash
   - name: Way of the Horse
+    type:
+      - way
     ability:
       - card
       - action
   - name: Way of the Mole
+    type:
+      - way
     ability:
       - action
       - card
   - name: Way of the Monkey
+    type:
+      - way
     ability:
       - buy
       - coin
   - name: Way of the Mouse
+    type:
+      - way
   - name: Way of the Mule
+    type:
+      - way
     ability:
       - action
       - coin
   - name: Way of the Otter
+    type:
+      - way
     ability:
       - card
   - name: Way of the Owl
+    type:
+      - way
   - name: Way of the Ox
+    type:
+      - way
     ability:
       - action
   - name: Way of the Pig
+    type:
+      - way
     ability:
       - card
       - action
   - name: Way of the Rat
+    type:
+      - way
     ability:
       - gain
   - name: Way of the Seal
+    type:
+      - way
     ability:
       - coin
   - name: Way of the Sheep
+    type:
+      - way
     ability:
       - coin
   - name: Way of the Squirrel
+    type:
+      - way
     ability:
       - card
   - name: Way of the Turtle
+    type:
+      - way
   - name: Way of the Worm
+    type:
+      - way
     ability:
       - exile
     trigger:

@@ -128,7 +128,7 @@ cards:
     type:
       - victory
     ability:
-      - vp
+      - victory
     trigger:
       - potion
 

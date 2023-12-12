@@ -265,7 +265,6 @@ cards:
     type:
       - treasure
     ability:
-      - twice
       - buy
 
   - name: Cultist

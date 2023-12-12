@@ -1,4 +1,5 @@
-name: Prosperity (2nd)
+name: Prosperity
+edition: 2
 cards:
   - name: Anvil
     cost:
@@ -24,9 +25,9 @@ cards:
     ability:
       - trash
       - coin
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Tiara
     cost:
@@ -53,9 +54,9 @@ cards:
       - treasure
     ability:
       - buy
-      - vp
+      - victory
     trigger:
-      - token_vp
+      - token_victory
 
   - name: Crystal Ball
     cost:

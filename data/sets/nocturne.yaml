@@ -421,7 +421,7 @@ cards-non-supply:
       - treasure
       - heirloom
     ability:
-      trash
+      - trash
 
   - name: Haunted Mirror
     cost:
@@ -533,73 +533,127 @@ boons:
   - name: The Earth's Gift
     ability:
       - gain
+    type:
+      - boon
   - name: The Field's Gift
     ability:
       - action
       - coin
+    type:
+      - boon
   - name: The Flame's Gift
     ability:
       - trash
+    type:
+      - boon
   - name: The Forest's Gift
     ability:
       - buy
       - coin
+    type:
+      - boon
   - name: The Moon's Gift
+    type:
+      - boon
   - name: The Mountain's Gift
     ability:
       - gain
+    type:
+      - boon
   - name: The River's Gift
     ability:
       - card
+    type:
+      - boon
   - name: The Sea's Gift
     ability:
       - card
+    type:
+      - boon
   - name: The Sky's Gift
     ability:
       - gain
+    type:
+      - boon
   - name: The Sun's Gift
+    type:
+      - boon
   - name: The Swamp's Gift
+    type:
+      - boon
     ability:
       - gain
     trigger:
       - willowisp
   - name: The Wind's Gift
+    type:
+      - boon
     ability:
       - card
 
 hexes:
   - name: Bad Omens
+    type:
+      - hex
   - name: Delusion
+    type:
+      - hex
     trigger:
       - state_deluded
   - name: Envy
+    type:
+      - hex
     trigger:
       - state_deluded
   - name: Famine
+    type:
+      - hex
   - name: Fear
+    type:
+      - hex
   - name: Greed
+    type:
+      - hex
     ability:
       - gain
   - name: Haunting
+    type:
+      - hex
   - name: Locusts
+    type:
+      - hex
     ability:
       - trash
       - curse
       - gain
   - name: Misery
+    type:
+      - hex
     trigger:
       - state_miserable
   - name: Plague
+    type:
+      - hex
     ability:
       - curse
   - name: Poverty
+    type:
+      - hex
   - name: War
+    type:
+      - hex
     ability:
       - trash
 
 states:
   - name: Lost in the Woods
+    type:
+      - state
     trigger:
       - boon
   - name: Deluded/Envious
+    type:
+      - state
   - name: Miserable/Twice Miserable
+    type:
+      - state

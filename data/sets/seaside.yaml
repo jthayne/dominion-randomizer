@@ -23,7 +23,7 @@ cards:
       treasure: 2
     type:
       - action
-      - dration
+      - duration
     ability:
       - card
       - action

@@ -1,4 +1,5 @@
-name: Hinterlands (1st Edition)
+name: Hinterlands
+edition: 1
 cards:
   - name: Silk Road
     cost:

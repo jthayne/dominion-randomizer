@@ -91,5 +91,7 @@ events:
   - name: Summon
     cost:
       treasure: 5
+    type:
+      - event
     ability:
       - gain

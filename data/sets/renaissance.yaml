@@ -276,6 +276,8 @@ cards:
 
 projects:
   - name: Cathedral
+    type:
+      - project
     cost:
       treasure: 3
     ability:
@@ -284,6 +286,8 @@ projects:
       - token_block
 
   - name: City Gate
+    type:
+      - project
     cost:
       treasure: 3
     ability:
@@ -292,6 +296,8 @@ projects:
       - token_block
 
   - name: Pageant
+    type:
+      - project
     cost:
       treasure: 3
     ability:
@@ -302,6 +308,8 @@ projects:
       - token_block
 
   - name: Sewers
+    type:
+      - project
     cost:
       treasure: 3
     ability:
@@ -310,12 +318,16 @@ projects:
       - token_block
 
   - name: Star Chart
+    type:
+      - project
     cost:
       treasure: 3
     trigger:
       - token_block
 
   - name: Exploration
+    type:
+      - project
     cost:
       treasure: 4
     ability:
@@ -330,6 +342,8 @@ projects:
   - name: Fair
     cost:
       treasure: 4
+    type:
+      - project
     ability:
       - buy
     trigger:
@@ -338,12 +352,16 @@ projects:
   - name: Silos
     cost:
       treasure: 4
+    type:
+      - project
     trigger:
       - token_block
 
   - name: Sinister Plot
     cost:
       treasure: 4
+    type:
+      - project
     ability:
       - card
     trigger:
@@ -352,6 +370,8 @@ projects:
   - name: Academy
     cost:
       treasure: 5
+    type:
+      - project
     ability:
       - villager
     trigger:
@@ -362,18 +382,24 @@ projects:
   - name: Capitalism
     cost:
       treasure: 5
+    type:
+      - project
     trigger:
       - token_block
 
   - name: Fleet
     cost:
       treasure: 5
+    type:
+      - project
     trigger:
       - token_block
 
   - name: Guildhall
     cost:
       treasure: 5
+    type:
+      - project
     ability:
       - coffer
     trigger:
@@ -384,12 +410,16 @@ projects:
   - name: Piazza
     cost:
       treasure: 5
+    type:
+      - project
     trigger:
       - token_block
 
   - name: Road Network
     cost:
       treasure: 5
+    type:
+      - project
     ability:
       - card
     trigger:
@@ -398,6 +428,8 @@ projects:
   - name: Barracks
     cost:
       treasure: 6
+    type:
+      - project
     ability:
       - action
     trigger:
@@ -406,6 +438,8 @@ projects:
   - name: Crop Rotation
     cost:
       treasure: 6
+    type:
+      - project
     ability:
       - card
     trigger:
@@ -414,30 +448,46 @@ projects:
   - name: Innovation
     cost:
       treasure: 6
+    type:
+      - project
     trigger:
       - token_block
 
   - name: Canal
     cost:
       treasure: 7
+    type:
+      - project
     trigger:
       - token_block
 
   - name: Citadel
     cost:
       treasure: 8
+    type:
+      - project
     trigger:
       - token_block
 
 artifacts:
   - name: Flag
+    type:
+      - artifact
     ability:
       - card
   - name: Horn
+    type:
+      - artifact
   - name: Key
+    type:
+      - artifact
     ability:
       - coin
   - name: Lantern
+    type:
+      - artifact
   - name: Treasure Chest
+    type:
+      - artifact
     ability:
       - gain

@@ -40,7 +40,6 @@ cards:
       - card
       - action
       - coin
-      - draw
 
   - name: Augurs
     cost:
@@ -70,7 +69,7 @@ cards:
       - card
       - action
       - coin
-      - vp
+      - victory
       - gain
 
   - name: Forts
@@ -637,49 +636,95 @@ wizards:
       - card
       - gain
 
-allies:
+ally:
   - name: Architects' Guild
+    type:
+      - ally
   - name: Band of Nomads
+    type:
+      - ally
     ability:
       - card
       - action
       - buy
   - name: Cave Dwellers
+    type:
+      - ally
   - name: Circle of Witches
+    type:
+      - ally
     ability:
       - curse
   - name: City-State
+    type:
+      - ally
   - name: Coastal Haven
+    type:
+      - ally
   - name: Crafters' Guild
+    type:
+      - ally
     ability:
       - gain
   - name: Desert Guides
+    type:
+      - ally
   - name: Family of Inventors
+    type:
+      - ally
   - name: Fellowship of Scribes
+    type:
+      - ally
     ability:
       - card
   - name: Forest Dwellers
+    type:
+      - ally
   - name: Gang of Pickpockets
+    type:
+      - ally
   - name: Island Folk
+    type:
+      - ally
   - name: League of Bankers
+    type:
+      - ally
     ability:
       - coin
   - name: League of Shopkeepers
+    type:
+      - ally
     ability:
       - coin
       - action
       - buy
   - name: Market Towns
+    type:
+      - ally
   - name: Mountain Folk
+    type:
+      - ally
     ability:
       - card
   - name: Order of Astrologers
+    type:
+      - ally
   - name: Order of Masons
+    type:
+      - ally
   - name: Peaceful Cult
+    type:
+      - ally
     ability:
       - trash
   - name: Plateau Shepherds
+    type:
+      - ally
   - name: Trappers' Lodge
+    type:
+      - ally
   - name: Woodworkers' Guild
+    type:
+      - ally
     ability:
       - trash

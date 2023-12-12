@@ -1,4 +1,5 @@
-name: Intrigue (2nd)
+name: Intrigue
+edition: 2
 cards:
   - name: Lurker
     cost:

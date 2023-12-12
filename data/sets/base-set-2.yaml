@@ -1,4 +1,5 @@
-name: Dominion (2nd)
+name: Dominion
+edition: 2
 cards:
   - name: Harbinger
     cost:
@@ -67,3 +68,5 @@ cards:
 
 trash:
   - name: Trash Mat
+    type:
+      - trash

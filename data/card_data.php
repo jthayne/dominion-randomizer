@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Dominion\Cards\Card;
 use Dominion\Cards\Type;
+use Dominion\Cards\Validation\CardValidation;
 use Dominion\CardSet;
 
 $row = 1;
@@ -140,7 +141,14 @@ if (($handle = fopen(__DIR__ . "/cards.csv", "r")) !== FALSE) {
 $card = new Card($db);
 foreach ($cards as $set => $cardlist) {
     foreach ($cardlist as $data) {
-        $cardId = $card->add($data);
+        $validatedCard = new CardValidation(
+            name: $data['name'],
+            set: $data['set']->value,
+            edition: $data['edition'],
+            isKingdomCard: $data['is_kingdom_card'],
+        );
+
+        $cardId = $card->add($validatedCard);
         foreach ($data['types'] as $type) {
             $card->addTypeToCard((int) $cardId, $type);
         }

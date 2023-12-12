@@ -526,24 +526,32 @@ events:
   - name: Bury
     cost:
       treasure: 1
+    type:
+      - event
     ability:
       - buy
 
   - name: Avoid
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - buy
 
   - name: Deliver
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - buy
 
   - name: Peril
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - trash
     trigger:
@@ -552,18 +560,24 @@ events:
   - name: Rush
     cost:
       treasure: 2
+    type:
+      - event
     ability:
       - buy
 
   - name: Foray
     cost:
       treasure: 3
+    type:
+      - event
     trigger:
       - loot
 
   - name: Launch
     cost:
       treasure: 3
+    type:
+      - event
     ability:
       - card
       - action
@@ -572,6 +586,8 @@ events:
   - name: Mirror
     cost:
       treasure: 3
+    type:
+      - event
     ability:
       - buy
       - gain
@@ -579,10 +595,14 @@ events:
   - name: Prepare
     cost:
       treasure: 3
+    type:
+      - event
 
   - name: Scrounge
     cost:
       treasure: 3
+    type:
+      - event
     ability:
       - trash
       - gain
@@ -590,16 +610,22 @@ events:
   - name: Journey
     cost:
       treasure: 4
+    type:
+      - event
 
   - name: Maelstrom
     cost:
       treasure: 4
+    type:
+      - event
     ability:
       - trash
 
   - name: Looting
     cost:
       treasure: 6
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -608,6 +634,8 @@ events:
   - name: Invasion
     cost:
       treasure: 10
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -616,6 +644,8 @@ events:
   - name: Prosper
     cost:
       treasure: 10
+    type:
+      - event
     ability:
       - gain
     trigger:
@@ -623,33 +653,63 @@ events:
 
 traits:
   - name: Cheap
+    type:
+      - trait
   - name: Cursed
+    type:
+      - trait
     ability:
       - curse
     trigger:
       - loot
   - name: Fated
+    type:
+      - trait
   - name: Fawning
+    type:
+      - trait
     ability:
       - gain
   - name: Friendly
+    type:
+      - trait
     ability:
       - gain
   - name: Hasty
+    type:
+      - trait
   - name: Inherited
+    type:
+      - trait
   - name: Inspiring
+    type:
+      - trait
   - name: Nearby
+    type:
+      - trait
     ability:
       - buy
   - name: Patient
+    type:
+      - trait
   - name: Pious
+    type:
+      - trait
     ability:
       - trash
   - name: Reckless
+    type:
+      - trait
   - name: Rich
+    type:
+      - trait
     ability:
       - gain
   - name: Shy
+    type:
+      - trait
     ability:
       - card
   - name: Tireless
+    type:
+      - trait

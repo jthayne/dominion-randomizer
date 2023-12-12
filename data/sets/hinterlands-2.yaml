@@ -1,4 +1,5 @@
-name: Hinterlands (2nd)
+name: Hinterlands
+edition: 2
 cards:
   - name: Trail
     cost:

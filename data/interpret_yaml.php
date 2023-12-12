@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+use Dominion\Cards\Ability;
 use Dominion\Cards\Card;
+use Dominion\Cards\Type;
+use Dominion\Cards\Validation\CardValidation;
 use Symfony\Component\Yaml\Yaml;
 
 require_once __DIR__ . '/../bootstrap/init.php';
@@ -11,42 +14,112 @@ $db = require_once __DIR__ . '/../bootstrap/db.php';
 $directory = __DIR__ . '/sets';
 $sets = scandir($directory);
 
-$triggers = [
-    'isReserve',
-    'isArtifactSupplier',
-    'isDoom',
-    'isFate',
-    'isLiaison',
-    'isLootSupplier',
-    'isVillageSupplier',
-];
-
 $cardData = new Card($db);
 
+$triggers = [];
 foreach ($sets as $set) {
     if ($set !== '.' && $set !== '..') {
+        echo 'Processing ' . $set;
+
+        $processed = $db->get(
+            'files_processed',
+            [
+                'name',
+            ],
+            [
+                'name[=]' => $set
+            ]
+        );
+
+        if (empty($processed) === false) {
+            echo ' (already processed)' . PHP_EOL;
+            continue;
+        }
+
         $cardsYaml = file_get_contents(__DIR__ . '/sets/' . $set);
         $cards = Yaml::parse($cardsYaml);
 
-        foreach ($cards['cards'] as $card) {
-            $cardTriggers = [];
-            foreach ($card as $attribute => $bool) {
-                if ($bool === true) {
-                    if (in_array($attribute, $triggers) === true) {
-                        $cardTriggers[] = $attribute;
+        $sections = [];
+        foreach ($cards as $section => $details) {
+            echo ' . ';
+            if ($section !== 'name' && $section !== 'edition') {
+                if (is_array($details) === false) {
+                    var_dump($section);
+                    var_dump($details);
+                    die();
+                }
+
+                $kingdomFlag = 0;
+                if ($section === 'cards') {
+                    $kingdomFlag = 1;
+                }
+
+                foreach ($details as $card) {
+                    $validatedCard = new CardValidation(
+                        name: $card['name'],
+                        set: $cards['name'],
+                        edition: $cards['edition'] ?? 0,
+                        isKingdomCard: $kingdomFlag,
+                    );
+
+                    $cardID = $cardData->add($validatedCard);
+
+                    if ($cardID === 0) {
+                        continue;
+                    }
+
+                    // Add card triggers
+                    if (isset($card['trigger']) === true) {
+                        foreach ($card['trigger'] as $trigger) {
+                            $cardData->addTrigger(
+                                cardID: $cardID,
+                                trigger: $trigger,
+                            );
+                        }
+                    }
+
+                    // Add card types
+                    if (isset($card['type']) === false) {
+                        var_dump($card);
+                        die();
+                    }
+                    foreach ($card['type'] as $type) {
+                        $cardData->addType(
+                            cardID: $cardID,
+                            type: Type::from(ucwords($type)),
+                        );
+                    }
+
+                    // Add card abilities
+                    if (isset($card['ability']) === true) {
+                        foreach ($card['ability'] as $ability) {
+                            $cardData->addAbility(
+                                cardID: $cardID,
+                                ability: Ability::from(ucwords($ability)),
+                            );
+                        }
+                    }
+
+                    // Add card cost
+                    if (isset($card['cost']) === true) {
+                        foreach ($card['cost'] as $type => $cost) {
+                            $cardData->addCost(
+                                cardID: $cardID,
+                                amount: (int) $cost,
+                                type: Type::from(ucwords($type)),
+                            );
+                        }
                     }
                 }
             }
-            $cardTriggersSerial = serialize($cardTriggers);
-
-            $details = $cardData->getCardByName($card['name']);
-            if (is_null($details) === true) {
-                echo 'Set: ' . $set . ' Card: ' . $card['name'] . PHP_EOL;
-            } else {
-                $cardId = (int) $details['id'];
-
-                $cardData->addTriggersToCard($cardId, $cardTriggersSerial);
-            }
         }
+        echo 'Done.' . PHP_EOL;
+
+        $db->insert(
+            'files_processed',
+            [
+                'name' => $set,
+            ]
+        );
     }
 }

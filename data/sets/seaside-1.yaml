@@ -1,4 +1,5 @@
 name: Seaside
+edition: 1
 cards:
   - name: Ghost Ship
     cost:
