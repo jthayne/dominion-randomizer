@@ -23,8 +23,8 @@ readonly class Details
                 'set',
                 'edition',
                 'is_kingdom_card',
-                'cost',
-                'types',
+//                'cost',
+//                'types',
             ],
             [
                 'id[=]' => $id,
@@ -35,7 +35,6 @@ readonly class Details
             $result['set'] = CardSet::tryFromName($result['set']);
             $result['types'] = $this->getTypesForCard($id);
             $result['abilities'] = $this->getAbilitiesForCard($id);
-            $result['ability_score'] = $this->calculateAbilityBinaryScore($result['abilities']);
             $result['triggers'] = $this->getTriggersForCard($id);
         }
 
@@ -67,19 +66,12 @@ readonly class Details
     final public function getAbilitiesForCard(int $id): array
     {
         return $this->medoo->get(
-            'cards',
+            'card_ability',
             [
-                'actions',
-                'cards',
-                'buys',
-                'coins',
-                'trash',
-                'exile',
-                'gain',
-                'vp',
+                'ability',
             ],
             [
-                'id[=]' => $id,
+                'card_id[=]' => $id,
             ]
         );
     }
