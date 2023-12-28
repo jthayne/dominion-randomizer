@@ -1,0 +1,66 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Dominion\Cards\Validation;
+
+final readonly class CardData
+{
+    public function __construct(
+        private string $name,
+        private string $set,
+        private bool $card = false,
+        private bool $mat = false,
+        private bool $token = false,
+        private array $types = [],
+        private array $cost = [],
+        private array $triggers = [],
+        private array $abilities = [],
+    ) {
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getSet(): string
+    {
+        return $this->set;
+    }
+
+    public function getTypes(): array
+    {
+        return $this->types;
+    }
+
+    public function getCost(): array
+    {
+        return $this->cost;
+    }
+
+    public function getTriggers(): array
+    {
+        return $this->triggers;
+    }
+
+    public function getAbilities(): array
+    {
+        return $this->abilities;
+    }
+
+    public function isCard(): bool
+    {
+        return $this->card;
+    }
+
+    public function isMat(): bool
+    {
+        return $this->mat;
+    }
+
+    public function isToken(): bool
+    {
+        return $this->token;
+    }
+}

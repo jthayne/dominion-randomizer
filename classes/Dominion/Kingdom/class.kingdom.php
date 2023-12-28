@@ -10,18 +10,26 @@ use Random\Randomizer;
 final class Kingdom
 {
     private array $cardList = [];
+    private array $cardListWithDetails = [];
     private array $setsInUse = [];
 
     public function __construct(private readonly Cards $cards) {}
 
-    public function buildKingdom(int $size = 10): void
+    public function buildKingdom(int $size = 10): Kingdom
     {
         $this->cardList = $this->getRandomKingdom($size);
+
+        return $this;
     }
 
     public function getKingdomList(): array
     {
         return $this->cardList;
+    }
+
+    public function getKingdomListWithDetails(): array
+    {
+        return $this->cardListWithDetails;
     }
 
     public function getRandomKingdom(int $size): array
