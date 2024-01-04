@@ -11,6 +11,9 @@ use Symfony\Component\Yaml\Yaml;
 require_once __DIR__ . '/../bootstrap/init.php';
 $db = require_once __DIR__ . '/../bootstrap/db.php';
 
+$da = new \Dominion\Cards\Triggers\DarkAges();
+$da->mercenary();
+die();
 $directory = __DIR__ . '/sets';
 $sets = scandir($directory);
 
@@ -21,24 +24,25 @@ foreach ($sets as $set) {
     if ($set !== '.' && $set !== '..') {
         echo 'Processing ' . $set;
 
-        $processed = $db->get(
-            'files_processed',
-            [
-                'name',
-            ],
-            [
-                'name[=]' => $set
-            ]
-        );
+//        $processed = $db->get(
+//            'files_processed',
+//            [
+//                'name',
+//            ],
+//            [
+//                'name[=]' => $set
+//            ]
+//        );
 
-        if (empty($processed) === false) {
-            echo ' (already processed)' . PHP_EOL;
-            continue;
-        }
+//        if (empty($processed) === false) {
+//            echo ' (already processed)' . PHP_EOL;
+//            continue;
+//        }
 
         $cardsYaml = file_get_contents(__DIR__ . '/sets/' . $set);
-        $cards = Yaml::parse($cardsYaml);
-
+        $cards = Yaml::parse($cardsYaml)['cards'];
+print_r($cards);
+die();
         $sections = [];
         foreach ($cards as $section => $details) {
             echo ' . ';

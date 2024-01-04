@@ -9,13 +9,14 @@ final readonly class CardData
     public function __construct(
         private string $name,
         private string $set,
-        private bool $card = false,
-        private bool $mat = false,
-        private bool $token = false,
-        private array $types = [],
-        private array $cost = [],
-        private array $triggers = [],
-        private array $abilities = [],
+        private bool   $card = false,
+        private bool   $mat = false,
+        private bool   $token = false,
+        private bool   $kingdom = false,
+        private array  $types = [],
+        private array  $cost = [],
+        private array  $triggers = [],
+        private array  $abilities = [],
     ) {
     }
 
@@ -57,6 +58,11 @@ final readonly class CardData
     public function isMat(): bool
     {
         return $this->mat;
+    }
+
+    public function isKingdom(): bool
+    {
+        return $this->kingdom;
     }
 
     public function isToken(): bool

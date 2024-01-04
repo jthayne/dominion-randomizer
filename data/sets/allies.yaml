@@ -99,7 +99,6 @@ cards:
       - gain
     trigger:
       - mat_favor
-      - token_coin_four
       - ally
 
   - name: Merchant Camp

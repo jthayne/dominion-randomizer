@@ -1,6 +1,7 @@
 name: Dark Ages
 cards:
   - name: Armory
+    supply: true
     cost:
       treasure: 4
     type:
@@ -9,6 +10,7 @@ cards:
       - gain
 
   - name: Vagrant
+    supply: true
     cost:
       treasure: 2
     type:
@@ -18,6 +20,7 @@ cards:
       - action
 
   - name: Catacombs
+    supply: true
     cost:
       treasure: 5
     type:
@@ -26,6 +29,7 @@ cards:
       - card
 
   - name: Count
+    supply: true
     cost:
       treasure: 5
     type:
@@ -36,6 +40,7 @@ cards:
       - trash
 
   - name: Knights
+    supply: true
     cost:
       treasure: 5
     type:
@@ -51,6 +56,7 @@ cards:
       - buy
 
   - name: Fortress
+    supply: true
     cost:
       treasure: 4
     type:
@@ -60,6 +66,7 @@ cards:
       - card
 
   - name: Scavenger
+    supply: true
     cost:
       treasure: 4
     type:
@@ -68,6 +75,7 @@ cards:
       - coin
 
   - name: Market Square
+    supply: true
     cost:
       treasure: 3
     type:
@@ -80,6 +88,7 @@ cards:
       - gain
 
   - name: Urchin
+    supply: true
     cost:
       treasure: 3
     type:
@@ -93,6 +102,7 @@ cards:
       - mercenary
 
   - name: Rats
+    supply: true
     cost:
       treasure: 4
     type:
@@ -104,6 +114,7 @@ cards:
       - gain
 
   - name: Sage
+    supply: true
     cost:
       treasure: 3
     type:
@@ -112,6 +123,7 @@ cards:
       - action
 
   - name: Forager
+    supply: true
     cost:
       treasure: 3
     type:
@@ -123,6 +135,7 @@ cards:
       - coin
 
   - name: Altar
+    supply: true
     cost:
       treasure: 6
     type:
@@ -132,6 +145,7 @@ cards:
       - gain
 
   - name: Procession
+    supply: true
     cost:
       treasure: 4
     type:
@@ -141,6 +155,7 @@ cards:
       - gain
 
   - name: Squire
+    supply: true
     cost:
       treasure: 2
     type:
@@ -152,6 +167,7 @@ cards:
       - gain
 
   - name: Beggar
+    supply: true
     cost:
       treasure: 2
     type:
@@ -161,6 +177,7 @@ cards:
       - gain
 
   - name: Poor House
+    supply: true
     cost:
       treasure: 1
     type:
@@ -169,6 +186,7 @@ cards:
       - coin
 
   - name: Death Cart
+    supply: true
     cost:
       treasure: 4
     type:
@@ -181,6 +199,7 @@ cards:
       - ruins
 
   - name: Wandering Minstrel
+    supply: true
     cost:
       treasure: 4
     type:
@@ -190,6 +209,7 @@ cards:
       - card
 
   - name: Ironmonger
+    supply: true
     cost:
       treasure: 4
     type:
@@ -200,6 +220,7 @@ cards:
       - coin
 
   - name: Hermit
+    supply: true
     cost:
       treasure: 3
     type:
@@ -212,6 +233,7 @@ cards:
       - madman
 
   - name: Pillage
+    supply: true
     cost:
       treasure: 5
     type:
@@ -224,6 +246,7 @@ cards:
       - spoils
 
   - name: Mystic
+    supply: true
     cost:
       treasure: 5
     type:
@@ -233,6 +256,7 @@ cards:
       - coin
 
   - name: Storeroom
+    supply: true
     cost:
       treasure: 3
     type:
@@ -242,6 +266,7 @@ cards:
       - coin
 
   - name: Hunting Grounds
+    supply: true
     cost:
       treasure: 6
     type:
@@ -251,6 +276,7 @@ cards:
       - gain
 
   - name: Graverobber
+    supply: true
     cost:
       treasure: 5
     type:
@@ -260,6 +286,7 @@ cards:
       - trash
 
   - name: Counterfeit
+    supply: true
     cost:
       treasure: 5
     type:
@@ -268,6 +295,7 @@ cards:
       - buy
 
   - name: Cultist
+    supply: true
     cost:
       treasure: 5
     type:
@@ -281,6 +309,7 @@ cards:
       - ruins
 
   - name: Rogue
+    supply: true
     cost:
       treasure: 5
     type:
@@ -292,6 +321,7 @@ cards:
       - trash
 
   - name: Marauder
+    supply: true
     cost:
       treasure: 4
     type:
@@ -305,6 +335,7 @@ cards:
       - ruins
 
   - name: Band of Misfits
+    supply: true
     cost:
       treasure: 5
     type:
@@ -312,6 +343,7 @@ cards:
       - command
 
   - name: Junk Dealer
+    supply: true
     cost:
       treasure: 5
     type:
@@ -323,6 +355,7 @@ cards:
       - trash
 
   - name: Feodum
+    supply: true
     cost:
       treasure: 4
     type:
@@ -331,6 +364,7 @@ cards:
       - gain
 
   - name: Rebuild
+    supply: true
     cost:
       treasure: 5
     type:
@@ -341,6 +375,7 @@ cards:
       - gain
 
   - name: Bandit Camp
+    supply: true
     cost:
       treasure: 5
     type:
@@ -352,8 +387,8 @@ cards:
     trigger:
       - spoils
 
-cards-not-in-supply:
   - name: Madman
+    supply: false
     cost:
       treasure: 0
     type:
@@ -363,6 +398,7 @@ cards-not-in-supply:
       - card
 
   - name: Mercenary
+    supply: false
     cost:
       treasure: 0
     type:
@@ -374,13 +410,14 @@ cards-not-in-supply:
       - coin
 
   - name: Spoils
+    supply: false
     cost:
       treasure: 0
     type:
       - treasure
 
-shelters:
   - name: Hovel
+    supply: false
     cost:
       treasure: 1
     type:
@@ -390,6 +427,7 @@ shelters:
       - trash
 
   - name: Necropolis
+    supply: false
     cost:
       treasure: 1
     type:
@@ -399,6 +437,7 @@ shelters:
       - action
 
   - name: Overgrown Estate
+    supply: false
     cost:
       treasure: 1
     type:
@@ -407,8 +446,8 @@ shelters:
     ability:
       - card
 
-ruins:
   - name: Abandoned Mine
+    supply: false
     cost:
       treasure: 0
     type:
@@ -418,6 +457,7 @@ ruins:
       - coin
 
   - name: Ruined Library
+    supply: false
     cost:
       treasure: 0
     type:
@@ -427,6 +467,7 @@ ruins:
       - card
 
   - name: Ruined Market
+    supply: false
     cost:
       treasure: 0
     type:
@@ -436,6 +477,7 @@ ruins:
       - buy
 
   - name: Ruined Village
+    supply: false
     cost:
       treasure: 0
     type:
@@ -445,6 +487,7 @@ ruins:
       - action
 
   - name: Survivors
+    supply: false
     cost:
       treasure: 0
     type:

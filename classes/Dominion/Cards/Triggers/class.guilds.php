@@ -10,6 +10,12 @@ class Guilds
 {
     use General;
 
+    public function __construct()
+    {
+        $this->set = 'guilds';
+        $this->setProperName = 'Guilds';
+    }
+
     private function coffer(): CardData
     {
         return new CardData(

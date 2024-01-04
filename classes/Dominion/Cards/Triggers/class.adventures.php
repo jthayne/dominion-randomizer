@@ -6,8 +6,16 @@ namespace Dominion\Cards\Triggers;
 
 use Dominion\Cards\Validation\CardData;
 
-class Adventures
+final class Adventures
 {
+    use General;
+
+    public function __construct()
+    {
+        $this->set = 'adventures';
+        $this->setProperName = 'Adventures';
+    }
+
     private function champion(): CardData
     {
         // TODO: Add champion upgrade code

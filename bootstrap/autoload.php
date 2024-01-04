@@ -43,12 +43,12 @@ spl_autoload_register(
     function ($traitName) {
         $traitName = ltrim($traitName, '\\');
         $lastNsPos = strripos($traitName, '\\');
-        $fileName = 'int.' . $traitName . '.php';
+        $fileName = 'trait.' . $traitName . '.php';
         if ($lastNsPos !== false && $lastNsPos > 0) {
             $namespace = substr($traitName, 0, $lastNsPos);
             $traitName = strtolower(substr($traitName, $lastNsPos + 1));
             $fileName = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
-            $fileName .= 'int.' . $traitName . '.php';
+            $fileName .= 'trait.' . $traitName . '.php';
         }
         $pathName = __DIR__ . DIRECTORY_SEPARATOR
             . '..' . DIRECTORY_SEPARATOR

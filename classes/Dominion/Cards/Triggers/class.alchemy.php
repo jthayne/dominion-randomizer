@@ -10,11 +10,17 @@ class Alchemy
 {
     use General;
 
+    public function __construct()
+    {
+        $this->set = 'alchemy';
+        $this->setProperName = 'Alchemy';
+    }
+
     private function potion(): CardData
     {
         return new CardData(
             name: 'Potion',
-            set: __CLASS__,
+            set: $this->setProperName,
         );
     }
 }
