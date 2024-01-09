@@ -6,6 +6,7 @@ namespace Dominion\Cards\Triggers;
 
 use Dominion\Cards\Validation\CardData;
 use Dominion\Exceptions\UndefinedCardTypeException;
+use General\Environment;
 use Symfony\Component\Yaml\Yaml;
 
 trait General
@@ -93,7 +94,7 @@ trait General
 
     private function getCardDetails(string $cardName): array
     {
-        $cardsYaml = file_get_contents($_ENV['PROJECT_DIR'] . '/data/sets/' . strtolower($this->set) . '.yaml');
+        $cardsYaml = file_get_contents(Environment::get('PROJECT_DIR') . '/data/sets/' . strtolower($this->set) . '.yaml');
         $cards = Yaml::parse($cardsYaml)['cards'];
 
         foreach ($cards as $card) {
@@ -107,7 +108,7 @@ trait General
 
     private function getCardGroupDetails(string $section): array
     {
-        $cardsYaml = file_get_contents($_ENV['PROJECT_DIR'] . '/data/sets/' . strtolower($this->set) . '.yaml');
+        $cardsYaml = file_get_contents(Environment::get('PROJECT_DIR') . '/data/sets/' . strtolower($this->set) . '.yaml');
         return Yaml::parse($cardsYaml)[$section];
     }
 }
