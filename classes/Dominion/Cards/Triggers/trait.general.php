@@ -49,13 +49,9 @@ trait General
             return;
         }
 
-        if ($card->isType() === true) {
-            $this->addedItems['type'][] = $card;
-            return;
-        }
-
         if ($card->isCard() === true) {
             $this->addedItems['card'][] = $card;
+            $this->addedItems['type'][] = $card;
             return;
         }
 
