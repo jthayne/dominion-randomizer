@@ -11,9 +11,9 @@ use Symfony\Component\Yaml\Yaml;
 require_once __DIR__ . '/../bootstrap/init.php';
 $db = require_once __DIR__ . '/../bootstrap/db.php';
 
-$da = new \Dominion\Cards\Triggers\DarkAges();
-$da->mercenary();
-die();
+//$da = new \Dominion\Cards\Triggers\DarkAges();
+//$da->mercenary();
+//die();
 $directory = __DIR__ . '/sets';
 $sets = scandir($directory);
 
@@ -24,29 +24,28 @@ foreach ($sets as $set) {
     if ($set !== '.' && $set !== '..') {
         echo 'Processing ' . $set;
 
-//        $processed = $db->get(
-//            'files_processed',
-//            [
-//                'name',
-//            ],
-//            [
-//                'name[=]' => $set
-//            ]
-//        );
+        $processed = $db->get(
+            'files_processed',
+            [
+                'name',
+            ],
+            [
+                'name[=]' => $set
+            ]
+        );
 
-//        if (empty($processed) === false) {
-//            echo ' (already processed)' . PHP_EOL;
-//            continue;
-//        }
+        if (empty($processed) === false) {
+            echo ' (already processed)' . PHP_EOL;
+            continue;
+        }
 
         $cardsYaml = file_get_contents(__DIR__ . '/sets/' . $set);
-        $cards = Yaml::parse($cardsYaml)['cards'];
-print_r($cards);
-die();
+        $cards = Yaml::parse($cardsYaml);
+
         $sections = [];
         foreach ($cards as $section => $details) {
             echo ' . ';
-            if ($section !== 'name' && $section !== 'edition') {
+            if ($section !== 'name') {
                 if (is_array($details) === false) {
                     var_dump($section);
                     var_dump($details);
@@ -62,7 +61,7 @@ die();
                     $validatedCard = new CardValidation(
                         name: $card['name'],
                         set: $cards['name'],
-                        edition: $cards['edition'] ?? 0,
+                        edition: $card['edition'] ?? 0,
                         isKingdomCard: $kingdomFlag,
                     );
 
