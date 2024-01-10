@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Dominion\Cards;
 
+use Dominion\Cards\Validation\CardData;
 use Dominion\Cards\Validation\CardValidation;
 use Dominion\CardSet;
 use Medoo\Medoo;
@@ -158,55 +159,141 @@ final readonly class Card
         }
     }
 
-    public function addTypeToCard(int $id, int $type): void
+    public function getCardByID(int $id): CardData
     {
-        $this->medoo->update(
-            'cards',
-            [
-                'types' => $type,
-            ],
-            [
-                'id[=]' => $id,
-            ]
-        );
-    }
-
-    public function addTriggersToCard(int $id, string $triggers): void
-    {
-        $this->medoo->update(
-            'cards',
-            [
-                'triggers' => $triggers,
-            ],
-            [
-                'id[=]' => $id,
-            ],
-        );
-    }
-
-    public function getCardByName(string $name): ?array
-    {
-        return $this->medoo->get(
+        $details = $this->medoo->get(
             'cards',
             [
                 'id',
                 'name',
                 'set',
                 'edition',
-                'actions',
-                'cards',
-                'buys',
-                'coins',
-                'trash',
-                'exile',
-                'gain',
-                'vp',
                 'is_kingdom_card',
-                'triggers',
+            ],
+            [
+                'id[=]' => $id,
+            ]
+        );
+
+        $abilities = $this->medoo->select(
+            'card_ability',
+            [
+                'ability',
+            ],
+            [
+                'card_id[=]' => $id,
+            ]
+        );
+
+        $cost = $this->medoo->select(
+            'card_cost',
+            [
+                'amount',
+                'type',
+            ],
+            [
+                'card_id[=]' => $id,
+            ]
+        );
+
+        $trigger = $this->medoo->select(
+            'card_trigger',
+            [
+                'trigger',
+            ],
+            [
+                'card_id[=]' => $id,
+            ]
+        );
+
+        $type = $this->medoo->select(
+            'card_type',
+            [
+                'type',
+            ],
+            [
+                'card_id[=]' => $id,
+            ]
+        );
+
+        return new CardData(
+            name:      $details['name'],
+            set:       $details['set'],
+            card:      true,
+            kingdom:   true,
+            types:     $type ?? [],
+            cost:      $cost ?? [],
+            triggers:  $trigger ?? [],
+            abilities: $abilities ?? [],
+        );
+    }
+
+    public function getCardByName(string $name): CardData
+    {
+        $details = $this->medoo->get(
+            'cards',
+            [
+                'id',
+                'name',
+                'set',
+                'edition',
+                'is_kingdom_card',
             ],
             [
                 'name[=]' => $name,
             ]
+        );
+
+        $abilities = $this->medoo->select(
+            'card_ability',
+            [
+                'ability',
+            ],
+            [
+                'card_id[=]' => $details['id'],
+            ]
+        );
+
+        $cost = $this->medoo->select(
+            'card_cost',
+            [
+                'amount',
+                'type',
+            ],
+            [
+                'card_id[=]' => $details['id'],
+            ]
+        );
+
+        $trigger = $this->medoo->select(
+            'card_trigger',
+            [
+                'trigger',
+            ],
+            [
+                'card_id[=]' => $details['id'],
+            ]
+        );
+
+        $type = $this->medoo->select(
+            'card_type',
+            [
+                'type',
+            ],
+            [
+                'card_id[=]' => $details['id'],
+            ]
+        );
+
+        return new CardData(
+            name:      $details['name'],
+            set:       $details['set'],
+            card:      true,
+            kingdom:   true,
+            types:     $type ?? [],
+            cost:      $cost ?? [],
+            triggers:  $trigger ?? [],
+            abilities: $abilities ?? [],
         );
     }
 }

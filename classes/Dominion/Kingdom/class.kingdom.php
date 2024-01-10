@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Dominion\Kingdom;
 
+use Dominion\Cards\Card;
 use Dominion\Cards\Cards;
+use Medoo\Medoo;
 use Random\Randomizer;
 
 final class Kingdom
@@ -13,13 +15,28 @@ final class Kingdom
     private array $cardListWithDetails = [];
     private array $setsInUse = [];
 
-    public function __construct(private readonly Cards $cards) {}
+    public function __construct(private readonly Medoo $medoo, private readonly Cards $cards) {}
 
     public function buildKingdom(int $size = 10): Kingdom
     {
-        $this->cardList = $this->getRandomKingdom($size);
+        $this->buildRandomKingdom($size);
 
         return $this;
+    }
+
+    private function buildDetailedCardList(): void
+    {
+        $card = new Card($this->medoo);
+
+        foreach ($this->cardList as $single) {
+            $cardDetails = $card->getCardByID($single['id']);
+
+            $this->setsInUse[] = $cardDetails->getSet();
+
+            $this->cardListWithDetails[] = $cardDetails;
+        }
+
+        $this->setsInUse = array_unique($this->setsInUse);
     }
 
     public function getKingdomList(): array
@@ -32,7 +49,7 @@ final class Kingdom
         return $this->cardListWithDetails;
     }
 
-    public function getRandomKingdom(int $size): array
+    public function buildRandomKingdom(int $size): void
     {
         $cards = $this->cards->getAllKingdomCards();
 
@@ -44,22 +61,7 @@ final class Kingdom
 
         $randomizer = new Randomizer();
 
-        return $randomizer->shuffleArray($this->cardList);
-    }
-
-    public function replaceCard(int $oldCard): void
-    {
-        $process = true;
-
-        $place = array_search($oldCard, $this->cardList);
-
-        do {
-            $newCard = $this->cards->getRandomCard();
-
-            if ($newCard !== $oldCard) {
-                $this->cardList[$place] = $newCard;
-                $process = false;
-            }
-        } while ($process === true);
+        $this->cardList = $randomizer->shuffleArray($this->cardList);
+        $this->buildDetailedCardList();
     }
 }

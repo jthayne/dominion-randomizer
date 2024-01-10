@@ -13,7 +13,7 @@ $db = require_once __DIR__ . '/../bootstrap/db.php';
 //die();
 
 $cards = new Cards($db);
-$kingdom = new Kingdom($cards);
+$kingdom = new Kingdom($db, $cards);
 
 $generated = $kingdom->buildKingdom()->getKingdomListWithDetails();
 
