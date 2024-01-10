@@ -9,6 +9,13 @@ use Dominion\Cards\Cards;
 use Medoo\Medoo;
 use Random\Randomizer;
 
+/**
+ * TODO: Process triggers
+ * TODO: Add ability for custom rules
+ * TODO: Add ability to remove unwanted cards
+ * TODO: Add base supply set up
+ * TODO: Add ability to define number of players
+ */
 final class Kingdom
 {
     private array $cardList = [];
