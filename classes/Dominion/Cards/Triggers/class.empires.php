@@ -6,29 +6,29 @@ namespace Dominion\Cards\Triggers;
 
 use Dominion\Cards\Validation\CardData;
 
-class Guilds
+class Empires
 {
     use General;
 
     public function __construct()
     {
-        $this->set = 'guilds';
-        $this->setProperName = 'Guilds';
+        $this->set = 'empires';
+        $this->setProperName = 'Empires';
     }
 
-    private function coffer(): CardData
+    private function debt(): CardData
     {
         return new CardData(
-            name: 'Coffer',
+            name: 'Debt',
             set: $this->setProperName,
-            mat: true,
+            token: true,
         );
     }
 
-    private function coin(): CardData
+    private function victory(): CardData
     {
         return new CardData(
-            name: 'Coin',
+            name: 'Victory Token',
             set: $this->setProperName,
             token: true,
         );

@@ -175,6 +175,159 @@ cards:
       - action
       - card
 
+  - name: Secret Chamber
+    edition: 1
+    cost:
+      treasure: 2
+    type:
+      - action
+      - reaction
+    ability:
+      - coin
+      - card
+
+  - name: Coppersmith
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+
+  - name: Scout
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Harem
+    edition: 1
+    cost:
+      treasure: 6
+    type:
+      - treasure
+      - victory
+
+  - name: Saboteur
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - gain
+
+  - name: Tribute
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+      - coin
+      - card
+
+  - name: Great Hall
+    edition: 1
+    cost:
+      treasure: 3
+    type:
+      - action
+      - victory
+    ability:
+      - card
+      - action
+
+  - name: Lurker
+    edition: 2
+    cost:
+      treasure: 2
+    type:
+      - action
+    ability:
+      - action
+      - trash
+      - gain
+
+  - name: Diplomat
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - reaction
+    ability:
+      - card
+      - action
+
+  - name: Mill
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - victory
+    ability:
+      - card
+      - action
+      - coin
+
+  - name: Secret Passage
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - card
+      - action
+
+  - name: Patrol
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - card
+
+  - name: Courtier
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+      - buy
+      - coin
+      - gain
+
+  - name: Replace
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - gain
+      - curse
+
+  - name: Farm
+    edition: 2
+    cost:
+      treasure: 6
+    type:
+      - treasure
+      - victory
+
 supply:
   - name: Copper
     cost:

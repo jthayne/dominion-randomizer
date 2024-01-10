@@ -6,22 +6,22 @@ namespace Dominion\Cards\Triggers;
 
 use Dominion\Cards\Validation\CardData;
 
-class Guilds
+class Prosperity
 {
     use General;
 
     public function __construct()
     {
-        $this->set = 'guilds';
-        $this->setProperName = 'Guilds';
+        $this->set = 'prosperity';
+        $this->setProperName = 'Prosperity';
     }
 
-    private function coffer(): CardData
+    private function victory(): CardData
     {
         return new CardData(
-            name: 'Coffer',
+            name: 'Victory',
             set: $this->setProperName,
-            mat: true,
+            token: true,
         );
     }
 
@@ -31,6 +31,15 @@ class Guilds
             name: 'Coin',
             set: $this->setProperName,
             token: true,
+        );
+    }
+
+    private function traderoute(): CardData
+    {
+        return new CardData(
+            name: 'Trade Route',
+            set: $this->setProperName,
+            mat: true,
         );
     }
 }

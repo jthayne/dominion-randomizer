@@ -167,3 +167,189 @@ cards:
     type:
       - action
       - duration
+
+  - name: Ghost Ship
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - card
+
+  - name: Ambassador
+    edition: 1
+    cost:
+      treasure: 3
+    type:
+      - action
+      - attack
+    ability:
+      - gain
+
+  - name: Sea Hag
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+    ability:
+      - curse
+
+  - name: Navigator
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - coin
+
+  - name: Explorer
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - gain
+
+  - name: Pirate Ship
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+      - trash
+    trigger:
+      - mat_pirateship
+      - token_coin
+
+  - name: Pearl Diver
+    edition: 1
+    cost:
+      treasure: 2
+    type:
+      - action
+    ability:
+      - card
+      - action
+
+  - name: Embargo
+    edition: 1
+    cost:
+      treasure: 2
+    type:
+      - action
+    ability:
+      - coin
+      - trash
+      - curse
+    trigger:
+      - token_embargo
+
+  - name: Astrolabe
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - treasure
+      - duration
+    ability:
+      - buy
+
+  - name: Monkey
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - action
+      - duration
+    ability:
+      - card
+
+  - name: Sea Chart
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - card
+      - action
+
+  - name: Blockade
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - gain
+      - curse
+
+  - name: Sailor
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - duration
+    ability:
+      - action
+      - coin
+      - trash
+
+  - name: Tide Pools
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - duration
+    ability:
+      - card
+      - action
+
+  - name: Corsair
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - coin
+      - card
+      - trash
+
+  - name: Pirate
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - duration
+      - reaction
+    ability:
+      - gain
+
+  - name: Sea Witch
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - duration
+      - attack
+    ability:
+      - card
+      - curse

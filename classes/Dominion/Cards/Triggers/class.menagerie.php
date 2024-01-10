@@ -6,31 +6,31 @@ namespace Dominion\Cards\Triggers;
 
 use Dominion\Cards\Validation\CardData;
 
-class Guilds
+class Menagerie
 {
     use General;
 
     public function __construct()
     {
-        $this->set = 'guilds';
-        $this->setProperName = 'Guilds';
+        $this->set = 'menagerie';
+        $this->setProperName = 'Menagerie';
     }
 
-    private function coffer(): CardData
+    private function horse(): CardData
     {
         return new CardData(
-            name: 'Coffer',
+            name: 'Horse',
             set: $this->setProperName,
-            mat: true,
+            card: true,
         );
     }
 
-    private function coin(): CardData
+    private function exile(): CardData
     {
         return new CardData(
-            name: 'Coin',
+            name: 'Exile',
             set: $this->setProperName,
-            token: true,
+            mat: true,
         );
     }
 }

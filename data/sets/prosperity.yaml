@@ -145,6 +145,183 @@ cards:
       - card
       - coin
 
+  - name: Contraband
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - treasure
+    ability:
+      - buy
+
+  - name: Counting House
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+
+  - name: Goons
+    edition: 1
+    cost:
+      treasure: 6
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+      - victory
+    trigger:
+      - token_victory
+
+  - name: Talisman
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - treasure
+    ability:
+      - gain
+
+  - name: Loan
+    edition: 1
+    cost:
+      treasure: 3
+    type:
+      - treasure
+    ability:
+      - trash
+
+  - name: Trade Route
+    edition: 1
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - buy
+      - trash
+      - coin
+    trigger:
+      - token_coin
+      - mat_traderoute
+
+  - name: Royal Seal
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - treasure
+
+  - name: Mountebank
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+      - curse
+      - gain
+
+  - name: Venture
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - treasure
+
+  - name: Anvil
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - treasure
+
+  - name: Clerk
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - reaction
+      - attack
+    ability:
+      - coin
+
+  - name: Investment
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - treasure
+    ability:
+      - trash
+      - coin
+      - victory
+    trigger:
+      - token_victory
+
+  - name: Tiara
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - treasure
+    ability:
+      - buy
+
+  - name: Charlatan
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - coin
+      - curse
+
+  - name: Collection
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - treasure
+    ability:
+      - buy
+      - victory
+    trigger:
+      - token_victory
+
+  - name: Crystal Ball
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - treasure
+    ability:
+      - trash
+
+  - name: Magnate
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - card
+
+  - name: War Chest
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - treasure
+    ability:
+      - gain
+
 supply:
   - name: Platinum
     cost:

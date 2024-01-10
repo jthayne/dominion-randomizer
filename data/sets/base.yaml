@@ -161,6 +161,136 @@ cards:
     ability:
       - gain
 
+  - name: Adventurer
+    edition: 1
+    cost:
+      treasure: 6
+    type:
+      - action
+
+  - name: Chancellor
+    edition: 1
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - coin
+
+  - name: Feast
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - trash
+      - gain
+
+  - name: Spy
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - action
+
+  - name: Thief
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+      - attack
+    ability:
+      - trash
+      - gain
+
+  - name: Woodcutter
+    edition: 1
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+
+  - name: Harbinger
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - card
+      - action
+
+  - name: Merchant
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
+
+  - name: Vassal
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - coin
+
+  - name: Poacher
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - coin
+
+  - name: Bandit
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - gain
+      - trash
+
+  - name: Sentry
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - card
+      - action
+      - trash
+
+  - name: Artisan
+    edition: 2
+    cost:
+      treasure: 6
+    type:
+      - action
+    ability:
+      - gain
+
 supply:
   - name: Copper
     cost:
@@ -203,3 +333,12 @@ supply:
       treasure: 0
     type:
       - curse
+
+trash:
+  - name: Trash
+    type:
+      - trash
+
+  - name: Trash Mat
+    type:
+      - trash

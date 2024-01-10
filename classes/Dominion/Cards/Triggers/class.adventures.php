@@ -30,7 +30,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Estate',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -49,7 +49,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Journey',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -58,7 +58,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Minus Cost',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -67,7 +67,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Minus Card',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -76,7 +76,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Minus Coin',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -85,7 +85,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Plus Action',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -94,7 +94,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Plus Buy',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -103,7 +103,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Plus Card',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -112,7 +112,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Plus Coin',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }
@@ -126,7 +126,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Tavern',
-            set: __CLASS__,
+            set: $this->setProperName,
             mat: true,
         );
     }
@@ -140,7 +140,7 @@ final class Adventures
     {
         return new CardData(
             name: 'Trashing',
-            set: __CLASS__,
+            set: $this->setProperName,
             token: true,
         );
     }

@@ -233,3 +233,179 @@ cards:
       - action
     ability:
       - action
+
+  - name: Silk Road
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Ill-Gotten Gains
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Embassy
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Nomad Camp
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Oracle
+    edition: 1
+    cost:
+      treasure: 3
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Noble Brigand
+    edition: 1
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Mandarin
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Cache
+    edition: 1
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Duchess
+    edition: 1
+    cost:
+      treasure: 2
+    type:
+      - action
+    ability:
+      - action
+
+  - name: Trail
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - reaction
+    ability:
+      - action
+      - card
+
+  - name: Weaver
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+      - reaction
+    ability:
+      - gain
+
+  - name: Berserker
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - gain
+
+  - name: Cauldron
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - treasure
+      - attack
+    ability:
+      - buy
+      - curse
+
+  - name: Guard Dog
+    edition: 2
+    cost:
+      treasure: 3
+    type:
+      - action
+      - reaction
+    ability:
+      - card
+
+  - name: Nomads
+    edition: 2
+    cost:
+      treasure: 4
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+
+  - name: Souk
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - buy
+      - coin
+      - trash
+
+  - name: Wheelwright
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+    ability:
+      - action
+      - card
+      - gain
+
+  - name: Witch's Hut
+    edition: 2
+    cost:
+      treasure: 5
+    type:
+      - action
+      - attack
+    ability:
+      - card
+      - curse
