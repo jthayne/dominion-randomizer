@@ -11,9 +11,10 @@ use Symfony\Component\Yaml\Yaml;
 require_once __DIR__ . '/../bootstrap/init.php';
 $db = require_once __DIR__ . '/../bootstrap/db.php';
 
-//$da = new \Dominion\Cards\Triggers\DarkAges();
-//$da->mercenary();
-//die();
+$card = new Card($db);
+$da = new \Dominion\Cards\Triggers\Adventures($db, $card);
+print_r($da->estate());
+die();
 $directory = __DIR__ . '/sets';
 $sets = scandir($directory);
 

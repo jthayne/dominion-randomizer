@@ -4,13 +4,17 @@ declare(strict_types=1);
 
 namespace Dominion\Cards\Triggers;
 
+use Dominion\Cards\Card;
+use Dominion\Cards\Cards;
 use Dominion\Cards\Validation\CardData;
+use Dominion\Kingdom\Kingdom;
+use Medoo\Medoo;
 
 class Cornucopia
 {
     use General;
 
-    public function __construct()
+    public function __construct(private readonly Medoo $db, private readonly Card $card, private readonly Kingdom $kingdom)
     {
         $this->set = 'cornucopia';
         $this->setProperName = 'Cornucopia';
@@ -18,7 +22,13 @@ class Cornucopia
 
     private function bane(): CardData
     {
-        // TODO: Add code to find and add bane card
+        $cards = new Cards($this->db);
+
+        do {
+            $bane = $cards->getRandomCard();
+        } while (in_array($bane->getId(), $this->kingdom->getKingdomList()) === true);
+
+        return $bane;
     }
 
     /**

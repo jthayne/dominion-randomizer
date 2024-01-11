@@ -4,13 +4,16 @@ declare(strict_types=1);
 
 namespace Dominion\Cards\Triggers;
 
+use Dominion\Cards\Card;
 use Dominion\Cards\Validation\CardData;
+use Dominion\Kingdom\Kingdom;
+use Medoo\Medoo;
 
 final class Adventures
 {
     use General;
 
-    public function __construct()
+    public function __construct(private readonly Medoo $db, private readonly Card $card, private readonly Kingdom $kingdom)
     {
         $this->set = 'adventures';
         $this->setProperName = 'Adventures';
@@ -18,12 +21,12 @@ final class Adventures
 
     private function champion(): CardData
     {
-        // TODO: Add champion upgrade code
+        return $this->card->getCardByName('Champion');
     }
 
     private function disciple(): CardData
     {
-        // TODO: Add disciple upgrade code
+        return $this->card->getCardByName('Disciple');
     }
 
     private function estate(): CardData
@@ -37,12 +40,12 @@ final class Adventures
 
     private function fugitive(): CardData
     {
-        // TODO: Add fugitive upgrade code
+        return $this->card->getCardByName('Fugitive');
     }
 
     private function hero(): CardData
     {
-        // TODO: Add hero upgrade code
+        return $this->card->getCardByName('Hero');
     }
 
     private function journey(): CardData
@@ -119,7 +122,7 @@ final class Adventures
 
     private function soldier(): CardData
     {
-        // TODO: Add soldier upgrade code
+        return $this->card->getCardByName('Soldier');
     }
 
     private function tavern(): CardData
@@ -133,7 +136,7 @@ final class Adventures
 
     private function teacher(): CardData
     {
-        // TODO: Add teacher upgrade code
+        return $this->card->getCardByName('Teacher');
     }
 
     private function trashing(): CardData
@@ -147,11 +150,11 @@ final class Adventures
 
     private function treasurehunter(): CardData
     {
-        // TODO: Add treasure hunter upgrade code
+        return $this->card->getCardByName('Treasure Hunter');
     }
 
     private function warrior(): CardData
     {
-        // TODO: Add warrior upgrade code
+        return $this->card->getCardByName('Warrior');
     }
 }

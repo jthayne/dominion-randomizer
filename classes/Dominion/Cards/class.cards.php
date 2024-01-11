@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Dominion\Cards;
 
+use Dominion\Cards\Validation\CardData;
 use Medoo\Medoo;
 
 final readonly class Cards
@@ -38,10 +39,14 @@ final readonly class Cards
         );
     }
 
-    public function getRandomCard(): int
+    public function getRandomCard(): CardData
     {
         $cards = $this->getAllCards();
 
-        return $cards[array_rand($cards)];
+        $cardID = $cards[array_rand($cards)];
+
+        $card = new Card($this->medoo);
+
+        return $card->getCardByID($cardID);
     }
 }

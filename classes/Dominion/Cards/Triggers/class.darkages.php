@@ -4,13 +4,16 @@ declare(strict_types=1);
 
 namespace Dominion\Cards\Triggers;
 
+use Dominion\Cards\Card;
 use Dominion\Cards\Validation\CardData;
+use Dominion\Kingdom\Kingdom;
+use Medoo\Medoo;
 
 final class DarkAges
 {
     use General;
 
-    public function __construct()
+    public function __construct(private readonly Medoo $db, private readonly Card $card, private readonly Kingdom $kingdom)
     {
         $this->set = 'darkages';
         $this->setProperName = 'Dark Ages';
@@ -18,31 +21,25 @@ final class DarkAges
 
     private function spoils(): CardData
     {
-        // TODO: Add code to find and add bane card
+        return $this->card->getCardByName('Spoils');
     }
 
     public function mercenary(): CardData
     {
-        $details = $this->getCardDetails('mercenary');
-
-        return new CardData(
-            name: $details['name'],
-            set:  $this->setProperName,
-            card: true,
-            kingdom: $details['supply'],
-            types: $details['type'],
-            cost: $details['cost'],
-            abilities: $details['ability'],
-        );
+        return $this->card->getCardByName('Mercenary');
     }
 
     private function ruins(): CardData
     {
-        // TODO: Add code for ruins cards
+        return new CardData(
+            name: 'Ruins',
+            set: $this->setProperName,
+            card: true,
+        );
     }
 
     private function madman(): CardData
     {
-        // TODO: Add code for madman card
+        return $this->card->getCardByName('Madman');
     }
 }

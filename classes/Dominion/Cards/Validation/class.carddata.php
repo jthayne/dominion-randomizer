@@ -9,6 +9,7 @@ final readonly class CardData
     public function __construct(
         private string $name,
         private string $set,
+        private int    $id = 0,
         private bool   $card = false,
         private bool   $mat = false,
         private bool   $token = false,
@@ -18,6 +19,11 @@ final readonly class CardData
         private array  $triggers = [],
         private array  $abilities = [],
     ) {
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     public function getName(): string

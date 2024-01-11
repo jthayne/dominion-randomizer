@@ -286,6 +286,7 @@ final readonly class Card
         );
 
         return new CardData(
+            id: $details['id'],
             name:      $details['name'],
             set:       $details['set'],
             card:      true,
