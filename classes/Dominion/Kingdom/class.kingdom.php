@@ -31,31 +31,6 @@ final class Kingdom
         return $this;
     }
 
-    private function buildDetailedCardList(): void
-    {
-        $card = new Card($this->medoo);
-
-        foreach ($this->cardList as $single) {
-            $cardDetails = $card->getCardByID($single['id']);
-
-            $this->setsInUse[] = $cardDetails->getSet();
-
-            $this->cardListWithDetails[] = $cardDetails;
-        }
-
-        $this->setsInUse = array_unique($this->setsInUse);
-    }
-
-    public function getKingdomList(): array
-    {
-        return $this->cardList;
-    }
-
-    public function getKingdomListWithDetails(): array
-    {
-        return $this->cardListWithDetails;
-    }
-
     public function buildRandomKingdom(int $size): void
     {
         $cards = $this->cards->getAllKingdomCards();
@@ -70,5 +45,30 @@ final class Kingdom
 
         $this->cardList = $randomizer->shuffleArray($this->cardList);
         $this->buildDetailedCardList();
+    }
+
+    public function getKingdomList(): array
+    {
+        return $this->cardList;
+    }
+
+    public function getKingdomListWithDetails(): array
+    {
+        return $this->cardListWithDetails;
+    }
+
+    private function buildDetailedCardList(): void
+    {
+        $card = new Card($this->medoo);
+
+        foreach ($this->cardList as $single) {
+            $cardDetails = $card->getCardByID($single['id']);
+
+            $this->setsInUse[] = $cardDetails->getSet();
+
+            $this->cardListWithDetails[] = $cardDetails;
+        }
+
+        $this->setsInUse = array_unique($this->setsInUse);
     }
 }
