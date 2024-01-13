@@ -207,9 +207,9 @@ cards:
     type:
       - action
     trigger:
-      - zombie_apprentice
-      - zombie_mason
-      - zombie_spy
+      - zombieapprentice
+      - zombiemason
+      - zombiespy
 
   - name: Shepherd
     cost:

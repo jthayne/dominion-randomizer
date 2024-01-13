@@ -43,7 +43,7 @@ final readonly class Cards
     {
         $cards = $this->getAllCards();
 
-        $cardID = $cards[array_rand($cards)];
+        $cardID = $cards[array_rand($cards)]['id'];
 
         $card = new Card($this->medoo);
 

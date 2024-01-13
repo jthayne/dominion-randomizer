@@ -15,6 +15,7 @@ $db = require_once __DIR__ . '/../bootstrap/db.php';
 $cards = new Cards($db);
 $kingdom = new Kingdom($db, $cards);
 
-$generated = $kingdom->buildKingdom()->getKingdomListWithDetails();
+$generated = $kingdom->buildKingdom(450)
+    ->getKingdomListWithDetails();
 
-print_r($generated);
+//print_r($generated);

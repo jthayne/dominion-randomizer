@@ -6,6 +6,7 @@ namespace Dominion\Kingdom;
 
 use Dominion\Cards\Card;
 use Dominion\Cards\Cards;
+use Dominion\Cards\Triggers\Seaside;
 use Medoo\Medoo;
 use Random\Randomizer;
 
@@ -19,6 +20,9 @@ use Random\Randomizer;
 final class Kingdom
 {
     private array $cardList = [];
+    /**
+     * @var array<\Dominion\Cards\Validation\CardData>
+     */
     private array $cardListWithDetails = [];
     private array $setsInUse = [];
 
@@ -27,6 +31,8 @@ final class Kingdom
     public function buildKingdom(int $size = 10): Kingdom
     {
         $this->buildRandomKingdom($size);
+
+        $this->processTriggers();
 
         return $this;
     }
@@ -70,5 +76,27 @@ final class Kingdom
         }
 
         $this->setsInUse = array_unique($this->setsInUse);
+    }
+
+    private function processTriggers(): void
+    {
+        $card = new Card($this->medoo);
+
+        foreach ($this->cardListWithDetails as $cardDetails) {
+            $setName = $cardDetails->getSet();
+            $cardName = $cardDetails->getName();
+
+            echo $cardName . ' (' . $setName . ')' . PHP_EOL;
+            $set = '\Dominion\Cards\Triggers\\' . str_replace(' ', '', $setName);
+//            var_dump($set);
+//            echo PHP_EOL;
+            $triggers = $cardDetails->getTriggers();
+            if (empty($triggers) === false) {
+                $setInstance = new $set($this->medoo, $card, $this);
+//                var_dump($setInstance);
+//                die();
+                $setInstance->process($triggers);
+            }
+        }
     }
 }

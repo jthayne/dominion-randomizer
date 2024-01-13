@@ -31,7 +31,11 @@ trait General
                 $triggerName = explode('_', $triggerName)[0];
             }
 
-            $this->$triggerName($trigger);
+            if ($triggerName === $trigger) {
+                $this->$triggerName();
+            } else {
+                $this->$triggerName($trigger);
+            }
         }
     }
 

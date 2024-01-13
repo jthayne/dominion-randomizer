@@ -79,4 +79,15 @@ class Renaissance
             token: true,
         );
     }
+
+    private function artifact(string $artifactName): void
+    {
+        $type = $artifactName;
+
+        if (str_contains($artifactName, '_') === true) {
+            $type = explode('_', $artifactName, 2)[1];
+        }
+
+        $this->$type();
+    }
 }

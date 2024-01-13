@@ -6,7 +6,6 @@ namespace Dominion\Cards;
 
 use Dominion\Cards\Validation\CardData;
 use Dominion\Cards\Validation\CardValidation;
-use Dominion\CardSet;
 use Medoo\Medoo;
 
 final readonly class Card
@@ -177,12 +176,10 @@ final readonly class Card
 
         $abilities = $this->medoo->select(
             'card_ability',
-            [
-                'ability',
-            ],
+            'ability',
             [
                 'card_id[=]' => $id,
-            ]
+            ],
         );
 
         $cost = $this->medoo->select(
@@ -198,9 +195,7 @@ final readonly class Card
 
         $trigger = $this->medoo->select(
             'card_trigger',
-            [
-                'trigger',
-            ],
+            'trigger',
             [
                 'card_id[=]' => $id,
             ]
@@ -208,12 +203,10 @@ final readonly class Card
 
         $type = $this->medoo->select(
             'card_type',
-            [
-                'type',
-            ],
+            'type',
             [
                 'card_id[=]' => $id,
-            ]
+            ],
         );
 
         return new CardData(
@@ -246,9 +239,7 @@ final readonly class Card
 
         $abilities = $this->medoo->select(
             'card_ability',
-            [
-                'ability',
-            ],
+            'ability',
             [
                 'card_id[=]' => $details['id'],
             ]
@@ -267,28 +258,24 @@ final readonly class Card
 
         $trigger = $this->medoo->select(
             'card_trigger',
-            [
-                'trigger',
-            ],
+            'trigger',
             [
                 'card_id[=]' => $details['id'],
-            ]
+            ],
         );
 
         $type = $this->medoo->select(
             'card_type',
-            [
-                'type',
-            ],
+            'type',
             [
                 'card_id[=]' => $details['id'],
-            ]
+            ],
         );
 
         return new CardData(
-            id: $details['id'],
             name:      $details['name'],
             set:       $details['set'],
+            id:        $details['id'],
             card:      true,
             kingdom:   true,
             types:     $type ?? [],
@@ -296,5 +283,29 @@ final readonly class Card
             triggers:  $trigger ?? [],
             abilities: $abilities ?? [],
         );
+    }
+
+    /**
+     * @return array<\Dominion\Cards\Validation\CardData>
+     */
+    public function getCardsByType(string $type): array
+    {
+        $cards = $this->medoo->select(
+            'cards',
+            [
+                '[><]card_type' => ['cards.id' => 'card_id'],
+            ],
+            'id',
+            [
+                'type[=]' => $type,
+            ],
+        );
+
+        $allCards = [];
+        foreach ($cards as $card) {
+            $allCards[] = $this->getCardByID((int) $card);
+        }
+
+        return $allCards;
     }
 }

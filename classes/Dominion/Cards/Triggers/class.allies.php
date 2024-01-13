@@ -37,8 +37,11 @@ class Allies
         );
     }
 
-    private function ally(): CardData
+    /**
+     * @return array<\Dominion\Cards\Validation\CardData>
+     */
+    private function ally(): array
     {
-        return $this->card->getCardByName('Ally');
+        return $this->card->getCardsByType('Ally');
     }
 }
