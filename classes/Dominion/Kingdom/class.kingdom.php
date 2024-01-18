@@ -7,6 +7,7 @@ namespace Dominion\Kingdom;
 use Dominion\Cards\Card;
 use Dominion\Cards\Cards;
 use Dominion\Cards\Triggers\Seaside;
+use Dominion\Cards\Validation\CardData;
 use Medoo\Medoo;
 use Random\Randomizer;
 
@@ -19,11 +20,13 @@ use Random\Randomizer;
  */
 final class Kingdom
 {
-    private array $cardList = [];
     /**
      * @var array<\Dominion\Cards\Validation\CardData>
      */
-    private array $cardListWithDetails = [];
+    private array $cardsInSupplyListWithDetails = [];
+    private array $cardsInSupplyList = [];
+    private array $nonSupplyCardsListWithDetails = [];
+    private array $nonSupplyCardsList = [];
     private array $setsInUse = [];
 
     public function __construct(private readonly Medoo $medoo, private readonly Cards $cards) {}
@@ -44,35 +47,35 @@ final class Kingdom
         $selectedKeys = array_rand($cards, $size);
 
         foreach ($selectedKeys as $key) {
-            $this->cardList[] = $cards[$key];
+            $this->cardsInSupplyList[] = $cards[$key];
         }
 
         $randomizer = new Randomizer();
 
-        $this->cardList = $randomizer->shuffleArray($this->cardList);
+        $this->cardsInSupplyList = $randomizer->shuffleArray($this->cardsInSupplyList);
         $this->buildDetailedCardList();
     }
 
     public function getKingdomList(): array
     {
-        return $this->cardList;
+        return $this->cardsInSupplyList;
     }
 
     public function getKingdomListWithDetails(): array
     {
-        return $this->cardListWithDetails;
+        return $this->cardsInSupplyListWithDetails;
     }
 
     private function buildDetailedCardList(): void
     {
         $card = new Card($this->medoo);
 
-        foreach ($this->cardList as $single) {
+        foreach ($this->cardsInSupplyList as $single) {
             $cardDetails = $card->getCardByID($single['id']);
 
             $this->setsInUse[] = $cardDetails->getSet();
 
-            $this->cardListWithDetails[] = $cardDetails;
+            $this->cardsInSupplyListWithDetails[] = $cardDetails;
         }
 
         $this->setsInUse = array_unique($this->setsInUse);
@@ -82,21 +85,34 @@ final class Kingdom
     {
         $card = new Card($this->medoo);
 
-        foreach ($this->cardListWithDetails as $cardDetails) {
+        foreach ($this->cardsInSupplyListWithDetails as $cardDetails) {
             $setName = $cardDetails->getSet();
             $cardName = $cardDetails->getName();
 
             echo $cardName . ' (' . $setName . ')' . PHP_EOL;
             $set = '\Dominion\Cards\Triggers\\' . str_replace(' ', '', $setName);
-//            var_dump($set);
-//            echo PHP_EOL;
+
             $triggers = $cardDetails->getTriggers();
             if (empty($triggers) === false) {
                 $setInstance = new $set($this->medoo, $card, $this);
-//                var_dump($setInstance);
-//                die();
+
                 $setInstance->process($triggers);
             }
         }
+    }
+
+    public function addNonSupplyCard(CardData $card): void
+    {
+        $this->nonSupplyCardsList[] = [
+            'id' => $card->getId(),
+            'name' => $card->getName(),
+        ];
+
+        $this->nonSupplyCardsListWithDetails[] = $card;
+    }
+
+    public function replaceCard(): void
+    {
+        // TODO: Add code to replace a card in the supply. All triggers need to be undone and new triggers run
     }
 }
