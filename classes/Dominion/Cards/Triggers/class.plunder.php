@@ -19,13 +19,22 @@ class Plunder
         $this->setProperName = 'Menagerie';
     }
 
-    /**
-     * @return array<\Dominion\Cards\Validation\CardData>
-     */
-    private function loot(): array
+    private function loot(): CardData
     {
-        $card = new Card($this->db);
+        $cards = $this->card->getCardsByType('loot');
 
-        return $card->getCardsByType('Loot');
+        $triggers = [];
+        foreach ($cards as $card) {
+            $triggers = array_merge($triggers, $card->getTriggers());
+        }
+
+        $triggers = array_unique($triggers);
+
+        return new CardData(
+            name: 'Loot',
+            set: $this->setProperName,
+            card: true,
+            triggers: $triggers,
+        );
     }
 }

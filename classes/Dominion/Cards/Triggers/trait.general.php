@@ -30,7 +30,7 @@ trait General
             if (str_contains($trigger, '_') === true) {
                 $triggerName = explode('_', $triggerName)[0];
             }
-
+echo '<-- ' . $triggerName . ' -->';
             if ($triggerName === $trigger) {
                 $return = $this->$triggerName();
             } else {
@@ -41,6 +41,10 @@ trait General
                 // TODO: Iterate result and add each to kingdom then continue loop
                 foreach ($return as $card) {
                     $this->kingdom->addNonSupplyCard($card);
+
+                    if (empty($card->getTriggers()) === false) {
+
+                    }
                 }
 
                 continue;
@@ -74,7 +78,7 @@ trait General
         throw new UndefinedCardTypeException();
     }
 
-    private function mat(string $matName): void
+    private function mat(string $matName): CardData
     {
         $type = $matName;
 
@@ -82,10 +86,10 @@ trait General
             $type = explode('_', $matName, 2)[1];
         }
 
-        $this->$type();
+        return $this->$type();
     }
 
-    private function token(string $tokenName): void
+    private function token(string $tokenName): CardData
     {
         $type = $tokenName;
 
@@ -93,10 +97,10 @@ trait General
             $type = explode('_', $tokenName, 2)[1];
         }
 
-        $this->$type();
+        return $this->$type();
     }
 
-    private function upgrade(string $upgradeName): void
+    private function upgrade(string $upgradeName): CardData
     {
         $type = $upgradeName;
 
@@ -104,7 +108,7 @@ trait General
             $type = explode('_', $upgradeName, 2)[1];
         }
 
-        $this->$type();
+        return $this->$type();
     }
 
     private function getCardDetails(string $cardName): array
@@ -125,5 +129,14 @@ trait General
     {
         $cardsYaml = file_get_contents(Environment::get('PROJECT_DIR') . '/data/sets/' . strtolower($this->set) . '.yaml');
         return Yaml::parse($cardsYaml)[$section];
+    }
+
+    private function coin(): CardData
+    {
+        return new CardData(
+            name:  'Coin',
+            set:   'Base',
+            token: true,
+        );
     }
 }

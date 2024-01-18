@@ -46,15 +46,6 @@ class Seaside
         );
     }
 
-    private function coin(): CardData
-    {
-        return new CardData(
-            name:  'Coin',
-            set:   $this->setProperName,
-            token: true,
-        );
-    }
-
     private function embargo(): CardData
     {
         return new CardData(

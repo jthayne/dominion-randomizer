@@ -18,4 +18,4 @@ $kingdom = new Kingdom($db, $cards);
 $generated = $kingdom->buildKingdom(450)
     ->getKingdomListWithDetails();
 
-//print_r($generated);
+print_r($generated);

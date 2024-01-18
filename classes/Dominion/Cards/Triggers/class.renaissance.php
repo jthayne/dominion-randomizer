@@ -38,15 +38,6 @@ class Renaissance
         );
     }
 
-    private function coin(): CardData
-    {
-        return new CardData(
-            name: 'Coin',
-            set: $this->setProperName,
-            token: true,
-        );
-    }
-
     private function villager(): CardData
     {
         return new CardData(
@@ -80,7 +71,7 @@ class Renaissance
         );
     }
 
-    private function artifact(string $artifactName): void
+    private function artifact(string $artifactName): CardData
     {
         $type = $artifactName;
 
@@ -88,6 +79,6 @@ class Renaissance
             $type = explode('_', $artifactName, 2)[1];
         }
 
-        $this->$type();
+        return $this->$type();
     }
 }

@@ -28,15 +28,6 @@ class Prosperity
         );
     }
 
-    private function coin(): CardData
-    {
-        return new CardData(
-            name: 'Coin',
-            set: $this->setProperName,
-            token: true,
-        );
-    }
-
     private function traderoute(): CardData
     {
         return new CardData(

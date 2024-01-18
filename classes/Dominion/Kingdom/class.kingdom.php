@@ -63,7 +63,10 @@ final class Kingdom
 
     public function getKingdomListWithDetails(): array
     {
-        return $this->cardsInSupplyListWithDetails;
+        return [
+            'supply' => $this->cardsInSupplyListWithDetails,
+            'non-supply' => $this->nonSupplyCardsListWithDetails,
+        ];
     }
 
     private function buildDetailedCardList(): void
@@ -99,16 +102,20 @@ final class Kingdom
                 $setInstance->process($triggers);
             }
         }
+
+//        array_unique()
     }
 
     public function addNonSupplyCard(CardData $card): void
     {
-        $this->nonSupplyCardsList[] = [
-            'id' => $card->getId(),
-            'name' => $card->getName(),
-        ];
+        if (in_array($card, $this->nonSupplyCardsList) === false) {
+            $this->nonSupplyCardsList[] = [
+                'id' => $card->getId(),
+                'name' => $card->getName(),
+            ];
 
-        $this->nonSupplyCardsListWithDetails[] = $card;
+            $this->nonSupplyCardsListWithDetails[] = $card;
+        }
     }
 
     public function replaceCard(): void

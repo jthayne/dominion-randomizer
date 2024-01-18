@@ -28,20 +28,22 @@ class Allies
         );
     }
 
-    private function coin(): CardData
+    private function ally(): CardData
     {
-        return new CardData(
-            name:  'Coin',
-            set:   $this->setProperName,
-            token: true,
-        );
-    }
+        $cards = $this->card->getCardsByType('ally');
 
-    /**
-     * @return array<\Dominion\Cards\Validation\CardData>
-     */
-    private function ally(): array
-    {
-        return $this->card->getCardsByType('Ally');
+        $triggers = [];
+        foreach ($cards as $card) {
+            $triggers = array_merge($triggers, $card->getTriggers());
+        }
+
+        $triggers = array_unique($triggers);
+
+        return new CardData(
+            name: 'Ally',
+            set: $this->setProperName,
+            card: true,
+            triggers: $triggers,
+        );
     }
 }

@@ -24,12 +24,23 @@ class Nocturne
         return $this->card->getCardByName('Bat');
     }
 
-    /**
-     * @return array<\Dominion\Cards\Validation\CardData>
-     */
-    private function boon(): array
+    private function boon(): CardData
     {
-        return $this->card->getCardsByType('Loot');
+        $cards = $this->card->getCardsByType('hex');
+
+        $triggers = [];
+        foreach ($cards as $card) {
+            $triggers = array_merge($triggers, $card->getTriggers());
+        }
+
+        $triggers = array_unique($triggers);
+
+        return new CardData(
+            name: 'Boon',
+            set: $this->setProperName,
+            card: true,
+            triggers: $triggers,
+        );
     }
     private function cursedgold(): CardData
     {
@@ -56,7 +67,7 @@ class Nocturne
         return $this->card->getCardByName('Haunted Mirror');
     }
 
-    private function heirloom(string $heirloomName): void
+    private function heirloom(string $heirloomName): CardData
     {
         $type = $heirloomName;
 
@@ -64,15 +75,26 @@ class Nocturne
             $type = explode('_', $heirloomName, 2)[1];
         }
 
-        $this->$type();
+        return $this->$type();
     }
 
-    /**
-     * @return array<\Dominion\Cards\Validation\CardData>
-     */
-    private function hex(): array
+    private function hex(): CardData
     {
-        return $this->card->getCardsByType('Hex');
+        $cards = $this->card->getCardsByType('hex');
+
+        $triggers = [];
+        foreach ($cards as $card) {
+            $triggers = array_merge($triggers, $card->getTriggers());
+        }
+
+        $triggers = array_unique($triggers);
+
+        return new CardData(
+            name: 'Hex',
+            set: $this->setProperName,
+            card: true,
+            triggers: $triggers,
+        );
     }
 
     private function imp(): CardData
@@ -105,7 +127,7 @@ class Nocturne
         return $this->card->getCardByName('Pouch');
     }
 
-    private function state(string $stateName): void
+    private function state(string $stateName): CardData
     {
         $type = $stateName;
 
@@ -113,7 +135,7 @@ class Nocturne
             $type = explode('_', $stateName, 2)[1];
         }
 
-        $this->$type();
+        return $this->$type();
     }
 
     private function vampire(): CardData
