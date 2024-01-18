@@ -38,7 +38,6 @@ echo '<-- ' . $triggerName . ' -->';
             }
 
             if (is_array($return) === true) {
-                // TODO: Iterate result and add each to kingdom then continue loop
                 foreach ($return as $card) {
                     $this->kingdom->addNonSupplyCard($card);
                 }
