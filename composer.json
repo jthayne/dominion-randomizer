@@ -1,6 +1,6 @@
 {
   "require": {
-    "php": "^8.2",
+    "php": "^8.3",
     "catfan/medoo": "^2.1",
     "cerbero/enum": "^1.0",
     "psr/log": "^3.0",
