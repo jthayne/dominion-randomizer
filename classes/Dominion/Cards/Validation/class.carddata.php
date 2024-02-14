@@ -14,6 +14,7 @@ final readonly class CardData
         private bool   $mat = false,
         private bool   $token = false,
         private bool   $kingdom = false,
+        private bool   $splitPile = false,
         private array  $types = [],
         private array  $cost = [],
         private array  $triggers = [],
@@ -54,6 +55,11 @@ final readonly class CardData
     public function getAbilities(): array
     {
         return $this->abilities;
+    }
+
+    public function isSplitPile(): bool
+    {
+        return $this->splitPile;
     }
 
     public function isCard(): bool

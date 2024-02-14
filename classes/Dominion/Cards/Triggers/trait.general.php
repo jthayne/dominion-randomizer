@@ -30,7 +30,7 @@ trait General
             if (str_contains($trigger, '_') === true) {
                 $triggerName = explode('_', $triggerName)[0];
             }
-echo '<-- ' . $triggerName . ' -->';
+
             if ($triggerName === $trigger) {
                 $return = $this->$triggerName();
             } else {
@@ -38,14 +38,31 @@ echo '<-- ' . $triggerName . ' -->';
             }
 
             if (is_array($return) === true) {
-                foreach ($return as $card) {
-                    $this->kingdom->addNonSupplyCard($card);
+                $type = $return['type'];
+
+                $bmStatus = match ($type) {
+                    'blackmarket' => true,
+                    default => false,
+                };
+
+                foreach ($return['cards'] as $card) {
+                    $added = $this->kingdom->addNonSupplyCard(card: $card, blackmarket: $bmStatus);
+
+                    if ($added === true) {
+                        // process new triggers
+                        $this->process($card->getTriggers());
+                    }
                 }
 
                 continue;
             }
 
-            $this->kingdom->addNonSupplyCard($return);
+            $added = $this->kingdom->addNonSupplyCard($return);
+
+            if ($added === true) {
+                // process new triggers
+                $this->process($return->getTriggers());
+            }
         }
     }
 

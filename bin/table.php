@@ -2,22 +2,6 @@
 
 declare(strict_types=1);
 
-use Dominion\Cards\Cards;
-use Dominion\Kingdom\Kingdom;
-
-require_once __DIR__ . '/../bootstrap/init.php';
-$db = require_once __DIR__ . '/../bootstrap/db.php';
-
-$cards = new Cards($db);
-$kingdom = new Kingdom($db, $cards);
-
-$generated = $kingdom->size(10)
-    ->set('Nocturne')
-    ->set('Menagerie')
-    ->set('Prosperity')
-    ->buildKingdom()
-    ->getKingdomListWithDetails();
-
 function displayTable($data): void
 {
     // Check if data is not empty
@@ -62,32 +46,12 @@ function displayTable($data): void
     }
 }
 
-$toAdd = [];
-foreach ($generated['supply'] as $item) {
-    $toAdd[] = [
-        'Kingdom' => $item->getName(),
-        'Set' => $item->getSet(),
-    ];
-}
+// Example data
+$data = [
+    ['Name' => 'John', 'City' => 'New York', 'Age' => 25],
+    ['Name' => 'Alice', 'City' => 'San Francisco', 'Age' => 30],
+    // Add more rows as needed
+];
 
-displayTable($toAdd);
-echo PHP_EOL;
-
-foreach ($generated['non-supply'] as $index => $item) {
-    $toAdd = [];
-
-    foreach ($item as $value) {
-        $toAdd[] = [
-            ucwords($index) => $value->getName(),
-            'Set' => $value->getSet(),
-        ];
-    }
-
-    displayTable($toAdd);
-    echo PHP_EOL;
-}
-//foreach ($generated as $item) {
-
-//}
-//displayTable($generated);
-//print_r($generated);
+// Display the table
+displayTable($data);

@@ -42,6 +42,7 @@ cards:
   - name: Encampment/Plunder
     cost:
       treasure: 2
+    split: true
     type:
       - action
       - treasure
@@ -55,6 +56,7 @@ cards:
   - name: Patrician/Emporium
     cost:
       treasure: 2
+    split: true
     type:
       - action
     ability:
@@ -68,6 +70,7 @@ cards:
   - name: Settlers/Bustling Village
     cost:
       treasure: 2
+    split: true
     type:
       - action
     ability:
@@ -77,6 +80,7 @@ cards:
   - name: Castles
     cost:
       treasure: 3
+    split: true
     type:
       - treasure
       - victory
@@ -93,6 +97,7 @@ cards:
   - name: Catapult/Rocks
     cost:
       treasure: 3
+    split: true
     type:
       - action
       - attack
@@ -143,6 +148,7 @@ cards:
   - name: Gladiator/Fortune
     cost:
       treasure: 3
+    split: true
     type:
       - action
       - treasure

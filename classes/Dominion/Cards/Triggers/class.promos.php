@@ -24,16 +24,19 @@ class Promos
      */
     private function blackmarket(int $marketsize = 15): array
     {
-        $bmList = [];
+        $bmList = [
+            'type' => 'blackmarket',
+            'cards' => [],
+        ];
 
         $cards = new Cards($this->db);
 
         for ($counter = 1; $counter <= $marketsize; $counter++) {
-            $bmCard = $cards->getRandomCard();
-            if (in_array($bmCard->getId(), $this->kingdom->getKingdomList()) === true) {
+            $bmCard = $cards->getRandomKingdomCard();
+            if ($this->kingdom->isCardIdInKingdom($bmCard->getId()) === true || $bmCard->isSplitPile() === true) {
                 $counter--;
             } else {
-                $bmList[] = $bmCard;
+                $bmList['cards'][] = $bmCard;
             }
         }
 

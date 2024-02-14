@@ -15,8 +15,8 @@ class Nocturne
 
     public function __construct(private readonly Medoo $db, private readonly Card $card, private readonly Kingdom $kingdom)
     {
-        $this->set = 'menagerie';
-        $this->setProperName = 'Menagerie';
+        $this->set = 'nocturne';
+        $this->setProperName = 'Nocturne';
     }
 
     private function bat(): CardData
@@ -152,6 +152,24 @@ class Nocturne
         return $this->card->getCardByName('Wish');
     }
 
+    private function zombie(): CardData
+    {
+        $cards = $this->card->getCardsByType('zombie');
+
+        $triggers = [];
+        foreach ($cards as $card) {
+            $triggers = array_merge($triggers, $card->getTriggers());
+        }
+
+        $triggers = array_unique($triggers);
+
+        return new CardData(
+            name: 'Zombie',
+            set: $this->setProperName,
+            card: true,
+            triggers: $triggers,
+        );
+    }
     private function zombieapprentice(): CardData
     {
         return $this->card->getCardByName('Zombie Apprentice');

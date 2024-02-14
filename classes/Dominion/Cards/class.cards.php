@@ -25,6 +25,20 @@ final readonly class Cards
         );
     }
 
+    public function getCardsInSet(string $set): array
+    {
+        return $this->medoo->select(
+            'cards',
+            [
+                'id',
+                'name',
+            ],
+            [
+                'is_kingdom_card[=]' => 1,
+                'set[=]' => $set,
+            ]
+        );
+    }
     public function getAllKingdomCards(): array
     {
         return $this->medoo->select(
@@ -42,6 +56,17 @@ final readonly class Cards
     public function getRandomCard(): CardData
     {
         $cards = $this->getAllCards();
+
+        $cardID = $cards[array_rand($cards)]['id'];
+
+        $card = new Card($this->medoo);
+
+        return $card->getCardByID($cardID);
+    }
+
+    public function getRandomKingdomCard(): CardData
+    {
+        $cards = $this->getAllKingdomCards();
 
         $cardID = $cards[array_rand($cards)]['id'];
 

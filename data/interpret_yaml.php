@@ -59,11 +59,17 @@ foreach ($sets as $set) {
                 }
 
                 foreach ($details as $card) {
+                    $splitPileFlag = 0;
+                    if (isset($card['split']) === true && $card['split'] === true) {
+                        $splitPileFlag = 1;
+                    }
+
                     $validatedCard = new CardValidation(
                         name: $card['name'],
                         set: $cards['name'],
                         edition: $card['edition'] ?? 0,
                         isKingdomCard: $kingdomFlag,
+                        isSplitPile: $splitPileFlag,
                     );
 
                     $cardID = $cardData->add($validatedCard);
