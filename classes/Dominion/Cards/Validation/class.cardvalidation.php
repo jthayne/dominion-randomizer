@@ -11,7 +11,13 @@ final readonly class CardValidation
         private string $set,
         private int $edition = 0,
         private int $isKingdomCard = 1,
+        private int $isSplitPile = 0,
     ) {}
+
+    public function getIsSplitPile(): int
+    {
+        return $this->isSplitPile;
+    }
 
     public function getName(): string
     {

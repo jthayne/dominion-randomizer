@@ -25,7 +25,7 @@ class Cornucopia
         $cards = new Cards($this->db);
 
         do {
-            $bane = $cards->getRandomCard();
+            $bane = $cards->getRandomKingdomCard();
         } while (in_array($bane->getId(), $this->kingdom->getKingdomList()) === true);
 
         return $bane;

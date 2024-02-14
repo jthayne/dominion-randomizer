@@ -32,4 +32,15 @@ final class Verify
             return $array;
         }
     }
+
+    public static function keyInSubarrayContainsValue(array $array, string $key, mixed $contains): bool
+    {
+        foreach ($array as $item) {
+            if ($item[$key] === $contains) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

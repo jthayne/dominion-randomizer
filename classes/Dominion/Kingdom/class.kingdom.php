@@ -8,6 +8,8 @@ use Dominion\Cards\Card;
 use Dominion\Cards\Cards;
 use Dominion\Cards\Triggers\Seaside;
 use Dominion\Cards\Validation\CardData;
+use Dominion\Kingdom\Rules\AvailableRules;
+use General\Verify;
 use Medoo\Medoo;
 use Random\Randomizer;
 
@@ -25,26 +27,81 @@ final class Kingdom
      */
     private array $cardsInSupplyListWithDetails = [];
     private array $cardsInSupplyList = [];
-    private array $nonSupplyCardsListWithDetails = [];
+    public array $nonSupplyCardsListWithDetails = [];
     private array $nonSupplyCardsList = [];
-    private array $setsInUse = [];
+    public array $setsInUse = [];
+    private int $kingdomSize = 10;
+    private int $players = 2;
+    private array $allowedSets = [];
+    /**
+     * @var array<\Dominion\Kingdom\Rules\AvailableRules>
+     */
+    private array $appliedRules = [];
 
     public function __construct(private readonly Medoo $medoo, private readonly Cards $cards) {}
 
-    public function buildKingdom(int $size = 10): Kingdom
+    public function size(int $size): Kingdom
     {
-        $this->buildRandomKingdom($size);
+        $this->kingdomSize = $size;
+
+        return $this;
+    }
+
+    public function set(string $setName): Kingdom
+    {
+        $this->allowedSets[] = $setName;
+
+        return $this;
+    }
+
+    public function players(int $number): Kingdom
+    {
+        $this->players = $number;
+
+        return $this;
+    }
+
+    public function buildKingdom(): Kingdom
+    {
+        $this->buildRandomKingdom();
 
         $this->processTriggers();
 
         return $this;
     }
 
-    public function buildRandomKingdom(int $size): void
+    public function getAllCardsInKingdom(): array
     {
-        $cards = $this->cards->getAllKingdomCards();
+        return array_merge(
+            $this->getKingdomList(),
+            $this->getNonSupplyCardsList(),
+        );
+    }
 
-        $selectedKeys = array_rand($cards, $size);
+    public function isCardIdInKingdom(int $id): bool
+    {
+        $cards = $this->getAllCardsInKingdom();
+
+        foreach ($cards as $card) {
+            if ((int) $card['id'] === $id) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    public function buildRandomKingdom(): void
+    {
+        $cards = [];
+        if (empty($this->allowedSets) === true) {
+            $cards = $this->cards->getAllKingdomCards();
+        } else {
+            foreach ($this->allowedSets as $allowedSet) {
+                $cards = array_merge($cards, $this->cards->getCardsInSet($allowedSet));
+            }
+        }
+
+        $selectedKeys = array_rand($cards, $this->kingdomSize);
 
         foreach ($selectedKeys as $key) {
             $this->cardsInSupplyList[] = $cards[$key];
@@ -54,6 +111,11 @@ final class Kingdom
 
         $this->cardsInSupplyList = $randomizer->shuffleArray($this->cardsInSupplyList);
         $this->buildDetailedCardList();
+
+        $this->addBaseSupplyCards();
+
+        $rules = new Rules\Rules($this->medoo);
+        $rules->process($this->appliedRules, $this);
     }
 
     public function getKingdomList(): array
@@ -67,6 +129,49 @@ final class Kingdom
             'supply' => $this->cardsInSupplyListWithDetails,
             'non-supply' => $this->nonSupplyCardsListWithDetails,
         ];
+    }
+
+    public function printKingdon(): void
+    {
+        $generated = $this->getKingdomListWithDetails();
+
+
+    }
+
+    public function getNonSupplyCardsList(): array
+    {
+        return $this->nonSupplyCardsList;
+    }
+
+    private function addBaseSupplyCards(): void
+    {
+        $card = new Card($this->medoo);
+
+        $baseTreasures = [
+            $card->getCardByName('Copper'),
+            $card->getCardByName('Silver'),
+            $card->getCardByName('Gold'),
+        ];
+
+        $baseVictory = [
+            $card->getCardByName('Estate'),
+            $card->getCardByName('Duchy'),
+            $card->getCardByName('Province'),
+        ];
+
+        if (in_array('Prosperity', $this->setsInUse) === true) {
+            $baseTreasures[] = $card->getCardByName('Platinum');
+            $baseVictory[] = $card->getCardByName('Colony');
+        }
+
+        $this->nonSupplyCardsListWithDetails['setup'] = array_merge($baseTreasures, $baseVictory);
+    }
+
+    public function addRule(AvailableRules $rule): Kingdom
+    {
+        $this->appliedRules($rule);
+
+        return $this;
     }
 
     private function buildDetailedCardList(): void
@@ -92,7 +197,7 @@ final class Kingdom
             $setName = $cardDetails->getSet();
             $cardName = $cardDetails->getName();
 
-            echo $cardName . ' (' . $setName . ')' . PHP_EOL;
+//            echo $cardName . ' (' . $setName . ')' . PHP_EOL;
             $set = '\Dominion\Cards\Triggers\\' . str_replace(' ', '', $setName);
 
             $triggers = $cardDetails->getTriggers();
@@ -102,20 +207,33 @@ final class Kingdom
                 $setInstance->process($triggers);
             }
         }
-
-//        array_unique()
     }
 
-    public function addNonSupplyCard(CardData $card): void
+    public function addNonSupplyCard(CardData $card, bool $blackmarket = false): bool
     {
-        if (in_array($card, $this->nonSupplyCardsList) === false) {
-            $this->nonSupplyCardsList[] = [
+        $category = match(true) {
+            $card->isMat() => 'mat',
+            $card->isToken() => 'token',
+            $blackmarket => 'blackmarket',
+            default => 'cards',
+        };
+
+        if (isset($this->nonSupplyCardsList[$category]) === false) {
+            $this->nonSupplyCardsList[$category] = [];
+        }
+
+        if (Verify::keyInSubarrayContainsValue($this->nonSupplyCardsList[$category], 'name', $card->getName()) === false){
+            $this->nonSupplyCardsList[$category][] = [
                 'id' => $card->getId(),
                 'name' => $card->getName(),
             ];
 
-            $this->nonSupplyCardsListWithDetails[] = $card;
+            $this->nonSupplyCardsListWithDetails[$category][] = $card;
+
+            return true;
         }
+
+        return false;
     }
 
     public function replaceCard(): void

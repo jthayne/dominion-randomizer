@@ -28,6 +28,7 @@ final readonly class Card
                 'set' => $data->getSet(),
                 'edition' => $data->getEdition(),
                 'is_kingdom_card' => $data->getIsKingdomCard(),
+                'is_split_pile' => $data->getIsSplitPile(),
             ]
         );
 
@@ -42,6 +43,7 @@ final readonly class Card
                 'set' => $data->getSet(),
                 'edition' => $data->getEdition(),
                 'is_kingdom_card' => $data->getIsKingdomCard(),
+                'is_split_pile' => $data->getIsSplitPile(),
             ]
         );
 
@@ -168,6 +170,7 @@ final readonly class Card
                 'set',
                 'edition',
                 'is_kingdom_card',
+                'is_split_pile',
             ],
             [
                 'id[=]' => $id,
@@ -214,6 +217,7 @@ final readonly class Card
             set:       $details['set'],
             card:      true,
             kingdom:   true,
+            splitPile: (bool) $details['is_split_pile'],
             types:     $type ?? [],
             cost:      $cost ?? [],
             triggers:  $trigger ?? [],

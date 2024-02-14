@@ -38,6 +38,7 @@ cards:
   - name: Sauna/Avanto
     cost:
       treasure: 4
+    split: true
     type:
       - action
     ability:
