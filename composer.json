@@ -1,12 +1,10 @@
 {
   "require": {
     "php": "^8.3",
-    "ext-readline": "*",
     "catfan/medoo": "^2.1",
     "cerbero/enum": "^1.0",
     "psr/log": "^3.0",
     "vlucas/phpdotenv": "^5.6",
-    "symfony/yaml": "^7.0",
-    "minicli/miniterm": "^1.2"
+    "symfony/yaml": "^7.0"
   }
 }
