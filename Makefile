@@ -51,7 +51,7 @@ phpmd-ci:
 	@$(bin)/phpmd classes,public github build/phpmd/phpmd.xml
 
 phpmd-baseline: ## PHP Mess Detection. Generate Baseline
-	@$(bin)/phpmd offline,classes,public ansi build/phpmd/phpmd.xml --generate-baseline
+	@$(bin)/phpmd classes,public ansi build/phpmd/phpmd.xml --generate-baseline
 
 # Testing. Requires installing Pest. (Not yet installed).
 pest: ## Unit testing
