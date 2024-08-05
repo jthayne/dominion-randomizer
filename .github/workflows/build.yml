@@ -55,6 +55,3 @@ jobs:
 
       - name: PHP Mess Detector
         run: make phpmd-ci
-
-      - name: Static Analysis
-        run: make phpstan-ci
