@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<ruleset name="VirtualReef">
+    <description>A custom coding standard for Virtual Reef.</description>
+
+    <!-- Include all custom rules specific to Virtual Reef -->
+    <rule ref="VirtualReef.Files.FileName"/>
+
+    <!-- PSR12 sniffs -->
+    <rule ref="PSR12">
+        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine" />
+    </rule>
+
+    <!-- NormalizedArrays Sniffs -->
+    <rule ref="NormalizedArrays"/>
+    <rule ref="NormalizedArrays.Arrays.CommaAfterLast.MissingMultiLine"/>
+
+    <!-- Squiz Sniffs -->
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+    <rule ref="Squiz.Commenting.InlineComment">
+        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+        <exclude name="Squiz.Commenting.InlineComment.NotCapital"/>
+    </rule>
+    <rule ref="Squiz.ControlStructures.ControlSignature">
+        <properties>
+            <property name="requiredSpacesBeforeColon" value="0" />
+        </properties>
+    </rule>
+    <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
+        <properties>
+            <property name="equalsSpacing" value="1" />
+        </properties>
+    </rule>
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration">
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+    </rule>
+    <rule ref="Squiz.Objects.ObjectInstantiation">
+        <exclude name="Squiz.Objects.ObjectInstantiation.NotAssigned"/>
+    </rule>
+    <rule ref="Squiz.Operators.ComparisonOperatorUsage"/>
+    <rule ref="Squiz.PHP.GlobalKeyword">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
+        <exclude name="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"/>
+    </rule>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
+
+    <!-- MySource Sniffs -->
+    <rule ref="MySource.Channels.IncludeSystem">
+        <exclude name="MySource.Channels.IncludeSystem.NotIncludedCall"/>
+        <exclude name="MySource.Channels.IncludeSystem.NotIncludedExtends"/>
+    </rule>
+
+    <!-- Generic Sniffs -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Generic.Arrays.ArrayIndent"/>
+    <rule ref="Generic.Commenting.Fixme"/>
+    <rule ref="Generic.Commenting.Todo"/>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="240"/>
+            <property name="absoluteLineLimit" value="0"/>
+            <property name="ignoreComments" value="false"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Formatting.MultipleStatementAlignment">
+<!--        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame"/>-->
+        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
+    </rule>
+
+    <!-- Universal Sniffs -->
+    <rule ref="Universal.WhiteSpace.CommaSpacing"/>
+
+    <!-- PEAR Sniffs -->
+    <rule ref="PEAR.Files.IncludingFile">
+        <exclude name="PEAR.Files.IncludingFile.UseIncludeOnce"/>
+    </rule>
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
+
+    <!-- Zend Sniffs -->
+    <rule ref="Zend.NamingConventions.ValidVariableName">
+        <exclude name="Zend.NamingConventions.ValidVariableName.ContainsNumbers"/>
+        <exclude name="Zend.NamingConventions.ValidVariableName.MemberVarNotCamelCaps"/>
+        <exclude name="Zend.NamingConventions.ValidVariableName.NotCamelCaps"/>
+        <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+    </rule>
+</ruleset>

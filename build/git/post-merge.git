@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the list of changed files
+changedFiles="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)"
+
+# Define a function to check if a file has changed in the last git pull
+runOnChange() {
+    echo "$changedFiles" | grep -q "$1" && eval "$2"
+}
+
+# Run composer install and then composer update ifcomposer.json has ben updated
+runOnChange composer.json "composer install"
+runOnChange composer.json "composer update"

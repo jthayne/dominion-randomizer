@@ -1,0 +1,49 @@
+#!/bin/sh
+
+PROJECT=`php -r "echo dirname(dirname(dirname(realpath('$0'))));"`
+STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.php`
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+# a branch name where you want to prevent git push. In this case, it's "master"
+if [ "$branch" = "master" ]; then
+  echo "You can't commit directly to '"${branch}"' branch" # webstorm or intellij will show this as popup
+  exit 1 # if you remove this line then it won't block push but send message to group and on command line
+fi
+
+# Determine if a file list is passed
+if [ "$#" -eq 1 ]
+then
+  oIFS=$IFS
+  IFS='
+  '
+  SFILES="$1"
+  IFS=$oIFS
+fi
+SFILES=${SFILES:-$STAGED_FILES_CMD}
+
+echo "Checking PHP Lint..."
+for FILE in $SFILES
+do
+  php -l -d display_errors=0 $PROJECT/$FILE
+  if [ $? != 0 ]
+  then
+    echo "Fix the error before commit."
+    exit 1
+  fi
+  FILES="$FILES $PROJECT/$FILE"
+done
+
+# This section is for running phpcs. It will come later, and most likely in the form of Bitbucket pipelines.
+#if [ "$FILES" != "" ]
+#then
+#	echo "Running Code Sniffer..."
+#	./vendor/bin/phpcs --standard=PSR1 --encoding=utf-8 -n -p $FILES
+#	if [ $? != 0 ]
+#	then
+#		echo "Fix the error before commit."
+#		exit 1
+#	fi
+#fi
+
+exit $?
