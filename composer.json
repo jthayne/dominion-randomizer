@@ -14,18 +14,18 @@
     "catfan/medoo": "^2.1",
     "cerbero/enum": "^1.0",
     "psr/log": "^3.0",
-    "respect/validation": "2.3.7",
+    "respect/validation": "^2.3",
     "vlucas/phpdotenv": "^5.6",
     "symfony/yaml": "^7.0"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "3.60.0",
-    "pestphp/pest": "2.34.9",
-    "php-parallel-lint/php-console-highlighter": "1.0.0",
-    "php-parallel-lint/php-parallel-lint": "1.4.0",
-    "phpcsstandards/phpcsextra": "1.2.1",
-    "phpmd/phpmd": "2.15.0",
-    "squizlabs/php_codesniffer": "3.10.2"
+    "friendsofphp/php-cs-fixer": "^3.60",
+    "pestphp/pest": "^2.34",
+    "php-parallel-lint/php-console-highlighter": "^1.0",
+    "php-parallel-lint/php-parallel-lint": "^1.4",
+    "phpcsstandards/phpcsextra": "^1.2",
+    "phpmd/phpmd": "^2.15",
+    "squizlabs/php_codesniffer": "^3.10"
   },
   "scripts": {
     "install-codestandards": [
