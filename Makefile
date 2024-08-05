@@ -45,10 +45,10 @@ lint-ci:
 	$(bin)/parallel-lint -j 10 classes public --no-progress --colors --checkstyle > report.xml
 
 phpmd: ## PHP Mess Detection
-	@$(bin)/phpmd offline,classes,public ansi build/phpmd/phpmd.xml
+	@$(bin)/phpmd classes,public ansi build/phpmd/phpmd.xml
 
 phpmd-ci:
-	@$(bin)/phpmd offline,classes,public github build/phpmd/phpmd.xml
+	@$(bin)/phpmd classes,public github build/phpmd/phpmd.xml
 
 phpmd-baseline: ## PHP Mess Detection. Generate Baseline
 	@$(bin)/phpmd offline,classes,public ansi build/phpmd/phpmd.xml --generate-baseline
