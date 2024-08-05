@@ -1,6 +1,7 @@
 {
   "name": "jthayne/dominion_randomizer",
   "description": "A small script that creates a randomized kingdom for a game of Dominion",
+  "license": "proprietary",
   "config": {
     "sort-packages": true,
     "platform": {
