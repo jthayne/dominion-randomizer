@@ -39,10 +39,10 @@ sniffercbf-ci:
 	@$(bin)/phpcbf --standard=build/phpcs/VirtualReef/ruleset.xml --report=full --colors -q -n classes tests config bootstrap
 
 lint: ## PHP Syntax Checking
-	@$(bin)/parallel-lint -j 10 offline classes tests public config bootstrap --no-progress --colors --blame
+	@$(bin)/parallel-lint -j 10 classes tests public config bootstrap --no-progress --colors --blame
 
 lint-ci:
-	$(bin)/parallel-lint -j 10 offline classes public --no-progress --colors --checkstyle > report.xml
+	$(bin)/parallel-lint -j 10 classes public --no-progress --colors --checkstyle > report.xml
 
 phpmd: ## PHP Mess Detection
 	@$(bin)/phpmd offline,classes,public ansi build/phpmd/phpmd.xml
