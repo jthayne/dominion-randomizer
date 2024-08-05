@@ -8,6 +8,7 @@ use Dominion\Cards\Details;
 use Dominion\Kingdom\Kingdom;
 
 require_once __DIR__ . '/../bootstrap/init.php';
+
 $db = require_once __DIR__ . '/../bootstrap/db.php';
 
 // Get initial kingdom cards.
