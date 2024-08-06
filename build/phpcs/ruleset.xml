@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="VirtualReef">
-    <description>A custom coding standard for Virtual Reef.</description>
-
-    <!-- Include all custom rules specific to Virtual Reef -->
-    <rule ref="VirtualReef.Files.FileName"/>
+<ruleset name="Thayne Personal">
+    <description>A custom coding standard for my personal projects.</description>
 
     <!-- PSR12 sniffs -->
     <rule ref="PSR12">

@@ -27,16 +27,16 @@ cs-fixer: ## Code styling fixer
 	@$(bin)/php-cs-fixer fix --config=build/php-cs-fixer/php-cs-fixer.dist.php
 
 sniffer: ## Code sniffer
-	@$(bin)/phpcs --standard=build/phpcs/VirtualReef/ruleset.xml --report=full -w -q classes tests config bootstrap
+	@$(bin)/phpcs --standard=build/phpcs/ruleset.xml --report=full -w -q classes tests config bootstrap
 
 sniffer-ci:
-	@$(bin)/phpcs --standard=build/phpcs/VirtualReef/ruleset.xml --report=full --colors -q classes tests config bootstrap
+	@$(bin)/phpcs --standard=build/phpcs/ruleset.xml --report=full --colors -q classes tests config bootstrap
 
 sniffercbf:
-	@$(bin)/phpcbf --standard=build/phpcs/VirtualReef/ruleset.xml --report=full -w -q classes tests config bootstrap
+	@$(bin)/phpcbf --standard=build/phpcs/ruleset.xml --report=full -w -q classes tests config bootstrap
 
 sniffercbf-ci:
-	@$(bin)/phpcbf --standard=build/phpcs/VirtualReef/ruleset.xml --report=full --colors -q -n classes tests config bootstrap
+	@$(bin)/phpcbf --standard=build/phpcs/ruleset.xml --report=full --colors -q -n classes tests config bootstrap
 
 lint: ## PHP Syntax Checking
 	@$(bin)/parallel-lint -j 10 classes tests public config bootstrap --no-progress --colors --blame
