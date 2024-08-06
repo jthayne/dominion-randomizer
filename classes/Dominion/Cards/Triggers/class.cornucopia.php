@@ -10,7 +10,10 @@ use Dominion\Cards\Validation\CardData;
 use Dominion\Kingdom\Kingdom;
 use Medoo\Medoo;
 
-class Cornucopia
+/**
+ * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+ */
+final class Cornucopia
 {
     use General;
 

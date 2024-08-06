@@ -9,7 +9,10 @@ use Dominion\Cards\Cards;
 use Dominion\Kingdom\Kingdom;
 use Medoo\Medoo;
 
-class Promos
+/**
+ * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+ */
+final class Promos
 {
     use General;
 

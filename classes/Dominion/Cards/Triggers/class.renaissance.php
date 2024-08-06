@@ -9,7 +9,10 @@ use Dominion\Cards\Validation\CardData;
 use Dominion\Kingdom\Kingdom;
 use Medoo\Medoo;
 
-class Renaissance
+/**
+ * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+ */
+final class Renaissance
 {
     use General;
 

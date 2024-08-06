@@ -9,7 +9,10 @@ use Dominion\Cards\Validation\CardData;
 use Dominion\Kingdom\Kingdom;
 use Medoo\Medoo;
 
-class Prosperity
+/**
+ * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+ */
+final class Prosperity
 {
     use General;
 

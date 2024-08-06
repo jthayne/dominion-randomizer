@@ -8,7 +8,10 @@ use Dominion\Cards\Card;
 use Dominion\Kingdom\Kingdom;
 use Medoo\Medoo;
 
-class Base
+/**
+ * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+ */
+final class Base
 {
     use General;
 

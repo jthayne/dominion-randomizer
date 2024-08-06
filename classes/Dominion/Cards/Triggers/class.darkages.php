@@ -9,6 +9,9 @@ use Dominion\Cards\Validation\CardData;
 use Dominion\Kingdom\Kingdom;
 use Medoo\Medoo;
 
+/**
+ * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+ */
 final class DarkAges
 {
     use General;

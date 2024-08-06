@@ -9,7 +9,10 @@ use Dominion\Cards\Validation\CardData;
 use Dominion\Kingdom\Kingdom;
 use Medoo\Medoo;
 
-class Seaside
+/**
+ * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+ */
+final class Seaside
 {
     use General;
 
