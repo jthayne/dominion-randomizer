@@ -55,5 +55,4 @@ enum Type
     case Way;
     case Wizard;
     case Zombie;
-
 }

@@ -22,17 +22,19 @@ use Random\Randomizer;
  */
 final class Kingdom
 {
+    public array $nonSupplyCardsListWithDetails = [];
+    public array $setsInUse = [];
+
     /**
      * @var array<\Dominion\Cards\Validation\CardData>
      */
     private array $cardsInSupplyListWithDetails = [];
     private array $cardsInSupplyList = [];
-    public array $nonSupplyCardsListWithDetails = [];
     private array $nonSupplyCardsList = [];
-    public array $setsInUse = [];
     private int $kingdomSize = 10;
     private int $players = 2;
     private array $allowedSets = [];
+
     /**
      * @var array<\Dominion\Kingdom\Rules\AvailableRules>
      */
@@ -90,6 +92,7 @@ final class Kingdom
 
         return false;
     }
+
     public function buildRandomKingdom(): void
     {
         $cards = [];
@@ -134,13 +137,50 @@ final class Kingdom
     public function printKingdon(): void
     {
         $generated = $this->getKingdomListWithDetails();
-
-
     }
 
     public function getNonSupplyCardsList(): array
     {
         return $this->nonSupplyCardsList;
+    }
+
+    public function addRule(AvailableRules $rule): Kingdom
+    {
+        $this->appliedRules($rule);
+
+        return $this;
+    }
+
+    public function addNonSupplyCard(CardData $card, bool $blackmarket = false): bool
+    {
+        $category = match (true) {
+            $card->isMat() => 'mat',
+            $card->isToken() => 'token',
+            $blackmarket => 'blackmarket',
+            default => 'cards',
+        };
+
+        if (isset($this->nonSupplyCardsList[$category]) === false) {
+            $this->nonSupplyCardsList[$category] = [];
+        }
+
+        if (Verify::keyInSubarrayContainsValue($this->nonSupplyCardsList[$category], 'name', $card->getName()) === false) {
+            $this->nonSupplyCardsList[$category][] = [
+                'id' => $card->getId(),
+                'name' => $card->getName(),
+            ];
+
+            $this->nonSupplyCardsListWithDetails[$category][] = $card;
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public function replaceCard(): void
+    {
+        // TODO: Add code to replace a card in the supply. All triggers need to be undone and new triggers run
     }
 
     private function addBaseSupplyCards(): void
@@ -167,13 +207,6 @@ final class Kingdom
         $this->nonSupplyCardsListWithDetails['setup'] = array_merge($baseTreasures, $baseVictory);
     }
 
-    public function addRule(AvailableRules $rule): Kingdom
-    {
-        $this->appliedRules($rule);
-
-        return $this;
-    }
-
     private function buildDetailedCardList(): void
     {
         $card = new Card($this->medoo);
@@ -197,7 +230,7 @@ final class Kingdom
             $setName = $cardDetails->getSet();
             $cardName = $cardDetails->getName();
 
-//            echo $cardName . ' (' . $setName . ')' . PHP_EOL;
+            // echo $cardName . ' (' . $setName . ')' . PHP_EOL;
             $set = '\Dominion\Cards\Triggers\\' . str_replace(' ', '', $setName);
 
             $triggers = $cardDetails->getTriggers();
@@ -207,37 +240,5 @@ final class Kingdom
                 $setInstance->process($triggers);
             }
         }
-    }
-
-    public function addNonSupplyCard(CardData $card, bool $blackmarket = false): bool
-    {
-        $category = match(true) {
-            $card->isMat() => 'mat',
-            $card->isToken() => 'token',
-            $blackmarket => 'blackmarket',
-            default => 'cards',
-        };
-
-        if (isset($this->nonSupplyCardsList[$category]) === false) {
-            $this->nonSupplyCardsList[$category] = [];
-        }
-
-        if (Verify::keyInSubarrayContainsValue($this->nonSupplyCardsList[$category], 'name', $card->getName()) === false){
-            $this->nonSupplyCardsList[$category][] = [
-                'id' => $card->getId(),
-                'name' => $card->getName(),
-            ];
-
-            $this->nonSupplyCardsListWithDetails[$category][] = $card;
-
-            return true;
-        }
-
-        return false;
-    }
-
-    public function replaceCard(): void
-    {
-        // TODO: Add code to replace a card in the supply. All triggers need to be undone and new triggers run
     }
 }

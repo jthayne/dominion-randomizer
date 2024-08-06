@@ -42,6 +42,7 @@ class Nocturne
             triggers: $triggers,
         );
     }
+
     private function cursedgold(): CardData
     {
         return $this->card->getCardByName('Cursed Gold');
@@ -142,6 +143,7 @@ class Nocturne
     {
         return $this->card->getCardByName('Vampire');
     }
+
     private function willowisp(): CardData
     {
         return $this->card->getCardByName('Will-o\'-Wisp');
@@ -170,14 +172,17 @@ class Nocturne
             triggers: $triggers,
         );
     }
+
     private function zombieapprentice(): CardData
     {
         return $this->card->getCardByName('Zombie Apprentice');
     }
+
     private function zombiemason(): CardData
     {
         return $this->card->getCardByName('Zombie Mason');
     }
+
     private function zombiespy(): CardData
     {
         return $this->card->getCardByName('Zombie Spy');

@@ -11,10 +11,10 @@ final readonly class Details
 {
     public function __construct(
         private Medoo $medoo,
-    ) {
-    }
+    ) {}
 
-    public function getByID(int $id): array {
+    public function getByID(int $id): array
+    {
         $result = $this->medoo->get(
             'cards',
             [
@@ -26,7 +26,7 @@ final readonly class Details
             ],
             [
                 'id[=]' => $id,
-            ]
+            ],
         );
 
         if (empty($result) === false) {
@@ -49,7 +49,7 @@ final readonly class Details
             ],
             [
                 'card_id[=]' => $id,
-            ]
+            ],
         );
 
         if (is_array($result) === true) {
@@ -70,7 +70,7 @@ final readonly class Details
             ],
             [
                 'card_id[=]' => $id,
-            ]
+            ],
         );
     }
 
@@ -83,7 +83,7 @@ final readonly class Details
             ],
             [
                 'card_id[=]' => $id,
-            ]
+            ],
         );
 
         return unserialize($triggers['triggers']);

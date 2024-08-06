@@ -42,7 +42,7 @@ final class PDOLogger extends AbstractLogger
         #[ExpectedValues(valuesFromClass: LogLevel::class)]
         $level,
         string|Stringable $message,
-        array $context = []
+        array $context = [],
     ): void {
         if (empty($context['channel']) === false) {
             $message = '(' . strtoupper($context['channel']) . ') ' . $message;
@@ -56,7 +56,7 @@ final class PDOLogger extends AbstractLogger
                 'level' => strtoupper($level),
                 'user' => $this->user,
                 'message' => $message,
-            ]
+            ],
         );
     }
 }

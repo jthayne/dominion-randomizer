@@ -12,7 +12,7 @@ final class Verify
     /**
      * Checks to see if a multidimensional array contains only empty arrays and returns true if that is the case.
      */
-    public static function arrayIsEmpty(array $array, int $level = 1): bool|array
+    public static function arrayIsEmpty(array $array, int $level = 1): array|bool
     {
         foreach ($array as $key => $value) {
             if (is_array($value) === true) {

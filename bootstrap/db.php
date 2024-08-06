@@ -21,7 +21,7 @@ $db = new Medoo(
         'database' => Environment::get('mysql_database'),
         'username' => Environment::get('mysql_user'),
         'password' => Environment::get('mysql_password'),
-    ]
+    ],
 );
 
 return $db;

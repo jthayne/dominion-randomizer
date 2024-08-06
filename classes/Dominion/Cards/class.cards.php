@@ -11,8 +11,7 @@ final readonly class Cards
 {
     public function __construct(
         private Medoo $medoo,
-    ) {
-    }
+    ) {}
 
     public function getAllCards(): array
     {
@@ -21,7 +20,7 @@ final readonly class Cards
             [
                 'id',
                 'name',
-            ]
+            ],
         );
     }
 
@@ -36,9 +35,10 @@ final readonly class Cards
             [
                 'is_kingdom_card[=]' => 1,
                 'set[=]' => $set,
-            ]
+            ],
         );
     }
+
     public function getAllKingdomCards(): array
     {
         return $this->medoo->select(
@@ -49,7 +49,7 @@ final readonly class Cards
             ],
             [
                 'is_kingdom_card[=]' => 1,
-            ]
+            ],
         );
     }
 

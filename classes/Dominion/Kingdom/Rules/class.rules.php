@@ -15,15 +15,9 @@ final class Rules
     private bool $includeBuy = false;
     private bool $test = true;
 
-    public function __construct(private readonly Medoo $medoo)
-    {
+    public function __construct(private readonly Medoo $medoo) {}
 
-    }
-
-    public function addSetRules(...$sets): void
-    {
-
-    }
+    public function addSetRules(...$sets): void {}
 
     public function getRules(): array
     {
@@ -43,7 +37,7 @@ final class Rules
             [
                 AvailableRules::AlwaysIncludePlatinumAndColony,
                 AvailableRules::RandomIncludePlatinumAndColony,
-            ]
+            ],
         ];
 
         $keys = [];

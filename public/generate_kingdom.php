@@ -87,8 +87,8 @@ foreach ($generated['non-supply'] as $index => $item) {
     displayTable($toAdd);
     echo PHP_EOL;
 }
-//foreach ($generated as $item) {
+// foreach ($generated as $item) {
 
-//}
-//displayTable($generated);
-//print_r($generated);
+// }
+// displayTable($generated);
+// print_r($generated);

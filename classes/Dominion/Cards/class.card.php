@@ -12,8 +12,7 @@ final readonly class Card
 {
     public function __construct(
         private Medoo $medoo,
-    ) {
-    }
+    ) {}
 
     public function add(
         CardValidation $data,
@@ -29,7 +28,7 @@ final readonly class Card
                 'edition' => $data->getEdition(),
                 'is_kingdom_card' => $data->getIsKingdomCard(),
                 'is_split_pile' => $data->getIsSplitPile(),
-            ]
+            ],
         );
 
         if (empty($exists) === false) {
@@ -44,7 +43,7 @@ final readonly class Card
                 'edition' => $data->getEdition(),
                 'is_kingdom_card' => $data->getIsKingdomCard(),
                 'is_split_pile' => $data->getIsSplitPile(),
-            ]
+            ],
         );
 
         return (int) $this->medoo->id();
@@ -53,8 +52,7 @@ final readonly class Card
     public function addType(
         int $cardID,
         Type $type,
-    ): void
-    {
+    ): void {
         $exists = $this->medoo->get(
             'card_type',
             [
@@ -63,7 +61,7 @@ final readonly class Card
             [
                 'card_id[=]' => $cardID,
                 'type[=]' => $type->name,
-            ]
+            ],
         );
 
         if ($exists === false || $exists === null) {
@@ -72,7 +70,7 @@ final readonly class Card
                 [
                     'card_id' => $cardID,
                     'type' => $type->name,
-                ]
+                ],
             );
         }
     }
@@ -80,8 +78,7 @@ final readonly class Card
     public function addAbility(
         int $cardID,
         Ability $ability,
-    ): void
-    {
+    ): void {
         $exists = $this->medoo->get(
             'card_ability',
             [
@@ -90,7 +87,7 @@ final readonly class Card
             [
                 'card_id[=]' => $cardID,
                 'ability[=]' => $ability->name,
-            ]
+            ],
         );
 
         if ($exists === false || $exists === null) {
@@ -99,7 +96,7 @@ final readonly class Card
                 [
                     'card_id' => $cardID,
                     'ability' => $ability->name,
-                ]
+                ],
             );
         }
     }
@@ -107,8 +104,7 @@ final readonly class Card
     public function addTrigger(
         int $cardID,
         string $trigger,
-    ): void
-    {
+    ): void {
         $exists = $this->medoo->get(
             'card_trigger',
             [
@@ -117,7 +113,7 @@ final readonly class Card
             [
                 'card_id[=]' => $cardID,
                 'trigger[=]' => $trigger,
-            ]
+            ],
         );
 
         if ($exists === false || $exists === null) {
@@ -126,17 +122,16 @@ final readonly class Card
                 [
                     'card_id' => $cardID,
                     'trigger' => $trigger,
-                ]
+                ],
             );
         }
     }
 
     public function addCost(
-        int  $cardID,
-        int  $amount,
+        int $cardID,
+        int $amount,
         Type $type,
-    ): void
-    {
+    ): void {
         $exists = $this->medoo->get(
             'card_cost',
             [
@@ -145,7 +140,7 @@ final readonly class Card
             [
                 'card_id[=]' => $cardID,
                 'type[=]' => $type->name,
-            ]
+            ],
         );
 
         if ($exists === false || $exists === null) {
@@ -155,7 +150,7 @@ final readonly class Card
                     'card_id' => $cardID,
                     'amount' => $amount,
                     'type' => $type->name,
-                ]
+                ],
             );
         }
     }
@@ -174,7 +169,7 @@ final readonly class Card
             ],
             [
                 'id[=]' => $id,
-            ]
+            ],
         );
 
         $abilities = $this->medoo->select(
@@ -193,7 +188,7 @@ final readonly class Card
             ],
             [
                 'card_id[=]' => $id,
-            ]
+            ],
         );
 
         $trigger = $this->medoo->select(
@@ -201,7 +196,7 @@ final readonly class Card
             'trigger',
             [
                 'card_id[=]' => $id,
-            ]
+            ],
         );
 
         $type = $this->medoo->select(
@@ -213,14 +208,14 @@ final readonly class Card
         );
 
         return new CardData(
-            name:      $details['name'],
-            set:       $details['set'],
-            card:      true,
-            kingdom:   true,
+            name: $details['name'],
+            set: $details['set'],
+            card: true,
+            kingdom: true,
             splitPile: (bool) $details['is_split_pile'],
-            types:     $type ?? [],
-            cost:      $cost ?? [],
-            triggers:  $trigger ?? [],
+            types: $type ?? [],
+            cost: $cost ?? [],
+            triggers: $trigger ?? [],
             abilities: $abilities ?? [],
         );
     }
@@ -238,7 +233,7 @@ final readonly class Card
             ],
             [
                 'name[=]' => $name,
-            ]
+            ],
         );
 
         $abilities = $this->medoo->select(
@@ -246,7 +241,7 @@ final readonly class Card
             'ability',
             [
                 'card_id[=]' => $details['id'],
-            ]
+            ],
         );
 
         $cost = $this->medoo->select(
@@ -257,7 +252,7 @@ final readonly class Card
             ],
             [
                 'card_id[=]' => $details['id'],
-            ]
+            ],
         );
 
         $trigger = $this->medoo->select(
@@ -277,14 +272,14 @@ final readonly class Card
         );
 
         return new CardData(
-            name:      $details['name'],
-            set:       $details['set'],
-            id:        $details['id'],
-            card:      true,
-            kingdom:   true,
-            types:     $type ?? [],
-            cost:      $cost ?? [],
-            triggers:  $trigger ?? [],
+            name: $details['name'],
+            set: $details['set'],
+            id: $details['id'],
+            card: true,
+            kingdom: true,
+            types: $type ?? [],
+            cost: $cost ?? [],
+            triggers: $trigger ?? [],
             abilities: $abilities ?? [],
         );
     }

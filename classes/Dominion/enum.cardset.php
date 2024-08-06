@@ -27,6 +27,4 @@ enum CardSet: string
     case Prosperity = 'Prosperity';
     case Renaissance = 'Renaissance';
     case Seaside = 'Seaside';
-
-
 }

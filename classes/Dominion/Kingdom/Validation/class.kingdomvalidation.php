@@ -12,9 +12,7 @@ final class KingdomValidation
     private array $supplyCards = [];
     private array $otherCards = [];
 
-    public function __construct(public int $size)
-    {
-    }
+    public function __construct(public int $size) {}
 
     public function addToSupply(CardData $card): void
     {

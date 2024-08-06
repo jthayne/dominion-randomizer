@@ -6,7 +6,8 @@ namespace Dominion\Exceptions;
 
 use Exception;
 
-class UndefinedCardTypeException extends Exception {
+class UndefinedCardTypeException extends Exception
+{
     public function __toString(): string
     {
         if (empty($return) === false) {

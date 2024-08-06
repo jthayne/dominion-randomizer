@@ -23,8 +23,8 @@ class Seaside
     {
         return new CardData(
             name: 'Native Village',
-            set:  $this->setProperName,
-            mat:  true,
+            set: $this->setProperName,
+            mat: true,
         );
     }
 
@@ -32,8 +32,8 @@ class Seaside
     {
         return new CardData(
             name: 'Island',
-            set:  $this->setProperName,
-            mat:  true,
+            set: $this->setProperName,
+            mat: true,
         );
     }
 
@@ -41,16 +41,16 @@ class Seaside
     {
         return new CardData(
             name: 'Pirate Ship',
-            set:  $this->setProperName,
-            mat:  true,
+            set: $this->setProperName,
+            mat: true,
         );
     }
 
     private function embargo(): CardData
     {
         return new CardData(
-            name:  'Embargo',
-            set:   $this->setProperName,
+            name: 'Embargo',
+            set: $this->setProperName,
             token: true,
         );
     }

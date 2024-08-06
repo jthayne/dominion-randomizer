@@ -23,8 +23,8 @@ class Allies
     {
         return new CardData(
             name: 'Favor',
-            set:  $this->setProperName,
-            mat:  true,
+            set: $this->setProperName,
+            mat: true,
         );
     }
 

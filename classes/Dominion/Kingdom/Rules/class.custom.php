@@ -8,10 +8,7 @@ class Custom
 {
     private int $numberOfSets;
 
-    public function __construct()
-    {
-
-    }
+    public function __construct() {}
 
     final public function list(): array
     {

@@ -19,14 +19,14 @@ final class DarkAges
         $this->setProperName = 'Dark Ages';
     }
 
-    private function spoils(): CardData
-    {
-        return $this->card->getCardByName('Spoils');
-    }
-
     public function mercenary(): CardData
     {
         return $this->card->getCardByName('Mercenary');
+    }
+
+    private function spoils(): CardData
+    {
+        return $this->card->getCardByName('Spoils');
     }
 
     private function ruins(): CardData

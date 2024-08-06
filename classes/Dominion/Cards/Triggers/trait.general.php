@@ -146,8 +146,8 @@ trait General
     private function coin(): CardData
     {
         return new CardData(
-            name:  'Coin',
-            set:   'Base',
+            name: 'Coin',
+            set: 'Base',
             token: true,
         );
     }

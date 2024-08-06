@@ -36,7 +36,7 @@ spl_autoload_register(
         }
 
         return false;
-    }
+    },
 );
 
 spl_autoload_register(
@@ -59,7 +59,7 @@ spl_autoload_register(
             return true;
         }
         return false;
-    }
+    },
 );
 
 spl_autoload_register(
@@ -89,5 +89,5 @@ spl_autoload_register(
         }
 
         return false;
-    }
+    },
 );
