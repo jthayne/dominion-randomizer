@@ -48,7 +48,7 @@ phpmd: ## PHP Mess Detection
 	@$(bin)/phpmd classes,public ansi build/phpmd/phpmd.xml
 
 phpmd-ci:
-	@$(bin)/phpmd classes,public text build/phpmd/phpmd.xml
+	@$(bin)/phpmd classes,public ansi build/phpmd/phpmd.xml
 
 phpmd-baseline: ## PHP Mess Detection. Generate Baseline
 	@$(bin)/phpmd classes,public ansi build/phpmd/phpmd.xml --generate-baseline
