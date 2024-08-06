@@ -3,7 +3,6 @@
 $appDir = dirname(__DIR__, 2);
 
 $finder = PhpCsFixer\Finder::create()
-    ->in($appDir . '/offline')
     ->in($appDir . '/classes')
     ->in($appDir . '/tests')
     ->in($appDir . '/public')
