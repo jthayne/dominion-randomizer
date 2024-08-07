@@ -13,6 +13,7 @@ use Medoo\Medoo;
 use Psr\Log\AbstractLogger;
 use Psr\Log\LogLevel;
 use Stringable;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * This class is for logging events to the database.
@@ -28,9 +29,10 @@ final class PDOLogger extends AbstractLogger
      */
     public function __construct(
         private readonly Medoo $medoo,
+        private readonly Request $request,
     ) {
         /** @noinspection GlobalVariableUsageInspection */
-        $this->machine = $_SERVER['SERVER_ADDR'] ?? '';
+        $this->machine = $this->request->server->getString('SERVER_ADDR');
 
         $dt = new DateTime('now', new DateTimeZone('America/New_York'));
         $this->date = $dt->format('Y-m-d H:i:s');
