@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Dominion\Cards\Validation;
 
+/**
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
+ */
 final readonly class CardData
 {
     public function __construct(

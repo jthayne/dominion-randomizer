@@ -41,7 +41,7 @@ final class Rules
         ];
 
         $keys = [];
-        foreach ($conflictingRules as $index => $ruleSet) {
+        foreach ($conflictingRules as $ruleSet) {
             $keys[] = array_search($ruleSet, $rules);
         }
 
@@ -52,6 +52,10 @@ final class Rules
         return $rules;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+     */
     private function AlwaysIncludePlatinumAndColony(Kingdom $kingdom): void
     {
         if (in_array('Prosperity', $kingdom->setsInUse) === true) {
@@ -62,6 +66,10 @@ final class Rules
         }
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
+     */
     private function RandomIncludePlatinumAndColony(Kingdom $kingdom): void
     {
         $yesno = (bool) mt_rand(0, 1);
