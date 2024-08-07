@@ -12,9 +12,11 @@ $cards = new Cards($db);
 $kingdom = new Kingdom($db, $cards);
 
 $generated = $kingdom->size(10)
-    ->set('Nocturne')
-    ->set('Menagerie')
-    ->set('Prosperity')
+    ->players(2)
+//    ->set('Nocturne')
+//    ->set('Menagerie')
+//    ->set('Prosperity')
+    ->set('Dark Ages')
     ->buildKingdom()
     ->getKingdomListWithDetails();
 
@@ -64,9 +66,13 @@ function displayTable($data): void
 
 $toAdd = [];
 foreach ($generated['supply'] as $item) {
+    $cardCount = $kingdom->getCardCount($item->getTypes());
+
     $toAdd[] = [
         'Kingdom' => $item->getName(),
         'Set' => $item->getSet(),
+        'Count' => $cardCount ?? $item->getCount(),
+        'Types' => implode(', ', $item->getTypes()),
     ];
 }
 
@@ -77,9 +83,13 @@ foreach ($generated['non-supply'] as $index => $item) {
     $toAdd = [];
 
     foreach ($item as $value) {
+        $cardCount = $kingdom->getCardCount($value->getTypes());
+
         $toAdd[] = [
             ucwords($index) => $value->getName(),
             'Set' => $value->getSet(),
+            'Count' => $cardCount ?? $value->getCount(),
+            'Types' => implode(', ', $value->getTypes()),
         ];
     }
 

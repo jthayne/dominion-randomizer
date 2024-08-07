@@ -143,6 +143,26 @@ final class Kingdom
         return $this->nonSupplyCardsList;
     }
 
+    public function getCardCount(array $types): ?string
+    {
+        if (empty(array_intersect(['Victory', 'Curse'], $types)) === true) {
+            return null;
+        }
+
+        if (in_array('Curse', $types) === true) {
+            return (string) ($this->players * 10 - 10);
+        }
+
+        if (in_array('Victory', $types) === true) {
+            return match ($this->players) {
+                2 => '8',
+                3, 4 => '12',
+                default => '10',
+            };
+        }
+
+        return null;
+    }
     private function addBaseSupplyCards(): void
     {
         $card = new Card($this->medoo);
