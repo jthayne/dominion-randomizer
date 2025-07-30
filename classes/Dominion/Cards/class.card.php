@@ -216,7 +216,7 @@ final readonly class Card
         return new CardData(
             name:      $details['name'],
             set:       $details['set'],
-            count:     $details['total_in_kingdom'],
+//            count:     $details['total_in_kingdom'],
             card:      true,
             kingdom:   true,
             splitPile: (bool) $details['is_split_pile'],
@@ -283,7 +283,7 @@ final readonly class Card
             name:      $details['name'],
             set:       $details['set'],
             id:        $details['id'],
-            count:     $details['total_in_kingdom'],
+//            count:     $details['total_in_kingdom'],
             card:      true,
             kingdom:   true,
             types:     $type ?? [],

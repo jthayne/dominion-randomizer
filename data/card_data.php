@@ -70,8 +70,8 @@ $cards = [];
 require_once __DIR__ . '/../bootstrap/init.php';
 $db = require_once __DIR__ . '/../bootstrap/db.php';
 
-if (($handle = fopen(__DIR__ . "/cards.csv", "r")) !== FALSE) {
-    while (($data = fgetcsv($handle)) !== FALSE) {
+if (($handle = fopen(__DIR__ . "/cards.csv", "r")) !== false) {
+    while (($data = fgetcsv($handle)) !== false) {
         if ($firstRow === true) {
             $firstRow = false;
             continue;

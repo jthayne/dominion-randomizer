@@ -1,7 +1,7 @@
 version: '3.8'
 services:
-  php-8.3-dominion:
-    container_name: php-8.3-dominion
+  php-8.4-dominion:
+    container_name: php-8.4-dominion
     build: .
     depends_on:
       - db-dominion
