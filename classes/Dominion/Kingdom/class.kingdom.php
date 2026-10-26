@@ -40,28 +40,28 @@ final class Kingdom
 
     public function __construct(private readonly Medoo $medoo, private readonly Cards $cards) {}
 
-    public function size(int $size): Kingdom
+    public function size(int $size): self
     {
         $this->kingdomSize = $size;
 
         return $this;
     }
 
-    public function set(string $setName): Kingdom
+    public function set(string $setName): self
     {
         $this->allowedSets[] = $setName;
 
         return $this;
     }
 
-    public function players(int $number): Kingdom
+    public function players(int $number): self
     {
         $this->players = $number;
 
         return $this;
     }
 
-    public function buildKingdom(): Kingdom
+    public function buildKingdom(): self
     {
         $this->buildRandomKingdom();
 
@@ -82,13 +82,7 @@ final class Kingdom
     {
         $cards = $this->getAllCardsInKingdom();
 
-        foreach ($cards as $card) {
-            if ((int) $card['id'] === $id) {
-                return true;
-            }
-        }
-
-        return false;
+        return array_any($cards, static fn($card) => (int) $card['id'] === $id);
     }
     public function buildRandomKingdom(): void
     {
@@ -149,11 +143,11 @@ final class Kingdom
             return null;
         }
 
-        if (in_array('Curse', $types) === true) {
+        if (in_array('Curse', $types, true) === true) {
             return (string) ($this->players * 10 - 10);
         }
 
-        if (in_array('Victory', $types) === true) {
+        if (in_array('Victory', $types, true) === true) {
             return match ($this->players) {
                 2 => '8',
                 3, 4 => '12',
@@ -179,7 +173,7 @@ final class Kingdom
             $card->getCardByName('Province'),
         ];
 
-        if (in_array('Prosperity', $this->setsInUse) === true) {
+        if (in_array('Prosperity', $this->setsInUse, true) === true) {
             $baseTreasures[] = $card->getCardByName('Platinum');
             $baseVictory[] = $card->getCardByName('Colony');
         }
@@ -187,7 +181,7 @@ final class Kingdom
         $this->nonSupplyCardsListWithDetails['setup'] = array_merge($baseTreasures, $baseVictory);
     }
 
-    public function addRule(AvailableRules $rule): Kingdom
+    public function addRule(AvailableRules $rule): self
     {
         $this->appliedRules($rule);
 

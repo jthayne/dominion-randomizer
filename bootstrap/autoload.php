@@ -10,7 +10,7 @@
 declare(strict_types=1);
 
 spl_autoload_register(
-    function ($className) {
+    static function ($className) {
         $namespaceParts = explode('\\', $className);
 
         $className = ltrim($className, '\\');
@@ -40,7 +40,7 @@ spl_autoload_register(
 );
 
 spl_autoload_register(
-    function ($traitName) {
+    static function ($traitName) {
         $traitName = ltrim($traitName, '\\');
         $lastNsPos = strripos($traitName, '\\');
         $fileName = 'trait.' . $traitName . '.php';
@@ -63,7 +63,7 @@ spl_autoload_register(
 );
 
 spl_autoload_register(
-    function ($enumName) {
+    static function ($enumName) {
         $namespaceParts = explode('\\', $enumName);
 
         $enumName = ltrim($enumName, '\\');

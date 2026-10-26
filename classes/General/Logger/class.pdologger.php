@@ -29,7 +29,6 @@ final class PDOLogger extends AbstractLogger
     public function __construct(
         private readonly Medoo $medoo,
     ) {
-        /** @noinspection GlobalVariableUsageInspection */
         $this->machine = $_SERVER['SERVER_ADDR'] ?? '';
 
         $dt = new DateTime('now', new DateTimeZone('America/New_York'));

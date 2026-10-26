@@ -48,7 +48,7 @@ final class Rules
 
         $keys = [];
         foreach ($conflictingRules as $index => $ruleSet) {
-            $keys[] = array_search($ruleSet, $rules);
+            $keys[] = array_search($ruleSet, $rules, true);
         }
 
         if (count($keys) > 1) {
@@ -60,7 +60,7 @@ final class Rules
 
     private function AlwaysIncludePlatinumAndColony(Kingdom $kingdom): void
     {
-        if (in_array('Prosperity', $kingdom->setsInUse) === true) {
+        if (in_array('Prosperity', $kingdom->setsInUse, true) === true) {
             $card = new Card($this->medoo);
 
             $kingdom->nonSupplyCardsListWithDetails['setup'][] = $card->getCardByName('Platinum');
@@ -68,10 +68,13 @@ final class Rules
         }
     }
 
+    /**
+     * @throws \Random\RandomException
+     */
     private function RandomIncludePlatinumAndColony(Kingdom $kingdom): void
     {
-        $yesno = (bool) mt_rand(0, 1);
-        if (in_array('Prosperity', $kingdom->setsInUse) === true && $yesno === true) {
+        $yesno = (bool) random_int(0, 1);
+        if ($yesno === true && in_array('Prosperity', $kingdom->setsInUse, true) === true) {
             $card = new Card($this->medoo);
 
             $kingdom->nonSupplyCardsListWithDetails['setup'][] = $card->getCardByName('Platinum');

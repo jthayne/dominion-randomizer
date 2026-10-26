@@ -9,7 +9,7 @@ use Dominion\Cards\Validation\CardValidation;
 use Symfony\Component\Yaml\Yaml;
 
 require_once __DIR__ . '/../bootstrap/init.php';
-$db = require_once __DIR__ . '/../bootstrap/db.php';
+$db = require __DIR__ . '/../bootstrap/db.php';
 
 //$card = new Card($db);
 //$da = new \Dominion\Cards\Triggers\Adventures($db, $card);
@@ -94,30 +94,29 @@ foreach ($sets as $set) {
                         die();
                     }
                     foreach ($card['type'] as $type) {
-                        $cardData->addType(
-                            cardID: $cardID,
-                            type: Type::from(ucwords($type)),
-                        );
+                        $type
+                            |> ucwords(...)
+                            |> Type::from(...)
+                            |> (static fn($x) => $cardData->addType(cardID: $cardID, type: $x,));
                     }
 
                     // Add card abilities
                     if (isset($card['ability']) === true) {
                         foreach ($card['ability'] as $ability) {
-                            $cardData->addAbility(
-                                cardID: $cardID,
-                                ability: Ability::from(ucwords($ability)),
-                            );
+                            $ability
+                                |> ucwords(...)
+                                |> Ability::from(...)
+                                |> (static fn($x) => $cardData->addAbility(cardID: $cardID, ability: $x,));
                         }
                     }
 
                     // Add card cost
                     if (isset($card['cost']) === true) {
                         foreach ($card['cost'] as $type => $cost) {
-                            $cardData->addCost(
-                                cardID: $cardID,
-                                amount: (int) $cost,
-                                type: Type::from(ucwords($type)),
-                            );
+                            $type
+                                |> ucwords(...)
+                                |> Type::from(...)
+                                |> (static fn($x) => $cardData->addCost(cardID: $cardID, amount: (int) $cost, type: $x,));
                         }
                     }
                 }

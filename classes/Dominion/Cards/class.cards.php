@@ -59,9 +59,7 @@ final readonly class Cards
 
         $cardID = $cards[array_rand($cards)]['id'];
 
-        $card = new Card($this->medoo);
-
-        return $card->getCardByID($cardID);
+        return new Card($this->medoo)->getCardByID($cardID);
     }
 
     public function getRandomKingdomCard(): CardData
@@ -70,8 +68,6 @@ final readonly class Cards
 
         $cardID = $cards[array_rand($cards)]['id'];
 
-        $card = new Card($this->medoo);
-
-        return $card->getCardByID($cardID);
+        return new Card($this->medoo)->getCardByID($cardID);
     }
 }

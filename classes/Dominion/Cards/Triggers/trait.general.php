@@ -87,7 +87,7 @@ trait General
             return;
         }
 
-        throw new UndefinedCardTypeException();
+        throw new UndefinedCardTypeException('Undefined card type');
     }
 
     private function mat(string $matName): CardData
