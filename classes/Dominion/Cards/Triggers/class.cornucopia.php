@@ -26,7 +26,7 @@ class Cornucopia
 
         do {
             $bane = $cards->getRandomKingdomCard();
-        } while (in_array($bane->getId(), $this->kingdom->getKingdomList()) === true);
+        } while (in_array($bane->getId(), $this->kingdom->getKingdomList(), true) === true);
 
         return $bane;
     }

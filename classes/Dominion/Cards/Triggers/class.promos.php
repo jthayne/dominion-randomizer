@@ -33,7 +33,7 @@ class Promos
 
         for ($counter = 1; $counter <= $marketsize; $counter++) {
             $bmCard = $cards->getRandomKingdomCard();
-            if ($this->kingdom->isCardIdInKingdom($bmCard->getId()) === true || $bmCard->isSplitPile() === true) {
+            if ($bmCard->isSplitPile() === true || $this->kingdom->isCardIdInKingdom($bmCard->getId()) === true) {
                 $counter--;
             } else {
                 $bmList['cards'][] = $bmCard;

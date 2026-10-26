@@ -68,9 +68,9 @@ $nonKingdomCardNames = [
 $cards = [];
 
 require_once __DIR__ . '/../bootstrap/init.php';
-$db = require_once __DIR__ . '/../bootstrap/db.php';
+$db = require __DIR__ . '/../bootstrap/db.php';
 
-if (($handle = fopen(__DIR__ . "/cards.csv", "r")) !== false) {
+if (($handle = fopen(__DIR__ . "/cards.csv", 'rb')) !== false) {
     while (($data = fgetcsv($handle)) !== false) {
         if ($firstRow === true) {
             $firstRow = false;
@@ -150,7 +150,7 @@ foreach ($cards as $set => $cardlist) {
 
         $cardId = $card->add($validatedCard);
         foreach ($data['types'] as $type) {
-            $card->addTypeToCard((int) $cardId, $type);
+            $card->addTypeToCard($cardId, $type);
         }
     }
 }

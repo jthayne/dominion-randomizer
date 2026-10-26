@@ -28,19 +28,13 @@ final class Verify
 
         if ($level === 1) {
             return empty($array);
-        } else {
-            return $array;
         }
+
+        return $array;
     }
 
     public static function keyInSubarrayContainsValue(array $array, string $key, mixed $contains): bool
     {
-        foreach ($array as $item) {
-            if ($item[$key] === $contains) {
-                return true;
-            }
-        }
-
-        return false;
+        return array_any($array, static fn($item) => $item[$key] === $contains);
     }
 }

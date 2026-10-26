@@ -1,7 +1,5 @@
 <?php
 
-/** @noinspection GlobalVariableUsageInspection */
-
 declare(strict_types=1);
 
 namespace General;
@@ -70,7 +68,7 @@ final class Session
      */
     public static function getString(string $key): string
     {
-        return strval(self::get($key));
+        return (string) self::get($key);
     }
 
     /**
